@@ -360,7 +360,7 @@ nav{
 .story-text{
     width: 50%;
     padding: 5% 5%;
-    
+
 }
 .story-section h2{
     font-family: 'Montserrat';
@@ -370,22 +370,22 @@ nav{
 }
 .story-section .img-container{
     width: 50%;
-    height: 70vh;
-    
+    height: 80vh;
+
 }
 
 .story-section img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
 
 .story-section p{
     text-align: justify;
     padding: 7% 0;
     color: black;
-    font-size: clamp(1.375rem, 1.375rem + 0vw, 1.375rem);
+    font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
 }
 
 .story-section .btn-container{
@@ -393,9 +393,10 @@ nav{
     display: flex;
     justify-content: center;
 }
+
 .story-section .read-more{
     margin-top: 10%;
-    font-size: clamp(1.375rem, 1.375rem + 0vw, 1.375rem);
+    font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
     background-color: #23C686;
     color: white;
     border: none;
@@ -403,14 +404,29 @@ nav{
     padding: 3% 7%;
     font-weight:lighter;
 }
+
 .story-section .read-more:hover{
     cursor: pointer;
     transform: scale(1.10);
     font-weight: bold;
 }
+
 .story-section hr{
     color: #23C686;
 }
+
+/* RECYLE SECTION */
+
+.recycle-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.recycle-container{
+    display: flex;
+}
+
+
 
 /* RECYLE SECTION */
 
@@ -505,6 +521,7 @@ nav{
 
 
 
+
 @media screen and (max-width:920px) {
     nav .web-elem{
         visibility: hidden;
@@ -555,9 +572,30 @@ nav{
     }
 
     .story-section .img-container{
-        height: 55vh;
+        height: 75vh;
     }
 
+    .recycle-container{
+        flex-direction: column;
+    }
+
+    .recycle-left{
+        width: 100%;
+    }
+
+    .recycle-right{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .recycle-section h5{
+        margin-top: 0;
+    }
+
+    .story-section .read-more{
+        margin-top: 0;
+    }
 }
 
 
@@ -578,6 +616,18 @@ nav{
         padding: 5% 10%;
     }
 
+    .recycle-left{
+        grid-template-columns: auto;
+        height: auto;
+    }
+
+    .recycle-container{
+        display: block;
+    }
+
+    .recycle-section h5{
+        margin-top: 20%;
+    }
 }
 
 
