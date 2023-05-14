@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Junkshop</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/home/#" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+<!-- BODY -->
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <!-- NAVBAR TOP -->
+    <div class="nav-top">
+      <div class="logo-box">
+        <div class="img-bg" onclick="location.href='index.html';"><img src="images/home/#" alt="Online Junkshop Logo"></div>
+      </div>
+
+      <div class="wrap">
+        <div class="search">
+          <input type="text" class="searchTerm" placeholder="  Search" style="font-family:Arial, FontAwesome">
+          </button>
+        </div>
+      </div>
+
+      <div class="socmed-button">
+        <i href="#" class="fa fa-facebook"></i>
+        <i href="#" class="fa fa-instagram"></i>
+        <i href="#" class="fa fa-twitter"></i>
+      </div>
+
+      <div class="account">
+        <div class="account-left">
+          <img src="images/sell/nav-account.png" alt="Account Logo">
+        </div>
+
+        <div class="account-right">
+          <h3 id="username-heading">helloworld123</h3>
+          <h4 id="logout-heading">logout</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR BOTTOM -->
+    <div class="nav-bot">
+      <ul>
+        <li>
+          <img src="images/home/nav-news.png" alt="News Logo">
+          <a href="index.html#news-section">News</a>
+        </li>
+        <li>
+          <img src="images/home/nav-info.png" alt="Information Logo">
+          <a href="index.html#information-section">Information</a>
+        </li>
+        <li>
+          <img src="images/home/nav-about.png" alt="About Logo">
+          <a href="about.html">About Us</a>
+        </li>
+        <li>
+          <img src="images/home/nav-contact.png" alt="Contact Logo">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SELL PAGE -->
+  <div class="sell-page">   
+    <!-- DON'T THROW SECTION -->
+    <section class="dont-throw-section">
+      <img src="images/sell/dont-throw.png" alt="An image containing junks.">
+      <div class="dont-throw-box"></div>
+    </section>
+
+    <!-- CLUTTER SECTION -->
+    <section class="clutter-section">
+      <div class="clutter-container">
+        <h1>Cash for Clutter Form</h1>
+        <div class="clutter-box">
+          <div class="clutter-details">
+            <div class="clutter-seller">
+              <div class="seller-heading">
+                <h2>Seller's Information </h2>
+                <h3>EDIT ACCOUNT INFORMATION</h3> 
+                <div class="underline"></div>
+              </div>
+
+              <div class="seller-content">
+                <ul class="seller-information">
+                  <li><span class="detail-label">Name:</span> Samantha De Jesus</li>
+                  <li><span class="detail-label">Contact No:</span> 09123456789</li>
+                  <li><span class="detail-label">Address:</span> General Tinio Street, Sto. Nino Gapan Nueva Ecija</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="clutter-product">
+              <div class="product-heading">
+                <h2>Product Description</h2>
+                <div class="underline"></div>
+              </div>
+
+              <div class="product-content">
+                <div class="product-left">
+                  <form id="product-form">
+                    <label for="name" id="name-label">PRODUCT NAME
+                      <input
+                        id="name"
+                        type="text"
+                        placeholder="Enter your product"
+                        required>
+                      </input>
+                    </label>
+
+                    <label for="type" id="type-label">TYPE OF JUNK
+                      <input
+                        id="type"
+                        type="text"
+                        placeholder="Pet Bottle"
+                        required>
+                      </input>
+                    </label>
+
+                    <label for="description" id="description-label">DESCRIPTION
+                      <input
+                        id="description"
+                        type="text"
+                        placeholder="Type Here">
+                      </input>
+                    </label>
+
+                    <label for="weight" id="weight-label">ESTIMATED WEIGHT (KG)
+                      <input
+                        id="weight"
+                        type="number"
+                        min="0" max="50"
+                        placeholder="4.5"
+                        required>
+                      </input>
+                    </label>
+                  </form>
+                </div>
+
+                <div class="product-right">
+                  <form id="product-form">
+                    <label for="image">PRODUCT IMAGE:
+                      <input type="file" id="image" name="image">
+                      <!-- <input type="submit" value="Submit"> -->
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="underline"></div>
+
+            <div class="clutter-submit">
+              <button class="submit-button">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer-section">
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="#" alt="Online Junkshop Logo">
+            <h5>SOME TAGLINE</h5>
+          </div>
+        </div>
+
+        <div class="footer-vertical-line"></div>
+
+        <div class="footer-right">
+          <div class="footer-contact">
+            <h3>CONTACT</h3>
+            <div class="footer-contact-container">
+              <div class="contact-details">
+                <img src="images/home/location-logo.png" alt="Location Logo"> 
+                <p id="paragraph-footer">
+                  General Tinio Street, Sto. Nino Gapan Nueva Ecija
+                </p>
+              </div>
+
+              <div class="contact-details">
+                <img src="images/home/phone-logo.png" alt="Phone Logo"> 
+                <p id="paragraph-footer">
+                  (044) 486-0527
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-details">
+              <img src="images/home/email-logo.png" alt="Email Logo"> 
+              <p id="paragraph-footer">
+                namengwebsite@gmail.com
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-about">
+            <h3>ABOUT</h3>
+
+            <div class="footer-about-container">
+              <ul>
+                <li></li><a href="index.html#story-section">Our Story</a></li>
+                <li></li><a href="about.html">About Us</a></li>
+                <li></li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-follow">
+            <h3>FOLLOW US</h3>
+            <i href="#" class="fa fa-facebook"></i>
+            <i href="#" class="fa fa-instagram"></i>
+            <i href="#" class="fa fa-twitter"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-disclaimer">
+        <h5>Copyright © 2023 {ONLINE JUNKSHOP}. All rights reserved</h5>
+      </div>
+    </section>
+
+
+
+  </div>
+</body>
+</html>
