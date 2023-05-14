@@ -6,13 +6,16 @@ body{
 }
 
 
-/* NAV */
+/*-------------------NAV-------------------*/
 
 nav{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    z-index: 999;
+    top: 0;
 }
 
 .hamburger hr{
@@ -190,6 +193,7 @@ nav{
 /*HERO or TITLE SECTION*/
 
 .title-section{
+    margin-top: 112px;
     background: url(images/home/hero.png) no-repeat center;
     width: 100%;
     height: 90vh;
@@ -370,7 +374,7 @@ nav{
 }
 .story-section .img-container{
     width: 50%;
-    height: 80vh;
+    height: 100vh;
 
 }
 
@@ -434,7 +438,7 @@ nav{
     padding: 3% 0;
     display: flex;
     flex-direction: column;
-    background:#23C686;
+    background:#198B72;
 }
 
 .recycle-container{
@@ -459,12 +463,13 @@ nav{
 
 .recycle-right{
     width: 27%;
-    background: green;
+    background: #198B72;
     height: fit-content;
     padding: 3%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-shadow: 0px 4px 10px rgba(0.25, 0.25, 0.25, 0.50);
 }
 
 .recycle-section iframe{
@@ -479,15 +484,24 @@ nav{
 
 .recycle-section h4{
     margin-top: 0;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem);
 }
 
 .recycle-section h2{
     padding-left: 5%;
     padding-right: 5%;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(1.375rem, 1.0625rem + 1vw, 1.625rem);
 }
 
 .recycle-section hr{
     margin: 0;
+    color: white;
 }
 
 .recycle-section .line{
@@ -498,12 +512,147 @@ nav{
 .recycle-section h5{
     padding-left: 5%;
     padding-right: 5%;
+    color: #fff;
+    font-size: clamp(0.75rem, 0.5938rem + 0.5vw, 0.875rem);
+}
+.recycle-section p{
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight:lighter;
+    font-size: clamp(0.9375rem, 0.7031rem + 0.75vw, 1.125rem);
 }
 
 
+/*NEWS SECTION*/
 
+.news-section{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+    background: white;
+}
 
+.news-card-container{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: space-between;
+    padding: 2% 5%;
+}
 
+.news-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.news-date{
+    display: flex;
+}
+
+.news-date img{
+   width: 25px;
+   height: 25px;
+   margin: auto 0;
+   margin-right: 10px;
+}
+
+.news-heading{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.news-button{
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.news-button button{
+    width: fit-content;
+}
+
+/*-------------------FOOTER-------------------*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer-container{
+    margin: 2% 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footer-right{
+    display: flex;
+    width: 60%;
+    gap: 50px;
+    justify-content: center;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.footer-contact{
+    display: inline-block;
+}
+
+.footer-about{
+    display: inline-block;
+}
+
+.footer-follow{
+    display: inline-block;
+}
+
+footer .contact-details{
+    display: flex;
+    gap: 5px;
+}
+
+footer .contact-details img{
+    width: 25px;
+    height: 25px;
+    margin: auto 0;
+}
+
+footer h3{
+    margin-top: 0;
+}
+
+.footer-disclaimer{
+    background: white;
+    text-align: center;
+}
+
+.footer-disclaimer h5{
+    margin: 1% 0;
+}
+
+.footer-vertical-line{
+    border-left: 3px solid green;
+    height: auto;
+    width: 2%;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer ul{
+    padding: 0;
+}
 
 @media screen and (max-width:920px) {
     nav .web-elem{
