@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* NAV */
+
+nav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger hr{
+    width: 16px;
+    margin: 4px 0px;
+    border: 1px solid green;
+}
+
+.hamburger {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+    /* NAV-TOP */
+
+    .nav-top{
+        display: flex;
+        width: 100%;
+        background: wheat;
+        justify-content: center;
+        padding: 1% 0;
+    }
+
+    .web-elem{
+        display: flex;
+        width: 75%;
+        justify-content: space-evenly;
+    }
+
+    .logo-box{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .logo-box img{
+        height: 100%;
+    }
+
+    .web-elem .wrap{
+        width: 35%;
+    }
+
+    .web-elem .search{
+        height: 100%;
+        display: flex;
+    }
+
+    .web-elem .wrap input{
+        margin: 0;
+        height: 100%;
+        padding: 0;
+        width: 90%;
+    }
+
+    .web-elem .wrap button{
+        margin: auto;
+        height: 100%;
+        width: 10%;
+    }
+
+    .web-elem .socmed-button{
+        width: 20%;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+    }
+
+    .socmed-button i{
+        width: 10%;
+        margin: auto 0;
+        text-align: center;
+    }
+
+    .web-elem .login-signup{
+        width: 20%;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+    }
+
+    /* NAV-BOT */
+    .nav-bot{
+        background: green;
+        height: fit-content;
+    }
+
+    .nav-bot li{
+        list-style: none;
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: fit-content;
+    }
+
+    .nav-bot a{
+        font-size: 1ch;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: white;
+        width: fit-content;
+    }
+
+    .nav-bot img{
+        scale: 0.5;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .nav-bot ul{
+        display: flex;
+        width: 30%;
+        margin: 0;
+        gap: 5px;
+        margin-left: 2%;
+    }
+
+
+/*-------------------HOMEPAGE-------------------*/
+
+.home{
+    background: #9BA09C;
+}
+
+
+/*HERO or TITLE SECTION*/
+
+.title-section{
+    background: url(images/home/hero.png) no-repeat center;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.title-section h1{
+    margin-top: 0;
+}
+
+.title-heading{
+    text-align: center;
+}
+
+.title-button{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (max-width:920px) {
+    nav .web-elem{
+        visibility: hidden;
+        width: 0;
+    }
+    
+    .nav-top{
+        justify-content: space-between;
+    }
+
+    .hamburger{
+        visibility: visible;
+        width: fit-content;
+        height: fit-content;
+        margin-right: 2% ;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .logo-box{
+        margin-left: 2%;
+        width: fit-content;
+    }
+
+    .nav-bot{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
