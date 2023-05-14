@@ -112,7 +112,7 @@ nav{
     }
 
     .nav-bot a{
-        font-size: 1ch;
+        font-size: 18px;
         margin-top: auto;
         margin-bottom: auto;
         color: white;
@@ -127,7 +127,7 @@ nav{
 
     .nav-bot ul{
         display: flex;
-        width: 30%;
+        width: 40%;
         margin: 0;
         gap: 5px;
         margin-left: 2%;
@@ -138,6 +138,7 @@ nav{
 
 .home{
     background: #9BA09C;
+    width: 100%;
 }
 
 
@@ -165,6 +166,64 @@ nav{
 .title-button{
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Why our clients love us */
+
+.client-section{
+    display: flex;
+    flex-direction: column;
+    background: green;
+    width: 100%;
+    padding: 2% 0 7% 0;
+    justify-content: center;
+}
+
+.client-card-container{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    text-align: center;
+    width: 29%;
+    padding: 5% 2%;
+}
+
+.client-heading{
+    width: 90%;
+    margin: auto;
+}
+
+.client-footer{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.client-section img{
+    width: 100%;
+    height: auto;
+}
+
+.client-section .img-bg{
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin: auto;
+    padding: 2%;
+}
+
+.client-card-row{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 3% 0;
+}
+
+.client-section hr{
+    width: 100%;
+    border: 1px solid white;
+    margin: 0;
 }
 
 
@@ -196,5 +255,40 @@ nav{
         visibility: hidden;
         width: 0;
         height: 0;
+    }
+
+    .title-section{
+        height: 50vh;
+    }
+
+    .client-card-row{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .client-card-container{
+        margin: auto;
+        width: 75%;
+    }
+
+    .client-heading{
+        width: 71%;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+
+    .title-section{
+        height: 40vh;
+    }
+}
+
+
+@media screen and (max-width:300px) {
+
+    .title-section{
+        height: 30vh;
     }
 }
