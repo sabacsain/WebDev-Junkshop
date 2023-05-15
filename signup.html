@@ -83,24 +83,21 @@
   <div class="signup-page">   
     <!-- JOIN US SECTION -->
     <section class="join-us-section">
-      <div class="join-us-container">
-        <img src="images/signup/joinUs.png" alt="An image containing Join Us text.">
-        <div class="box"></div>
-      
-      </div>
+      <div class="join-us-box"></div>
     </section>
 
     <!-- CREATE SECTION -->
     <section class="create-section">
+
       <div class="create-container">
-        <div class="create-heading">
-          <h1>Create Your Account</h1>
-        </div>
+
+        <h1>Create Your Account</h1>
 
         <div class="create-form">
+
           <div class="create-card">
             <h3>Personal Information</h3>
-            <div class="underline"></div>
+            <hr>
 
             <form id="signup-form">
               <label for="first-name" id="first-name-label">FIRST NAME
@@ -119,11 +116,13 @@
                   required>
               </label>
             </form>
+
           </div>
 
           <div class="create-card">
+
             <h3>Contact Information</h3>
-            <div class="underline"></div>
+            <hr>
 
             <form id="signup-form">
               <label for="phone" id="phone-label">PHONE
@@ -148,11 +147,12 @@
                   placeholder="samanthadejesus@gmail.com">
               </label>
             </form>
+
           </div>
 
           <div class="create-card">
             <h3>Address</h3>
-            <div class="underline"></div>
+            <hr>
 
             <form id="signup-form">
               <label for="address" id="address-label">ADDRESS
@@ -167,7 +167,7 @@
 
           <div class="create-card">
             <h3>Account</h3>
-            <div class="underline"></div>
+            <hr>
 
             <form id="signup-form">
               <label for="username" id="username-label">USERNAME
@@ -180,7 +180,15 @@
 
               <label for="password" id="password-label">PASSWORD
                 <input
-                  id="username"
+                  id="password"
+                  type="password"
+                  placeholder="**********"
+                  required>
+              </label>
+
+              <label for="confirm-password" id="confirm-password-label">CONFIRM PASSWORD
+                <input
+                  id="confirm-password"
                   type="password"
                   placeholder="**********"
                   required>
@@ -189,14 +197,14 @@
           </div>
 
           <div class="sign-up-footer">
-            <div class="underline"></div>
-            <button class="signup-button"></button>
+            <hr>
+            <button class="signup-button">Sign Up</button>
             <h5>Already Have an Account?   <a id="link-sign-in"href="signin.html">Sign In</a></h5>
-
           </div>
           
 
           </div>
+
         </div>
 
       </div>

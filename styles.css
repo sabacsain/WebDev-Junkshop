@@ -10,7 +10,7 @@ body{
 
 nav{
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -21,7 +21,7 @@ nav{
 .hamburger hr{
     width: 16px;
     margin: 4px 0px;
-    border: 1px solid green;
+    border: 1px solid #23C686;
 }
 
 .hamburger {
@@ -38,6 +38,7 @@ nav{
         background: #fff;
         justify-content: center;
         padding: 1% 0;
+        height: fit-content;
     }
 
     .web-elem{
@@ -128,6 +129,17 @@ nav{
         font-weight: bold;
     }
 
+    .nav-button{
+        font-family: 'Montserrat';
+        background: #23C686;
+        border-radius: 75px 75px;
+        border: none;
+        color: #fff;
+        padding: 2% 5%;
+        font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
+    }
+
+
     /* NAV-BOT */
     .nav-bot{
         background: #23C686;
@@ -172,17 +184,6 @@ nav{
         margin-left: 2%;
     }
 
-    .nav-button{
-        font-family: 'Montserrat';
-        background: #23C686;
-        border-radius: 75px 75px;
-        border: none;
-        color: #fff;
-        padding: 2% 5%;
-        font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
-    }
-
-
 /*-------------------HOMEPAGE-------------------*/
 
 .home{
@@ -193,7 +194,7 @@ nav{
 /*HERO or TITLE SECTION*/
 
 .title-section{
-    margin-top: 112px;
+    margin-top: 5%;
     background: url(images/home/hero.png) no-repeat center;
     width: 100%;
     height: 90vh;
@@ -266,14 +267,14 @@ nav{
     font-family: 'Montserrat';
     color: #fff;
     font-weight: 900;
-    font-size: clamp(2.5rem, 2.5rem + 0vw, 2.5rem);
+    font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
 }
 
 .client-section h2{
     font-family: 'Montserrat';
     color: #fff;
     font-weight: bold;
-    font-size: clamp(2.25rem, 3.0313rem + -2.5vw, 1.625rem);
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
 }
 
 .client-section .client-card-row h4{
@@ -286,6 +287,7 @@ nav{
     text-align: center;
     font-family: 'Montserrat';
     color: black;
+    font-size: clamp(0.75rem, 0.125rem + 2vw, 1.25rem);
 }
 
 .client-card-container{
@@ -293,7 +295,7 @@ nav{
     flex-direction: column;
     background: white;
     text-align: center;
-    width: 29%;
+    width: 28%;
     padding: 5% 2%;
     border: 3px solid #198B72;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -311,10 +313,6 @@ nav{
     text-align: center;
 }
 
-.client-section img{
-    width: 100%;
-    height: auto;
-}
 
 .client-section .img-bg{
     width: 100px;
@@ -323,6 +321,11 @@ nav{
     margin: auto;
     padding: 2%;
     border-radius: 75px 75px;
+}
+
+.client-section svg{
+    margin: auto;
+    height: inherit;
 }
 
 .client-card-row{
@@ -341,7 +344,7 @@ nav{
 
 .client-button{
     margin-top: 2%;
-    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     background-color: #23C686;
     color: white;
     border: none;
@@ -370,7 +373,7 @@ nav{
     font-family: 'Montserrat';
     font-weight: bold;
     color: #23C686;
-    font-size: clamp(1.75rem, 1.75rem + 0vw, 1.75rem);
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
 }
 .story-section .img-container{
     width: 50%;
@@ -400,7 +403,7 @@ nav{
 
 .story-section .read-more{
     margin-top: 10%;
-    font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
     background-color: #23C686;
     color: white;
     border: none;
@@ -418,18 +421,6 @@ nav{
 .story-section hr{
     color: #23C686;
 }
-
-/* RECYLE SECTION */
-
-.recycle-section{
-    display: flex;
-    flex-direction: column;
-}
-
-.recycle-container{
-    display: flex;
-}
-
 
 
 /* RECYLE SECTION */
@@ -487,7 +478,7 @@ nav{
     color: #fff;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem);
+    font-size: clamp(0.75rem, 0.125rem + 2vw, 1.25rem);
 }
 
 .recycle-section h2{
@@ -496,7 +487,7 @@ nav{
     color: #fff;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(1.375rem, 1.0625rem + 1vw, 1.625rem);
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
 }
 
 .recycle-section hr{
@@ -519,7 +510,7 @@ nav{
     color: #fff;
     font-family: 'Montserrat';
     font-weight:lighter;
-    font-size: clamp(0.9375rem, 0.7031rem + 0.75vw, 1.125rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
 }
 
 
@@ -535,12 +526,12 @@ nav{
     color: #23C686;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(1.375rem, 1.0625rem + 1vw, 1.625rem);
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
 }
 .news-section p{
     font-family: 'Montserrat';
     font-weight:lighter;
-    font-size: clamp(0.9375rem, 0.7031rem + 0.75vw, 1.125rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     padding-right: 7%;
     padding-left: 7%;
     text-align: justify;
@@ -592,8 +583,9 @@ nav{
     justify-content: center;
     margin-top: 5%;
 }
+
 .news-btn{
-    font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
     background-color: #23C686;
     color: white;
     border: none;
@@ -601,15 +593,336 @@ nav{
     padding: 1.5% 4%;
     font-weight:lighter;
 }
+
 .news-btn:hover{
     cursor: pointer;
     transform: scale(1.10);
     font-weight: bold;
 }
+
 .news-button button{
     width: fit-content;
 }
 
+.news-section hr{
+    color: #23C686;
+}
+
+/*-------------------SELL PAGE-------------------*/
+
+/*DON'T THROW*/
+
+.dont-throw-section{
+    background: url(images/sell/dont-throw.png) no-repeat center;   
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dont-throw-box{
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 10px;
+    width: 75%;
+    height: 75%;
+    z-index: 10;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dont-throw-text{
+    text-align: center;
+    margin: 5% auto auto auto;
+    margin-top: 13%;
+
+}
+.dont-throw-section h1{
+    font-family: 'Montserrat';
+    font-weight: 900;
+    color: #749559;
+    font-size: clamp(0.5625rem, -2.6406rem + 10.25vw, 3.125rem);
+    line-height: 0.1;
+    
+}
+.dont-throw-section h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #749559;
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    padding-bottom: 100%;
+    line-height: 0.1;
+}
+
+/*CLUTTER SECTION*/
+
+.clutter-section{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 13% 0;
+    width: 100%;
+    color: #fff;
+}
+
+.clutter-section h1{
+    background: #197C67;
+    width: fit-content;
+    padding: 2% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10%;
+    margin-bottom: 5%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+.clutter-section .submit-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 4%;
+    font-weight:lighter;
+    margin-top: 7%;
+}
+.clutter-section .submit-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
+.clutter-container{
+    display: flex;
+    flex-direction: column;
+    background: #197C67;
+    padding: 5% 15%;
+}
+.clutter-section h2{
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-weight: 900;
+}
+.clutter-section h3{
+    color: #23C686;
+    padding-left: 6%;
+    font-size: clamp(0.5625rem, -0.2969rem + 2.75vw, 1.25rem);
+}
+.clutter-section ul li span{
+    font-weight: 900;
+    padding-right: 6%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+}
+.clutter-section ul li{
+    line-height: 2;
+}
+.clutter-section hr{
+    color: white;
+    width: 100%;
+}
+
+.clutter-seller{
+    display: flex;
+    flex-direction: column;
+}
+
+.clutter-seller .seller-heading{
+    display: flex;
+}
+
+.clutter-product{
+    display: flex;
+    flex-direction: column;
+}
+
+.clutter-section .product-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+#name-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#type-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#description-label input{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    padding: 9% 9%;
+}
+#description-label {
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#weight-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#product-form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+input{
+    padding: 4% 4%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    color: #23C686;
+}
+#product-form label{
+    display: flex;
+    flex-direction: column; 
+    line-height: 3;
+}
+
+#image-form{
+    width: 45%;
+}
+
+#image-form label{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#image-form input{
+    margin: auto;
+}
+
+.clutter-submit{
+    display: flex;
+    justify-content: center;
+}
+
+/*-------------------SIGNUP-------------------*/
+
+/* JOIN US */
+
+.join-us-section{
+    background: url(images/signup/joinUs.png) no-repeat center;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    margin-top: 7%;
+    display: flex;
+
+}
+
+.join-us-box{
+    width: 90%;
+    height: 90%;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* CREATE YOUR ACCOUNT */
+
+.create-section{
+    padding: 5% 0;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+.create-section hr{
+    width: 100%;
+    color: white;
+}
+
+.create-container{
+    background: linear-gradient(180deg, #23C686 0%, #197C67 100%);
+    padding: 2% 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.create-section .create-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-section #signup-form{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+}
+
+.create-section label{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.create-section h2{
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-weight: 900;
+}
+.create-section h1{
+    background: #197C67;
+    width: fit-content;
+    padding: 2% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -7%;
+    margin-bottom: 5%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    border-radius: 10px 10px;
+}
+
+.sign-up-footer{
+    margin: auto;
+    text-align: center;
+}
+
+.sign-up-footer button{
+    margin-top: 5%;
+}
+
+.create-section input{
+    text-align: center;
+    padding: 4% 0;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    color: #23C686;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+}
+.create-section #address-label input{
+    padding: 20% 30%;
+}
+.create-section .signup-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 3%;
+    font-weight:lighter;
+    margin-top: 7%;
+}
+.create-section .signup-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
+.create-section h5{
+    color: #fff;
+    font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
+}
+.create-section a{
+    color: #fff;
+    font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
+}
 /*-------------------FOOTER-------------------*/
 
 footer{
@@ -669,11 +982,11 @@ footer .contact-details img{
 footer h3{
     margin-top: 0;
     color: #fff;
-    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
 }
 footer p{
     color: #fff;
-    font-size: clamp(0.625rem, 0.3125rem + 1vw, 0.875rem);
+    font-size: clamp(0.4375rem, 0.0469rem + 1.25vw, 0.75rem);
 }
 
 .footer-disclaimer{
@@ -688,10 +1001,11 @@ footer p{
 }
 
 .footer-vertical-line{
-    border-left: 3px solid green;
+    border-left: 1px solid white;
     height: auto;
     width: 2%;
 }
+
 footer i{
     margin-top: 15%;
     color: #23C686;
@@ -711,7 +1025,7 @@ footer a{
     text-decoration: none;
     color: #fff;
     line-height: 35px;
-    font-size: clamp(0.625rem, 0.3125rem + 1vw, 0.875rem);
+    font-size: clamp(0.4375rem, 0.0469rem + 1.25vw, 0.75rem);
 }
 
 footer li{
@@ -720,8 +1034,9 @@ footer li{
 
 footer ul{
     padding: 0;
-    padding-top: 15%;
+   padding-top: 15%;
 }
+
 
 @media screen and (max-width:920px) {
     nav .web-elem{
@@ -753,7 +1068,7 @@ footer ul{
         height: 0;
     }
 
-    .title-section{
+    .title-section, .dont-throw-section, .join-us-section{
         height: 50vh;
     }
 
@@ -800,9 +1115,31 @@ footer ul{
 }
 
 
+
+@media screen and (max-width:750px) {
+    .footer-left, .footer-vertical-line{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-container{
+        justify-content: start;
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer-right{
+        width: 100%;
+        padding: 0;
+    }
+}
+
 @media screen and (max-width:600px) {
 
-    .title-section{
+    .title-section, .dont-throw-section, .join-us-section{
         height: 40vh;
     }
 
@@ -829,12 +1166,38 @@ footer ul{
     .recycle-section h5{
         margin-top: 20%;
     }
+
+    .clutter-section .product-content{
+        flex-direction: column;
+    }
+
+    #product-form{
+        width: 75%;
+        margin: auto;
+
+    }
+
+    #image-form{
+        width: 100%;
+    }
+
+    .clutter-section h1{
+        margin-top: -13%;
+    }
+
+    .create-section label{
+        width: 50%;
+    }
 }
 
 
 @media screen and (max-width:300px) {
 
-    .title-section{
+    .title-section, .dont-throw-section, .join-us-section{
         height: 30vh;
+    }
+
+    .create-section label{
+        width: 70%;
     }
 }
