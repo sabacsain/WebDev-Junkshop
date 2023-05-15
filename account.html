@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Junkshop</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/home/#" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+<!-- BODY -->
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <!-- NAVBAR TOP -->
+    <div class="nav-top">
+      <div class="logo-box">
+        <div class="img-bg" onclick="location.href='index.html';"><img src="images/home/#" alt="Online Junkshop Logo"></div>
+      </div>
+
+      <div class="wrap">
+        <div class="search">
+          <input type="text" class="searchTerm" placeholder="  Search" style="font-family:Arial, FontAwesome">
+          </button>
+        </div>
+      </div>
+
+      <div class="socmed-button">
+        <i href="#" class="fa fa-facebook"></i>
+        <i href="#" class="fa fa-instagram"></i>
+        <i href="#" class="fa fa-twitter"></i>
+      </div>
+
+      <div class="account">
+        <div class="account-left">
+          <img src="images/sell/nav-account.png" alt="Account Logo">
+        </div>
+
+        <div class="account-right">
+          <h3 id="username-heading">helloworld123</h3>
+          <h4 id="logout-heading">logout</h4>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIGN IN PAGE -->
+  <div class="account-page">   
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome-section">
+
+      <div class="welcome-container">
+        <img src="images/account/bg-welcome.png" alt="An image containing junks.">
+        <div class="box">
+          <h1>Welcome, samanthadj!</h1>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="edit-section">
+      <div class="edit-heading">
+        <h2>Edit Profile</h2>
+      </div>
+
+      <div class="form-container">
+        <div class="form-row">
+          <h3>Personal Information</h3>
+          <hr>
+
+          <form id="edit-form">
+            <label for="first-name" id="first-name-label">FIRST NAME
+              <input
+                id="first-name"
+                type="text"
+                placeholder="SAMANTHA"
+                required>
+              </input>
+            </label>
+
+            <label for="last-name" id="last-name-label">LAST NAME
+              <input
+                id="last-name"
+                type="text"
+                placeholder="DE JESUS"
+                required>
+              </input>
+            </label>
+          </form>
+        </div>
+
+        <div class="form-row">
+          <h3>Contact Information</h3>
+          <hr>
+
+          <form id="edit-form">
+            <label for="phone" id="phone-label">PHONE
+              <input
+                id="phone"
+                type="text"
+                placeholder="09123456789"
+                required>
+              </input>
+            </label>
+
+            <label for="telephone" id="telephone-label">TELEPHONE
+              <input
+                id="telephone"
+                type="text"
+                placeholder="(044) 486-0527"
+                required>
+              </input>
+            </label>
+
+            <label for="email" id="email-label">EMAIL
+              <input
+                id="email"
+                type="text"
+                placeholder="(044) 486-0527"
+                required>
+              </input>
+            </label>
+          </form>
+        </div>
+
+        <div class="form-row">
+          <h3>Address</h3>
+          <hr>
+
+          <form id="edit-form">
+            <label for="address" id="address-label">ADDRESS
+              <input
+                id="phone"
+                type="address"
+                placeholder="General Tinio Street, Sto. Nino Gapan Nueva Ecija"
+                required>
+              </input>
+            </label>
+          </form>
+
+          <div class="account-button-container">
+            <button class="account-save-button">Save Changes</button>
+          </div>
+
+      </div>
+    </section>
+
+
+    <!-- TRANSACTION SECTION -->
+    <section class="transaction-section">
+      <div class="transaction-container">
+        
+        <div class="transaction-heading">
+          <h2>TRANSACTIONS</h2>
+        </div>
+
+        <div class="transaction-row">
+          <h4>TRANSACTION ID: 101015173</h4>
+          <h4>STATUS: <span id="transaction-completed">COMPLETED</span></h4>
+          <hr>
+
+          <ul class="transaction-information">
+            <li><span class="transaction-label">PRODUCT NAME: </span>MINERAL WATER BOTTLES</li>
+            <li><span class="transaction-label">TYPE OF JUNK: </span>PET BOTTLE</li>
+            <li><span class="transaction-label">DESCRIPTION: </span>MALINIS NA PO. BAGONG BAGO WHAT</li>
+            <li><span class="transaction-label">WEIGHT: </span>50</li>
+            <li><span class="transaction-label">PICK-UP DATE: </span>MAY 12, 2023</li>
+          </ul>
+
+          <div class="transaction-image">
+            <img src="#" alt="An image containing junks">
+          </div>
+        </div>
+
+        <hr class="transaction-underline">
+
+        <div class="transaction-row">
+          <h4>TRANSACTION ID: 101015173</h4>
+          <h4>STATUS: <span id="transaction-pending">PENDING</span></h4>
+          <hr>
+
+          <ul class="transaction-information">
+            <li><span class="transaction-label">PRODUCT NAME: </span>MINERAL WATER BOTTLES</li>
+            <li><span class="transaction-label">TYPE OF JUNK: </span>PET BOTTLE</li>
+            <li><span class="transaction-label">DESCRIPTION: </span>MALINIS NA PO. BAGONG BAGO WHAT</li>
+            <li><span class="transaction-label">WEIGHT: </span>50</li>
+            <li><span class="transaction-label">PICK-UP DATE: </span>MAY 12, 2023</li>
+          </ul>
+
+          <div class="transaction-image">
+            <img src="#" alt="An image containing junks">
+          </div>
+        </div>
+
+        <hr class="transaction-underline">
+
+        <div class="transaction-row">
+          <h4>TRANSACTION ID: 101015173</h4>
+          <h4>STATUS: <span id="transaction-cancelled">CANCELLED</span></h4>
+          <hr>
+
+          <ul class="transaction-information">
+            <li><span class="transaction-label">PRODUCT NAME: </span>MINERAL WATER BOTTLES</li>
+            <li><span class="transaction-label">TYPE OF JUNK: </span>PET BOTTLE</li>
+            <li><span class="transaction-label">DESCRIPTION: </span>MALINIS NA PO. BAGONG BAGO WHAT</li>
+            <li><span class="transaction-label">WEIGHT: </span>50</li>
+            <li><span class="transaction-label">PICK-UP DATE: </span>MAY 12, 2023</li>
+          </ul>
+
+          <div class="transaction-image">
+            <img src="#" alt="An image containing junks">
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      <div class="footer-container">
+
+        <div class="footer-left">
+            <img src="#" alt="Online Junkshop Logo">
+            <h5>SOME TAGLINE</h5>
+        </div>
+
+        <div class="footer-vertical-line"></div>
+
+        <div class="footer-right">
+
+          <div class="footer-contact">
+            <h3>CONTACT</h3>
+            <div class="footer-contact-container">
+              <div class="contact-details">
+                <img src="images/home/location-logo.png" alt="Location Logo"> 
+                <p id="paragraph-footer">
+                  General Tinio Street, Sto.<br>Nino Gapan Nueva Ecija
+                </p>
+              </div>
+
+              <div class="contact-details">
+                <img src="images/home/phone-logo.png" alt="Phone Logo"> 
+                <p id="paragraph-footer">
+                  (044) 486-0527
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-details">
+              <img src="images/home/email-logo.png" alt="Email Logo"> 
+              <p id="paragraph-footer">
+                namengwebsite@gmail.com
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-about">
+            <h3>ABOUT</h3>
+
+            <div class="footer-about-container">
+              <ul>
+                <li><a href="index.html#story-section">Our Story</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-follow">
+            <h3>FOLLOW US</h3>
+            <i href="#" class="fa fa-facebook"></i>
+            <i href="#" class="fa fa-instagram"></i>
+            <i href="#" class="fa fa-twitter"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-disclaimer">
+        <h5>Copyright © 2023 | JunKonnect | All rights reserved</h5>
+      </div>
+
+    </footer>
+
+
+
+  </div>
+</body>
+</html>
