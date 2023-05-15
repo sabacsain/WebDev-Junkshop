@@ -10,7 +10,7 @@ body{
 
 nav{
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -21,7 +21,7 @@ nav{
 .hamburger hr{
     width: 16px;
     margin: 4px 0px;
-    border: 1px solid green;
+    border: 1px solid #23C686;
 }
 
 .hamburger {
@@ -38,6 +38,7 @@ nav{
         background: #fff;
         justify-content: center;
         padding: 1% 0;
+        height: fit-content;
     }
 
     .web-elem{
@@ -128,6 +129,17 @@ nav{
         font-weight: bold;
     }
 
+    .nav-button{
+        font-family: 'Montserrat';
+        background: #23C686;
+        border-radius: 75px 75px;
+        border: none;
+        color: #fff;
+        padding: 2% 5%;
+        font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
+    }
+
+
     /* NAV-BOT */
     .nav-bot{
         background: #23C686;
@@ -172,17 +184,6 @@ nav{
         margin-left: 2%;
     }
 
-    .nav-button{
-        font-family: 'Montserrat';
-        background: #23C686;
-        border-radius: 75px 75px;
-        border: none;
-        color: #fff;
-        padding: 2% 5%;
-        font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
-    }
-
-
 /*-------------------HOMEPAGE-------------------*/
 
 .home{
@@ -193,7 +194,7 @@ nav{
 /*HERO or TITLE SECTION*/
 
 .title-section{
-    margin-top: 112px;
+    margin-top: 5%;
     background: url(images/home/hero.png) no-repeat center;
     width: 100%;
     height: 90vh;
@@ -266,14 +267,14 @@ nav{
     font-family: 'Montserrat';
     color: #fff;
     font-weight: 900;
-    font-size: clamp(2.5rem, 2.5rem + 0vw, 2.5rem);
+    font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
 }
 
 .client-section h2{
     font-family: 'Montserrat';
     color: #fff;
     font-weight: bold;
-    font-size: clamp(2.25rem, 3.0313rem + -2.5vw, 1.625rem);
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
 }
 
 .client-section .client-card-row h4{
@@ -286,6 +287,7 @@ nav{
     text-align: center;
     font-family: 'Montserrat';
     color: black;
+    font-size: clamp(0.75rem, 0.125rem + 2vw, 1.25rem);
 }
 
 .client-card-container{
@@ -293,7 +295,7 @@ nav{
     flex-direction: column;
     background: white;
     text-align: center;
-    width: 29%;
+    width: 28%;
     padding: 5% 2%;
     border: 3px solid #198B72;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -311,10 +313,6 @@ nav{
     text-align: center;
 }
 
-.client-section img{
-    width: 100%;
-    height: auto;
-}
 
 .client-section .img-bg{
     width: 100px;
@@ -323,6 +321,11 @@ nav{
     margin: auto;
     padding: 2%;
     border-radius: 75px 75px;
+}
+
+.client-section svg{
+    margin: auto;
+    height: inherit;
 }
 
 .client-card-row{
@@ -341,7 +344,7 @@ nav{
 
 .client-button{
     margin-top: 2%;
-    font-size: clamp(1rem, 1rem + 0vw, 1rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     background-color: #23C686;
     color: white;
     border: none;
@@ -370,7 +373,7 @@ nav{
     font-family: 'Montserrat';
     font-weight: bold;
     color: #23C686;
-    font-size: clamp(1.75rem, 1.75rem + 0vw, 1.75rem);
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
 }
 .story-section .img-container{
     width: 50%;
@@ -400,7 +403,7 @@ nav{
 
 .story-section .read-more{
     margin-top: 10%;
-    font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
     background-color: #23C686;
     color: white;
     border: none;
@@ -418,18 +421,6 @@ nav{
 .story-section hr{
     color: #23C686;
 }
-
-/* RECYLE SECTION */
-
-.recycle-section{
-    display: flex;
-    flex-direction: column;
-}
-
-.recycle-container{
-    display: flex;
-}
-
 
 
 /* RECYLE SECTION */
@@ -487,7 +478,7 @@ nav{
     color: #fff;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem);
+    font-size: clamp(0.75rem, 0.125rem + 2vw, 1.25rem);
 }
 
 .recycle-section h2{
@@ -496,7 +487,7 @@ nav{
     color: #fff;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(1.375rem, 1.0625rem + 1vw, 1.625rem);
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
 }
 
 .recycle-section hr{
@@ -519,7 +510,7 @@ nav{
     color: #fff;
     font-family: 'Montserrat';
     font-weight:lighter;
-    font-size: clamp(0.9375rem, 0.7031rem + 0.75vw, 1.125rem);
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
 }
 
 
@@ -531,7 +522,27 @@ nav{
     padding: 5% 0;
     background: white;
 }
-
+.news-section h2{
+    color: #23C686;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(1.5625rem, 0.7813rem + 2.5vw, 2.1875rem);
+}
+.news-section p{
+    font-family: 'Montserrat';
+    font-weight:lighter;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    padding-right: 7%;
+    padding-left: 7%;
+    text-align: justify;
+}
+.news-section h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+    padding-right: 7%;
+    padding-left: 7%;
+}
 .news-card-container{
     display: grid;
     grid-template-columns: 32% 32% 32%;
@@ -542,10 +553,15 @@ nav{
 .news-card{
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    margin-bottom: 5%;
+    
 }
 
 .news-date{
     display: flex;
+    padding-right: 7%;
+    padding-left: 7%;
 }
 
 .news-date img{
@@ -568,8 +584,28 @@ nav{
     margin-top: 5%;
 }
 
+.news-btn{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 4%;
+    font-weight:lighter;
+}
+
+.news-btn:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
+
 .news-button button{
     width: fit-content;
+}
+
+.news-section hr{
+    color: #23C686;
 }
 
 /*-------------------FOOTER-------------------*/
@@ -578,6 +614,7 @@ footer{
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: #198B72;
 }
 
 .footer-container{
@@ -598,6 +635,10 @@ footer{
     display: flex;
     flex-direction: column;
     width: 30%;
+    margin-left: 10%;
+}
+.footer-left h5{
+    color: #fff;
 }
 
 .footer-contact{
@@ -625,25 +666,51 @@ footer .contact-details img{
 
 footer h3{
     margin-top: 0;
+    color: #fff;
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
+}
+footer p{
+    color: #fff;
+    font-size: clamp(0.4375rem, 0.0469rem + 1.25vw, 0.75rem);
 }
 
 .footer-disclaimer{
-    background: white;
+    background: #23C686;
     text-align: center;
 }
 
 .footer-disclaimer h5{
     margin: 1% 0;
+    color: #fff;
+    font-size: clamp(0.625rem, 0.3125rem + 1vw, 0.875rem);
 }
 
 .footer-vertical-line{
-    border-left: 3px solid green;
+    border-left: 1px solid white;
     height: auto;
     width: 2%;
 }
 
+footer i{
+    margin-top: 15%;
+    color: #23C686;
+    border-radius: 50px 50px;
+    padding: 5% 7%;
+    background: #fff;
+    justify-content: center;
+}
+
+footer i:hover{
+    color: #fff;
+    background: #23C686;
+    cursor: pointer;
+}
+
 footer a{
     text-decoration: none;
+    color: #fff;
+    line-height: 35px;
+    font-size: clamp(0.4375rem, 0.0469rem + 1.25vw, 0.75rem);
 }
 
 footer li{
@@ -652,7 +719,9 @@ footer li{
 
 footer ul{
     padding: 0;
+   padding-top: 15%;
 }
+
 
 @media screen and (max-width:920px) {
     nav .web-elem{
@@ -730,6 +799,28 @@ footer ul{
     }
 }
 
+
+
+@media screen and (max-width:750px) {
+    .footer-left, .footer-vertical-line{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-container{
+        justify-content: start;
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer-right{
+        width: 100%;
+        padding: 0;
+    }
+}
 
 @media screen and (max-width:600px) {
 
