@@ -637,6 +637,24 @@ nav{
 .dont-throw-text{
     text-align: center;
     margin: 5% auto auto auto;
+    margin-top: 13%;
+
+}
+.dont-throw-section h1{
+    font-family: 'Montserrat';
+    font-weight: 900;
+    color: #749559;
+    font-size: clamp(0.5625rem, -2.6406rem + 10.25vw, 3.125rem);
+    line-height: 0.1;
+    
+}
+.dont-throw-section h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #749559;
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    padding-bottom: 100%;
+    line-height: 0.1;
 }
 
 /*CLUTTER SECTION*/
@@ -647,25 +665,60 @@ nav{
     background: white;
     padding: 13% 0;
     width: 100%;
+    color: #fff;
 }
 
 .clutter-section h1{
-    background: green;
+    background: #197C67;
     width: fit-content;
     padding: 2% 5%;
     margin-left: auto;
     margin-right: auto;
     margin-top: -10%;
     margin-bottom: 5%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
 }
-
+.clutter-section .submit-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 4%;
+    font-weight:lighter;
+    margin-top: 7%;
+}
+.clutter-section .submit-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
 .clutter-container{
     display: flex;
     flex-direction: column;
-    background: green;
+    background: #197C67;
     padding: 5% 15%;
 }
-
+.clutter-section h2{
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-weight: 900;
+}
+.clutter-section h3{
+    color: #23C686;
+    padding-left: 6%;
+    font-size: clamp(0.5625rem, -0.2969rem + 2.75vw, 1.25rem);
+}
+.clutter-section ul li span{
+    font-weight: 900;
+    padding-right: 6%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+}
+.clutter-section ul li{
+    line-height: 2;
+}
 .clutter-section hr{
     color: white;
     width: 100%;
@@ -689,16 +742,41 @@ nav{
     display: flex;
     justify-content: space-evenly;
 }
-
+#name-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#type-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#description-label input{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    padding: 9% 9%;
+}
+#description-label {
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#weight-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
 #product-form{
     display: flex;
     flex-direction: column;
     width: 40%;
 }
 
+.clutter-section input{
+    padding: 4% 4%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    color: #23C686;
+}
 #product-form label{
     display: flex;
     flex-direction: column; 
+    line-height: 3;
 }
 
 #image-form{
@@ -745,6 +823,8 @@ nav{
 
 .create-section{
     padding: 5% 0;
+    color: #fff;
+    font-family: 'Montserrat';
 }
 
 .create-section hr{
@@ -776,16 +856,27 @@ nav{
     flex-direction: column;
     margin: auto;
     width: 30%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 3px;
 }
-
+.create-section h2{
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-weight: 900;
+}
 .create-section h1{
-    background: green;
+    background: #197C67;
     width: fit-content;
     padding: 2% 5%;
     margin-left: auto;
     margin-right: auto;
     margin-top: -7%;
     margin-bottom: 5%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    border-radius: 10px 10px;
 }
 
 .sign-up-footer{
@@ -800,6 +891,228 @@ nav{
 .create-section input{
     text-align: center;
     padding: 4% 0;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    color: #23C686;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+}
+.create-section #address-label input{
+    padding: 20% 30%;
+}
+.create-section .signup-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 3%;
+    font-weight:lighter;
+    margin-top: 7%;
+}
+.create-section .signup-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
+.create-section h5{
+    color: #fff;
+    font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
+}
+.create-section a{
+    color: #fff;
+    font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
+}
+
+/*-------------------ACCOUNT-------------------*/
+/*WELCOME SECTION*/
+.welcome-section{
+    margin-top: 7%;
+    width: 100%;
+    height: 50vh;
+    background: url(images/account/account_banner.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+}
+
+.welcome-container{
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 10px;
+    width: 95%;
+    height: 85%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.welcome-section h1{
+    margin: auto;
+}
+
+/*EDIT SECTION*/
+.edit-section{
+    display: flex;
+    flex-direction: column;
+    background: green;
+}
+
+.edit-section hr{
+    color: white;
+    width: 100%;
+}
+
+.edit-section .form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5% 7% 5%;
+}   
+
+.edit-section label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#edit-form{
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    text-align: center;
+}
+
+.edit-section .form-row{
+    display: flex;
+    flex-direction: column;
+}
+
+#email-label input{
+    width: 100%;
+}
+
+.account-button-container{
+    margin-left: auto;
+    width: 50%;
+    display: flex;
+}
+
+.account-button-container button{
+    margin: auto;
+}
+
+.edit-row{
+    display: flex;
+}
+
+.edit-section h2{
+    background: greenyellow;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+    padding: 2% 5%;
+}
+
+/*TRANSACTION SECTION*/
+.transaction-section{
+    display: flex;
+}
+
+.transaction-container{
+    margin: 10% auto ;
+    width: 85%;
+    background: gold;
+}
+
+.transaction-container h2{
+    margin-top: 0;
+}
+
+
+.transaction-title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.transaction-row{
+    display: flex;
+    padding: 2% 10%;
+    margin-bottom: 3%;
+}
+
+.transaction-information{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transaction-row .img-container{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+}
+
+.transaction-row img{
+    width: 100%;
+    scale: 0.7;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transaction-section li{
+    list-style-type: none;
+}
+
+.transaction-section .thin-hr{
+    width: 80%;
+}
+
+.transaction-underline{
+    width: 90%;
+    border-top: 7px solid green;
+}
+
+.transaction-section h2{
+    background: green;
+    width: fit-content;
+    padding: 2% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+}
+
+/*-------------------ABOUT-------------------*/
+
+.about-page .first-section{
+    background: url(images/about/bg-welcome.png) no-repeat center;
+    background-size: cover;
+    height: 40vh;
+    margin-top: 7%;
+}
+
+.about-content{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 15%;
+}
+
+.about-content img{
+    width: 50%;
+    height: auto;
+    margin: 5% auto;
+}
+
+.about-section h2{
+    background: green;
+    width: fit-content;
+    padding: 2% 5%;
+    margin: -3% auto 0 auto;
 }
 
 /*-------------------FOOTER-------------------*/
@@ -951,6 +1264,10 @@ footer ul{
         height: 50vh;
     }
 
+    .welcome-section{
+        height: 30vh;
+    }
+
     .client-card-row{
         flex-direction: column;
         gap: 20px;
@@ -1016,6 +1333,51 @@ footer ul{
     }
 }
 
+@media screen and (max-width:720px) {
+    .transaction-row{
+        flex-direction: column;
+    }
+
+    .transaction-information{
+        width: 100%;
+    }
+
+    .transaction-section .img-container{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .transaction-container img{
+        scale: 0.6;
+    }
+
+    .transaction-row ul{
+        margin: auto;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+}
+
+@media screen and (max-width:660px) {
+    #edit-form{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .account-button-container{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .transaction-title{
+        flex-direction: column;
+    }
+}
+
+
 @media screen and (max-width:600px) {
 
     .title-section, .dont-throw-section, .join-us-section{
@@ -1067,8 +1429,17 @@ footer ul{
     .create-section label{
         width: 50%;
     }
+
+    .welcome-section, .about-page .first-section{
+        height: 20vh;
+    }
 }
 
+@media screen and (max-width:400px) {
+    #edit-form{
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width:300px) {
 
@@ -1078,5 +1449,13 @@ footer ul{
 
     .create-section label{
         width: 70%;
+    }
+
+    .welcome-section, .about-page .first-section{
+        height: 10vh;
+    }
+
+    .edit-section h3{
+        text-align: center;
     }
 }
