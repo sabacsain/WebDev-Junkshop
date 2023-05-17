@@ -767,7 +767,8 @@ nav{
     flex-direction: column;
     width: 40%;
 }
-input{
+
+.clutter-section input{
     padding: 4% 4%;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     color: #23C686;
@@ -808,7 +809,6 @@ input{
     background-size: cover;
     margin-top: 7%;
     display: flex;
-
 }
 
 .join-us-box{
@@ -923,6 +923,445 @@ input{
     color: #fff;
     font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
 }
+
+/*-------------------ACCOUNT-------------------*/
+/*WELCOME SECTION*/
+.welcome-section{
+    margin-top: 7%;
+    width: 100%;
+    height: 50vh;
+    background: url(images/account/account_banner.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+}
+
+.welcome-container{
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 10px;
+    width: 95%;
+    height: 85%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.welcome-section h1{
+    margin: auto;
+    font-size: clamp(1.375rem, -1.4375rem + 9vw, 3.625rem);
+    font-family: 'Montserrat';
+    font-weight: 900;
+	-webkit-text-stroke: 3px #198B72;
+    text-shadow: 0px 4px 4px #fff;
+}
+
+/*EDIT SECTION*/
+.edit-section{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #23C686 0%, #197C67 100%);
+}
+
+.edit-section hr{
+    color: white;
+    width: 100%;
+}
+.edit-section h3{
+    font-size: clamp(0.75rem, -0.0313rem + 2.5vw, 1.375rem);
+    color: #fff;
+}
+.edit-section .form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5% 7% 5%;
+    
+}   
+
+.edit-section label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #fff;
+    line-height: 3;
+}
+
+#edit-form{
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    text-align: center;
+}
+
+.edit-section .form-row{
+    display: flex;
+    flex-direction: column;
+}
+.edit-section input{
+    text-align: center;
+    padding: 3% 0%;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    color: #23C686;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    margin-right: 2%;
+}
+
+#email-label input{
+    width: 100%;
+    
+}
+
+.account-button-container{
+    margin-left: auto;
+    width: 50%;
+    display: flex;
+    margin-top: 5%;
+}
+
+.account-button-container button{
+    margin: auto;
+}
+.account-save-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 3%;
+    font-weight:lighter;
+    margin-top: 7%;
+}
+
+.account-save-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
+
+.edit-row{
+    display: flex;
+}
+
+.edit-section h2{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+    padding: 2% 5%;
+    background: #198B72;
+    color: #fff;
+    width: fit-content;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    
+}
+
+/*TRANSACTION SECTION*/
+.transaction-section{
+    display: flex;
+}
+
+.transaction-container{
+    margin: 10% auto ;
+    width: 85%;
+    background: white;
+}
+
+.transaction-container h2{
+    margin-top: 0;
+}
+
+
+.transaction-title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.transaction-row{
+    display: flex;
+    padding: 2% 10%;
+    margin-bottom: 3%;
+}
+
+.transaction-information{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transaction-row .img-container{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+}
+
+.transaction-row img{
+    width: 50%;
+    scale: 0.7;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transaction-section li{
+    list-style-type: none;
+    color: #197C67;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+    line-height: 3;
+}
+.transaction-section h4 span#transaction-completed{
+    color: #749559;
+}
+.transaction-section h4 span#transaction-pending{
+    color: #D3BE00;
+}
+.transaction-section h4 span#transaction-canceled{
+    color: #E22C2C;
+}
+.transaction-section li span{
+    font-weight: 900;
+}
+
+.transaction-section h4{
+    color: #197C67;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.625rem, 0rem + 2vw, 1.125rem);
+}
+
+.transaction-section .thin-hr{
+    width: 80%;
+    color:#197C67;
+}
+
+.transaction-underline{
+    width: 90%;
+    border-top: 7px solid #197C67;
+}
+
+.transaction-section h2{
+    width: fit-content;
+    padding: 2% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+
+/*-------------------ABOUT-------------------*/
+
+.about-page .first-section{
+    background: url(images/about/bg-welcome.png) no-repeat center;
+    background-size: cover;
+    height: 40vh;
+    margin-top: 7%;
+}
+
+.about-content{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 15%;
+}
+
+.about-content img{
+    width: 35%;
+    height: auto;
+    margin: 5% auto;
+}
+
+.about-section h2{
+    background: green;
+    width: fit-content;
+    padding: 2% 5%;
+    margin: -3% auto 0 auto;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+
+.about-section p{
+    color: #197C67;
+    text-align: justify;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-family: 'Montserrat';
+}
+
+/*-------------------SIGNIN-------------------*/
+.sign-in-section{
+    width: 100%;
+    height: 85vh;
+    margin-top: 7%;
+    display: flex;
+}
+
+.sign-in-left{
+    width: 50%;
+    background: url(images/signin/banner.jpg) no-repeat center;
+    height: auto;
+    background-size: cover;
+}
+
+.sign-in-left h1{
+    margin-top: 0;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(1.25rem, -1.7188rem + 9.5vw, 3.625rem);
+    line-height: 0.1;
+    -webkit-text-stroke: 3px white;
+    text-shadow: 10px 10px 7px rgb(0, 0, 0);
+}
+.sign-in-left h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: black;
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    line-height: 0.1
+;
+}
+
+.sign-in-right{
+    width: 50%;
+    display: flex;
+}
+
+.sign-in-right h2{
+    width: fit-content;
+    padding: 2% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+    background: green;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+
+.sign-in-box{
+    background: rgba(255, 255, 255, 0.37);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.sign-in-heading{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.sign-in-card{
+    margin: auto;
+    height: 80%;
+    width: 75%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px rgba(0.50, 0.50, 0.50, 0.25);
+}
+
+.sign-in-content{
+    height: 80%;
+    margin-top: auto;
+}
+.sign-in-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 3%;
+    font-weight:lighter;
+}
+
+.sign-in-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
+
+#sign-in-form{
+    text-align: center;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+#sign-in-form label{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    font-family: 'Montserrat';
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #198B72;
+    line-height: 2;
+}
+
+#sign-in-form input{
+    margin-top: 2%;
+    height: 35%;
+    box-shadow: 0px 5px 10px rgba(16, 141, 68, 0.753);
+    border: none;
+    color: #23C686;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+}
+
+.sign-in-button-container{
+    height: 25%;
+    display: flex;
+}
+
+.sign-in-button-container button{
+    margin: auto ;
+}
+
+.sign-in-section .sign-up{
+    height: 25%;
+    display: flex;
+}
+
+.sign-in-section .sign-up h5{
+    margin-top: auto;
+    margin-left: auto ;
+    margin-right: auto ;
+    color: #198B72;
+    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+}
+.sign-in-section .sign-up a{
+    color: #197C67;
+}
+
 /*-------------------FOOTER-------------------*/
 
 footer{
@@ -1038,6 +1477,13 @@ footer ul{
 }
 
 
+@media screen and (max-width:1000px) {
+    .sign-in-section{
+        height: 60vh;
+    }
+    
+}
+
 @media screen and (max-width:920px) {
     nav .web-elem{
         visibility: hidden;
@@ -1070,6 +1516,10 @@ footer ul{
 
     .title-section, .dont-throw-section, .join-us-section{
         height: 50vh;
+    }
+
+    .welcome-section{
+        height: 30vh;
     }
 
     .client-card-row{
@@ -1112,6 +1562,18 @@ footer ul{
     .story-section .read-more{
         margin-top: 0;
     }
+
+    .sign-in-left{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .sign-in-right{
+        margin: auto;
+        width: 70%;
+        height: 70%;
+    }
 }
 
 
@@ -1136,6 +1598,51 @@ footer ul{
         padding: 0;
     }
 }
+
+@media screen and (max-width:720px) {
+    .transaction-row{
+        flex-direction: column;
+    }
+
+    .transaction-information{
+        width: 100%;
+    }
+
+    .transaction-section .img-container{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .transaction-container img{
+        scale: 0.6;
+    }
+
+    .transaction-row ul{
+        margin: auto;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+}
+
+@media screen and (max-width:660px) {
+    #edit-form{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .account-button-container{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .transaction-title{
+        flex-direction: column;
+    }
+}
+
 
 @media screen and (max-width:600px) {
 
@@ -1188,8 +1695,17 @@ footer ul{
     .create-section label{
         width: 50%;
     }
+
+    .welcome-section, .about-page .first-section{
+        height: 20vh;
+    }
 }
 
+@media screen and (max-width:400px) {
+    #edit-form{
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width:300px) {
 
@@ -1199,5 +1715,13 @@ footer ul{
 
     .create-section label{
         width: 70%;
+    }
+
+    .welcome-section, .about-page .first-section{
+        height: 10vh;
+    }
+
+    .edit-section h3{
+        text-align: center;
     }
 }
