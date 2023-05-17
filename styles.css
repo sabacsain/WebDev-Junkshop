@@ -809,7 +809,6 @@ nav{
     background-size: cover;
     margin-top: 7%;
     display: flex;
-
 }
 
 .join-us-box{
@@ -948,30 +947,44 @@ nav{
 
 .welcome-section h1{
     margin: auto;
+    font-size: clamp(1.375rem, -1.4375rem + 9vw, 3.625rem);
+    font-family: 'Montserrat';
+    font-weight: 900;
+	-webkit-text-stroke: 3px #198B72;
+    text-shadow: 0px 4px 4px #fff;
 }
 
 /*EDIT SECTION*/
 .edit-section{
     display: flex;
     flex-direction: column;
-    background: green;
+    background: linear-gradient(180deg, #23C686 0%, #197C67 100%);
 }
 
 .edit-section hr{
     color: white;
     width: 100%;
 }
-
+.edit-section h3{
+    font-size: clamp(0.75rem, -0.0313rem + 2.5vw, 1.375rem);
+    color: #fff;
+}
 .edit-section .form-container{
     display: flex;
     flex-direction: column;
     padding: 2% 5% 7% 5%;
+    
 }   
 
 .edit-section label{
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #fff;
+    line-height: 3;
 }
 
 #edit-form{
@@ -985,19 +998,47 @@ nav{
     display: flex;
     flex-direction: column;
 }
+.edit-section input{
+    text-align: center;
+    padding: 3% 0%;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    color: #23C686;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    margin-right: 2%;
+}
 
 #email-label input{
     width: 100%;
+    
 }
 
 .account-button-container{
     margin-left: auto;
     width: 50%;
     display: flex;
+    margin-top: 5%;
 }
 
 .account-button-container button{
     margin: auto;
+}
+.account-save-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 3%;
+    font-weight:lighter;
+    margin-top: 7%;
+}
+
+.account-save-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
 }
 
 .edit-row{
@@ -1005,12 +1046,19 @@ nav{
 }
 
 .edit-section h2{
-    background: greenyellow;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: -3%;
     padding: 2% 5%;
+    background: #198B72;
+    color: #fff;
+    width: fit-content;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    
 }
 
 /*TRANSACTION SECTION*/
@@ -1021,7 +1069,7 @@ nav{
 .transaction-container{
     margin: 10% auto ;
     width: 85%;
-    background: gold;
+    background: white;
 }
 
 .transaction-container h2{
@@ -1058,7 +1106,7 @@ nav{
 }
 
 .transaction-row img{
-    width: 100%;
+    width: 50%;
     scale: 0.7;
     height: auto;
     margin-left: auto;
@@ -1067,24 +1115,56 @@ nav{
 
 .transaction-section li{
     list-style-type: none;
+    color: #197C67;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+    line-height: 3;
+}
+.transaction-section h4 span#transaction-completed{
+    color: #749559;
+}
+.transaction-section h4 span#transaction-pending{
+    color: #D3BE00;
+}
+.transaction-section h4 span#transaction-canceled{
+    color: #E22C2C;
+}
+.transaction-section li span{
+    font-weight: 900;
+}
+
+.transaction-section h4{
+    color: #197C67;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.625rem, 0rem + 2vw, 1.125rem);
 }
 
 .transaction-section .thin-hr{
     width: 80%;
+    color:#197C67;
 }
 
 .transaction-underline{
     width: 90%;
-    border-top: 7px solid green;
+    border-top: 7px solid #197C67;
 }
 
 .transaction-section h2{
-    background: green;
     width: fit-content;
     padding: 2% 5%;
     margin-left: auto;
     margin-right: auto;
     margin-top: -3%;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 
 /*-------------------ABOUT-------------------*/
@@ -1104,7 +1184,7 @@ nav{
 }
 
 .about-content img{
-    width: 50%;
+    width: 35%;
     height: auto;
     margin: 5% auto;
 }
@@ -1114,6 +1194,21 @@ nav{
     width: fit-content;
     padding: 2% 5%;
     margin: -3% auto 0 auto;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+
+.about-section p{
+    color: #197C67;
+    text-align: justify;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-family: 'Montserrat';
 }
 
 /*-------------------SIGNIN-------------------*/
@@ -1133,6 +1228,20 @@ nav{
 
 .sign-in-left h1{
     margin-top: 0;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(1.25rem, -1.7188rem + 9.5vw, 3.625rem);
+    line-height: 0.1;
+    -webkit-text-stroke: 3px white;
+    text-shadow: 10px 10px 7px rgb(0, 0, 0);
+}
+.sign-in-left h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: black;
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    line-height: 0.1
+;
 }
 
 .sign-in-right{
@@ -1141,12 +1250,19 @@ nav{
 }
 
 .sign-in-right h2{
-    background: greenyellow;
     width: fit-content;
     padding: 2% 5%;
     margin-left: auto;
     margin-right: auto;
     margin-top: -3%;
+    background: green;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 
 .sign-in-box{
@@ -1166,14 +1282,30 @@ nav{
     margin: auto;
     height: 80%;
     width: 75%;
-    background: green;
+    background: #fff;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 4px 4px rgba(0.50, 0.50, 0.50, 0.25);
 }
 
 .sign-in-content{
     height: 80%;
     margin-top: auto;
+}
+.sign-in-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 1.5% 3%;
+    font-weight:lighter;
+}
+
+.sign-in-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
 }
 
 #sign-in-form{
@@ -1188,11 +1320,21 @@ nav{
     display: flex;
     flex-direction: column;
     height: 50%;
+    font-family: 'Montserrat';
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #198B72;
+    line-height: 2;
 }
 
 #sign-in-form input{
     margin-top: 2%;
     height: 35%;
+    box-shadow: 0px 5px 10px rgba(16, 141, 68, 0.753);
+    border: none;
+    color: #23C686;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
 }
 
 .sign-in-button-container{
@@ -1213,7 +1355,13 @@ nav{
     margin-top: auto;
     margin-left: auto ;
     margin-right: auto ;
+    color: #198B72;
+    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
 }
+.sign-in-section .sign-up a{
+    color: #197C67;
+}
+
 /*-------------------FOOTER-------------------*/
 
 footer{
