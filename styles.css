@@ -767,7 +767,8 @@ nav{
     flex-direction: column;
     width: 40%;
 }
-input{
+
+.clutter-section input{
     padding: 4% 4%;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     color: #23C686;
@@ -923,6 +924,296 @@ input{
     color: #fff;
     font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
 }
+
+/*-------------------ACCOUNT-------------------*/
+/*WELCOME SECTION*/
+.welcome-section{
+    margin-top: 7%;
+    width: 100%;
+    height: 50vh;
+    background: url(images/account/account_banner.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+}
+
+.welcome-container{
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 10px;
+    width: 95%;
+    height: 85%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.welcome-section h1{
+    margin: auto;
+}
+
+/*EDIT SECTION*/
+.edit-section{
+    display: flex;
+    flex-direction: column;
+    background: green;
+}
+
+.edit-section hr{
+    color: white;
+    width: 100%;
+}
+
+.edit-section .form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5% 7% 5%;
+}   
+
+.edit-section label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#edit-form{
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    text-align: center;
+}
+
+.edit-section .form-row{
+    display: flex;
+    flex-direction: column;
+}
+
+#email-label input{
+    width: 100%;
+}
+
+.account-button-container{
+    margin-left: auto;
+    width: 50%;
+    display: flex;
+}
+
+.account-button-container button{
+    margin: auto;
+}
+
+.edit-row{
+    display: flex;
+}
+
+.edit-section h2{
+    background: greenyellow;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+    padding: 2% 5%;
+}
+
+/*TRANSACTION SECTION*/
+.transaction-section{
+    display: flex;
+}
+
+.transaction-container{
+    margin: 10% auto ;
+    width: 85%;
+    background: gold;
+}
+
+.transaction-container h2{
+    margin-top: 0;
+}
+
+
+.transaction-title{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.transaction-row{
+    display: flex;
+    padding: 2% 10%;
+    margin-bottom: 3%;
+}
+
+.transaction-information{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transaction-row .img-container{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+}
+
+.transaction-row img{
+    width: 100%;
+    scale: 0.7;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transaction-section li{
+    list-style-type: none;
+}
+
+.transaction-section .thin-hr{
+    width: 80%;
+}
+
+.transaction-underline{
+    width: 90%;
+    border-top: 7px solid green;
+}
+
+.transaction-section h2{
+    background: green;
+    width: fit-content;
+    padding: 2% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+}
+
+/*-------------------ABOUT-------------------*/
+
+.about-page .first-section{
+    background: url(images/about/bg-welcome.png) no-repeat center;
+    background-size: cover;
+    height: 40vh;
+    margin-top: 7%;
+}
+
+.about-content{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 15%;
+}
+
+.about-content img{
+    width: 50%;
+    height: auto;
+    margin: 5% auto;
+}
+
+.about-section h2{
+    background: green;
+    width: fit-content;
+    padding: 2% 5%;
+    margin: -3% auto 0 auto;
+}
+
+/*-------------------SIGNIN-------------------*/
+.sign-in-section{
+    width: 100%;
+    height: 85vh;
+    margin-top: 7%;
+    display: flex;
+}
+
+.sign-in-left{
+    width: 50%;
+    background: url(images/signin/banner.jpg) no-repeat center;
+    height: auto;
+    background-size: cover;
+}
+
+.sign-in-left h1{
+    margin-top: 0;
+}
+
+.sign-in-right{
+    width: 50%;
+    display: flex;
+}
+
+.sign-in-right h2{
+    background: greenyellow;
+    width: fit-content;
+    padding: 2% 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+}
+
+.sign-in-box{
+    background: rgba(255, 255, 255, 0.37);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.sign-in-heading{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.sign-in-card{
+    margin: auto;
+    height: 80%;
+    width: 75%;
+    background: green;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-content{
+    height: 80%;
+    margin-top: auto;
+}
+
+#sign-in-form{
+    text-align: center;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+#sign-in-form label{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+#sign-in-form input{
+    margin-top: 2%;
+    height: 35%;
+}
+
+.sign-in-button-container{
+    height: 25%;
+    display: flex;
+}
+
+.sign-in-button-container button{
+    margin: auto ;
+}
+
+.sign-in-section .sign-up{
+    height: 25%;
+    display: flex;
+}
+
+.sign-in-section .sign-up h5{
+    margin-top: auto;
+    margin-left: auto ;
+    margin-right: auto ;
+}
 /*-------------------FOOTER-------------------*/
 
 footer{
@@ -1038,6 +1329,13 @@ footer ul{
 }
 
 
+@media screen and (max-width:1000px) {
+    .sign-in-section{
+        height: 60vh;
+    }
+    
+}
+
 @media screen and (max-width:920px) {
     nav .web-elem{
         visibility: hidden;
@@ -1070,6 +1368,10 @@ footer ul{
 
     .title-section, .dont-throw-section, .join-us-section{
         height: 50vh;
+    }
+
+    .welcome-section{
+        height: 30vh;
     }
 
     .client-card-row{
@@ -1112,6 +1414,18 @@ footer ul{
     .story-section .read-more{
         margin-top: 0;
     }
+
+    .sign-in-left{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .sign-in-right{
+        margin: auto;
+        width: 70%;
+        height: 70%;
+    }
 }
 
 
@@ -1136,6 +1450,51 @@ footer ul{
         padding: 0;
     }
 }
+
+@media screen and (max-width:720px) {
+    .transaction-row{
+        flex-direction: column;
+    }
+
+    .transaction-information{
+        width: 100%;
+    }
+
+    .transaction-section .img-container{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .transaction-container img{
+        scale: 0.6;
+    }
+
+    .transaction-row ul{
+        margin: auto;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+}
+
+@media screen and (max-width:660px) {
+    #edit-form{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .account-button-container{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .transaction-title{
+        flex-direction: column;
+    }
+}
+
 
 @media screen and (max-width:600px) {
 
@@ -1188,8 +1547,17 @@ footer ul{
     .create-section label{
         width: 50%;
     }
+
+    .welcome-section, .about-page .first-section{
+        height: 20vh;
+    }
 }
 
+@media screen and (max-width:400px) {
+    #edit-form{
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width:300px) {
 
@@ -1199,5 +1567,13 @@ footer ul{
 
     .create-section label{
         width: 70%;
+    }
+
+    .welcome-section, .about-page .first-section{
+        height: 10vh;
+    }
+
+    .edit-section h3{
+        text-align: center;
     }
 }
