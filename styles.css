@@ -1240,8 +1240,7 @@ nav{
     font-weight: bold;
     color: black;
     font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
-    line-height: 0.1
-;
+    line-height: 0.1;
 }
 
 .sign-in-right{
@@ -1360,6 +1359,206 @@ nav{
 }
 .sign-in-section .sign-up a{
     color: #197C67;
+}
+
+
+/*-------------------CONTACT-------------------*/
+/*CONTACT US*/
+
+.contact-page{
+    background: #F2F4F3;
+}
+
+.contact-page .first-section{
+    background: url(images/contact/bg-welcome.png) no-repeat center;
+    background-size: cover;
+    height: 40vh;    
+    margin-top: 7%;
+}
+
+.contact-section h2{
+    width: fit-content;
+    padding: 2% 5%;
+    margin: -3% auto 0 auto;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+.contact-section p#paragraph-contact{
+    font-size: clamp(0.5rem, 0.0313rem + 1.5vw, 0.875rem);
+    color: #197C67;
+    font-family: 'Montserrat';
+}
+
+.contact-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 10%;
+}
+
+.contact-card{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border-radius: 10px;
+}
+
+.card-heading{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15% 20% 15%;
+}
+
+.card-heading h3{
+    background: #23C686;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5rem, -0.4375rem + 3vw, 1.25rem);
+    border-radius: 0px 0px 10px 10px;
+    width: fit-content;
+    margin: auto;
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card-heading svg{
+    margin: 25% auto 10% auto;
+    width: 25%;
+    height: auto;
+}
+
+.contact-socmed{
+    margin: auto;
+    padding-top: 50%;
+    width: 100%;
+    display: flex;
+
+}
+
+.contact-socmed i{
+    text-align: justify;
+    font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
+    width: fit-content;
+    color: #fff;  
+    margin: auto;
+}
+
+.contact-page .fa {
+    padding: 6% 8%;   
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #198B72;
+    
+  }
+
+/*MESSAGE SECTION*/
+
+.contact-page .message-section{
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.contact-page .message-heading{
+    padding: 2% 5%;
+    text-align: center;
+}
+
+.contact-page .message-heading p{
+    width: 35%;
+    margin: auto;
+    color: #197C67;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -0.4375rem + 3vw, 1.25rem);
+}
+
+.contact-page .message-form-container{
+    padding: 2% 30%;
+    display: flex;
+    flex-direction: column;
+}
+.message-heading h3{
+    font-weight: 900;
+    color: #23C686;
+    font-family: 'Montserrat';
+    font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
+}
+#message-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#message-form label{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    font-size: clamp(0.75rem, 0.125rem + 2vw, 1.25rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #197C67;
+    line-height: 2;
+}
+
+#message-form input{
+    width: 100%;
+    padding: 3% 0%;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    color: #198B72;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    margin-right: 2%;
+    
+}
+
+#message-form textarea{
+    height: 200px;
+    width: 100%;
+    padding: 3% 0%;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    color: #198B72;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    margin-right: 2%;
+}
+
+.contact-page .message-button-container{
+    width: 100%;
+    display: flex;
+    flex-direction: center;
+    padding-top: 13%;
+}
+.contact-page .message-button{
+    font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 4% 3%;
+    font-weight:lighter;
+    
+}
+
+.contact-page .message-button:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    font-weight: bold;
+}
+.contact-page button{
+    margin: auto;
 }
 
 /*-------------------FOOTER-------------------*/
@@ -1518,7 +1717,7 @@ footer ul{
         height: 50vh;
     }
 
-    .welcome-section{
+    .welcome-section, .contact-page .first-section, .about-page .first-section{
         height: 30vh;
     }
 
@@ -1574,6 +1773,11 @@ footer ul{
         width: 70%;
         height: 70%;
     }
+
+    .contact-page .message-heading p{
+        width: 75%;
+    }
+    
 }
 
 
@@ -1622,6 +1826,7 @@ footer ul{
         padding-left: 2%;
         padding-right: 2%;
     }
+
 
 }
 
@@ -1696,7 +1901,7 @@ footer ul{
         width: 50%;
     }
 
-    .welcome-section, .about-page .first-section{
+    .welcome-section, .about-page .first-section, .contact-page .first-section{
         height: 20vh;
     }
 }
@@ -1717,7 +1922,7 @@ footer ul{
         width: 70%;
     }
 
-    .welcome-section, .about-page .first-section{
+    .welcome-section, .about-page .first-section, .contact-page .first-section{
         height: 10vh;
     }
 
