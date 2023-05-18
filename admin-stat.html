@@ -8,10 +8,101 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="images/home/#" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
   
+  
+    <!-- JS -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(draw_pie_chart);
+      google.charts.setOnLoadCallback(draw_monthly_chart);
+      google.charts.setOnLoadCallback(draw_yearly_chart);
 
+      function draw_pie_chart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Junk Type", "Hours per Day"],
+          ["Plastic", 16700],
+          ["Paper", 7000],
+          ["Metal", 5430],
+          ["Electronic Waste", 9300],
+          ["Glass", 6023],
+          ["Mixed", 12003],
+        ]);
 
+        var options = {
+          title: "Junk Type Purchase",
+          colors: [
+            "264653",
+            "#2A9D8F",
+            "#E9C46A",
+            "#F4A261",
+            "#E76F51",
+            "588157",
+          ],
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("week-piechart")
+        );
+
+        chart.draw(data, options);
+      }
+
+      function draw_monthly_chart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Month", "Total Purchase Amount"],
+          ["January", 12000],
+          ["February", 14000],
+          ["March", 16000],
+          ["April", 18000],
+          ["May", 10000],
+          ["June", 12000],
+          ["July", 22000],
+          ["August", 23420],
+          ["September", 9800],
+          ["October", 12452],
+          ["November", 11111],
+          ["December", 10000],
+        ]);
+
+        var options = {
+          title: "Monthly Purchase for the Year 2022",
+          colors: ["3a5a40"],
+        };
+
+        var chart = new google.visualization.ColumnChart(
+          document.getElementById("monthly-column-graph")
+        );
+        chart.draw(data, options);
+      }
+
+      function draw_yearly_chart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "Total Purchase Amount"],
+          ["2022", 100000],
+          ["2023", 120000],
+          ["2024", 140000],
+          ["2025", 160000],
+          ["2026", 180000],
+          ["2027", 100000],
+          ["2028", 120000],
+        ]);
+
+        var options = {
+          title: "Yearly Purchase",
+          colors: ["#2A9D8F"],
+        };
+
+        var chart = new google.visualization.ColumnChart(
+          document.getElementById("yearly-column-graph")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+  
+  
+  
+  </head>
   
 
   <!-- BODY -->
@@ -74,13 +165,68 @@
           <hr> <hr> <hr>
         </div>
 
+        <!-- LOGO -->
 
       </nav>
 
-      <div></div>
-        <!-- UNDER CONSTRUCTION -->
-        <!-- CHARTS -->
+      <div class="admin-statistics">
+        <h3>this week</h3>
 
+        <!-- THIS WEEK-->
+        <div class=stat-container">
+
+          <!-- ROW 1-->
+          <div class="week-row" id="week-row1">
+
+            <!-- COMPLETED -->
+            <div class="week-card" id="week-completed">
+              <h2>Completed</h2>
+              <h1>985</h1>
+            </div>
+
+            <!-- PENDING -->
+            <div class="week-card" id="week-pending">
+              <h2>PENDING</h2>
+              <h1>985</h1>
+            </div>
+
+            <!-- CANCELED -->
+            <div class="week-card" id="week-canceled">
+              <h2>CANCELED</h2>
+              <h1>985</h1>
+            </div>
+          </div>
+
+          <!-- ROW 2 -->
+          <div class="week-row" id="week-row2">
+            
+            <!-- PIE CHART -->
+            <div class="week-card" id="week-piechart" 
+              style="width: 900px; height: 500px">
+            </div>
+
+            <!-- MOST PURCHASED -->
+            <div class="week-card" id="week-purchased"> 
+              <h2>MOST PURCHASED JUNK</h2>
+              <h1>PLASTIC</h1>
+
+              <h3>PHP 54 321</h3>
+            </div>
+          </div> 
+        </div>
+
+        <!-- MONTHLY -->
+        <div class="stat-container">
+          <h3>2023</h3>
+
+          <!-- MONTHLY GRAPH -->
+          <div id="monthly-column-graph" style="width: 900px; height: 500px"></div>
+
+          <!-- YEARLY GRAPH -->
+          <div id="yearly-column-graph" style="width: 900px; height: 500px"></div>
+        </div>
+
+      </div>
     </section>
 
 
