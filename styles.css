@@ -558,6 +558,21 @@ nav{
     
 }
 
+.news-card img{
+    width: 100%;
+    height: 55%; 
+    display: block; 
+}
+
+.news-card a{
+    padding-right: 7%;
+    padding-left: 7%;
+    text-align: justify;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    color: black;
+}
+
 .news-date{
     display: flex;
     padding-right: 7%;
