@@ -365,10 +365,11 @@ nav{
 }
 
 .story-text{
-    width: 50%;
+    width: 60%;
     padding: 5% 5%;
-
+    height: 100%;
 }
+
 .story-section h2{
     font-family: 'Montserrat';
     font-weight: bold;
@@ -377,32 +378,28 @@ nav{
 }
 .story-section .img-container{
     width: 50%;
-    height: 100vh;
 
 }
 
 .story-section img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-
+    object-fit:fill;
 }
 
 .story-section p{
     text-align: justify;
-    padding: 7% 0;
     color: black;
     font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
+    margin-bottom: 5%;
 }
 
 .story-section .btn-container{
-    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .story-section .read-more{
-    margin-top: 10%;
     font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
     background-color: #23C686;
     color: white;
@@ -511,6 +508,7 @@ nav{
     font-family: 'Montserrat';
     font-weight:lighter;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    text-align: justify;
 }
 
 
@@ -596,7 +594,6 @@ nav{
     padding-right: 5%;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
 }
 
 .news-btn{
