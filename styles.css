@@ -397,6 +397,7 @@ nav{
 .story-section .btn-container{
     display: flex;
     justify-content: center;
+    margin-top: 10%;
 }
 
 .story-section .read-more{
