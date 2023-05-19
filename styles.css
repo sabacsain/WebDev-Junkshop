@@ -1953,6 +1953,42 @@ footer ul{
     margin: auto;
 }
 
+/*-------------------ADMIN USER-------------------*/
+
+.admin-user{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.admin-user table{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse; 
+}
+
+.admin-user h2{
+    text-align: center;
+    margin-bottom: 7% ;
+}
+
+.admin-user table thead{
+    background: green;
+}
+
+.admin-user tbody tr{
+    border-bottom: 1pt solid black;
+}
+
+.admin-user tbody td{
+    padding: 5% 0;
+}
+
+
+
+
 @media screen and (max-width:1390px) {
     #week-row2{
         flex-direction: column;
