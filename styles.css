@@ -1791,6 +1791,183 @@ footer ul{
    padding-top: 15%;
 }
 
+/*-------------------ADMIN STATS-------------------*/
+
+.entire-admin{
+    display: flex;
+}
+
+.admin-dashboard{
+    background: green;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-dashboard h1{
+    margin: 0;
+}
+
+.admin-page{
+    width: 80%;
+}
+
+.admin-page{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.admin-button-nav{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.admin-button-nav button{
+    background: none;
+    border: none;
+    color: #197C67;
+    width: 15%;
+    height: auto;
+    padding: 0;
+    height: fit-content;
+    margin: auto 5px;
+    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
+    cursor: pointer;
+}
+
+.admin-button-nav .active{
+    font-weight: bold;
+}
+
+.admin-upper{
+    padding: 20% 20%;
+    text-align: center;
+}
+
+.admin-button{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-button button{
+    background: none;
+    border: none;
+    padding: 3% 0;
+}
+
+.admin-button .active{
+    background: white;
+}
+
+.admin-upper hr{
+    margin: 15% 0;
+}
+
+.logout-admin{
+    padding: 0 20% 20% 20%;
+}
+
+.logout-admin button{
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+.admin-nav{
+    height: 5vh;
+    background: greenyellow;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-nav img{
+    height: 100%;
+    width: auto;
+    margin-left: 5%;
+}
+
+.this-week{
+    border: solid brown;
+    width: fit-content;
+    padding: 0.5% 1.5%;
+    margin-left: 5%;
+}
+
+.admin-statistics{
+    margin-top: 10%;
+}
+
+#week-row1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#week-row1 .week-card{
+    text-align: center;
+    background: blue;
+    width: 32.9%;
+}
+
+#week-row2{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0;
+}
+
+.stat-container{
+    padding: 2% 5%;
+}
+
+#week-piechart{
+    width: 65.8%;
+}
+
+#week-purchased{
+    width: 32.9%;
+    background: yellow;
+    display: flex;
+}
+
+.week-purchased-text{
+    text-align: center;
+    margin: auto;
+}
+
+.yearly-monthly-container h3{
+    border: solid brown;
+    width: fit-content;
+    padding: 0.5% 5%;
+    margin-left: 5%;
+}
+
+.yearly-monthly-container{
+    margin-top: 5%;
+}
+
+.yearly-monthly-container div{
+    margin: auto;
+}
+
+@media screen and (max-width:1390px) {
+    #week-row2{
+        flex-direction: column;
+    }
+
+    #week-purchased{
+        width: 100%;
+    }
+
+    #week-piechart{
+        margin: auto;
+        width: fit-content;
+        overflow-x:visible ;
+    }
+}
 
 @media screen and (max-width:1000px) {
     .sign-in-section{
@@ -1908,7 +2085,25 @@ footer ul{
     
 }
 
+@media screen and (max-width:800px) {
+    .admin-dashboard{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
 
+    .admin-page{
+        width: 100%;
+    }
+
+    .admin-button-nav{
+        width: 80%;
+        visibility: visible;
+        height: auto;
+        display: flex;
+        justify-content: end;
+    }
+}
 
 @media screen and (max-width:750px) {
     .footer-left, .footer-vertical-line{
