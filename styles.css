@@ -522,6 +522,37 @@ nav{
     padding: 5% 0;
     background: white;
 }
+
+.home .news-card-container{
+    height: 200vh;
+}   
+
+.news-page .news-card-container{
+    height: 350vh;
+}
+
+.news-page .news-section h1{
+    width: fit-content;
+    padding: 2% 7%;
+    margin: -8% auto 5% auto;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+
+.news-bg-section{
+    background: url(images/news/news-banner.png) no-repeat center;
+    width: 100%;
+    background-size: cover;
+    height: 40vh;
+    margin-top: 7%;
+}
+
 .news-section h2{
     color: #23C686;
     font-family: 'Montserrat';
@@ -531,18 +562,21 @@ nav{
 .news-section p{
     font-family: 'Montserrat';
     font-weight:lighter;
-    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
-    padding-right: 7%;
-    padding-left: 7%;
+    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
     text-align: justify;
 }
-.news-section h3{
+
+.news-section a{
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
-    padding-right: 7%;
-    padding-left: 7%;
+    font-size: clamp(0.625rem, 0rem + 2vw, 1.125rem);
+    color: #198b72;
 }
+
+.news-section a:hover{
+    color: #23c686;
+}
+
 .news-card-container{
     display: grid;
     grid-template-columns: 32% 32% 32%;
@@ -555,21 +589,13 @@ nav{
     flex-direction: column;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
     margin-bottom: 5%;
-    
+    height: 600px;
 }
 
 .news-date{
     display: flex;
-    padding-right: 7%;
-    padding-left: 7%;
 }
 
-.news-date img{
-   width: 25px;
-   height: 25px;
-   margin: auto 0;
-   margin-right: 10px;
-}
 
 .news-heading{
     padding-left: 5%;
@@ -581,7 +607,6 @@ nav{
     padding-right: 5%;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
 }
 
 .news-btn{
@@ -590,7 +615,7 @@ nav{
     color: white;
     border: none;
     border-radius: 75px 75px;
-    padding: 1.5% 4%;
+    padding: 1.5% 3.5%;
     font-weight:lighter;
 }
 
@@ -607,6 +632,29 @@ nav{
 .news-section hr{
     color: #23C686;
 }
+ 
+.news-card img{
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.news-section h5{
+    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
+}
+
+.news-card .news-date img{
+    width: 25px;
+    height: 25px;
+    margin: auto 0;
+    margin-right: 10px;
+ }
+
+ .news-info{
+    height: 50%;
+    padding-right: 7%;
+    padding-left: 7%;
+ }
 
 /*-------------------SELL PAGE-------------------*/
 
@@ -1389,6 +1437,7 @@ nav{
     font-weight: 900;
     font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
 }
+
 .contact-section p#paragraph-contact{
     font-size: clamp(0.5rem, 0.0313rem + 1.5vw, 0.875rem);
     color: #197C67;
@@ -1561,6 +1610,111 @@ nav{
     margin: auto;
 }
 
+/*-------------------INFO-------------------*/
+
+.info-section{
+    background: #fff;
+}
+.info-section h2{
+    width: fit-content;
+    padding: 2% 5%;
+    margin: -3% auto 0 auto;
+    border-radius: 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border: none;
+    background: #198B72;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+}
+
+.info-box h3{
+    padding: 0 7%;
+    font-weight: 900;
+    color: #23C686;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+}
+.info-box #info-dont h3 {
+    color: #F28660;
+}
+
+.info-box hr{
+    width: 86%;
+}
+
+.info-container{
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+}
+
+.info-title{
+    display: flex;
+    flex-direction: column;
+    margin-left:  20px;
+    width: 80%;
+}
+.info-title p{
+    color: #197C67;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    line-height: 2;
+}
+
+.info-title h4{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-weight: 900;
+    color: #198B72;
+}
+.info-box #info-dont h4{
+    color: #F28660;
+}
+.info-box #info-dont p{
+    color: #F28660;
+}
+.info-card{
+    padding: 5% 0;
+    display: flex;
+}
+
+.info-card svg{
+    width: 20%;
+}
+
+.info-box table{
+    margin: auto;
+    width: 100%;
+    padding: 0 7%;
+    margin: 2% 0;
+}
+
+.info-box table thead tr{
+    background: #23C686;
+    color: #fff;
+    font-size: clamp(0.5rem, -0.4375rem + 3vw, 1.25rem);
+    font-weight: 900;
+    font-family: 'Montserrat';
+    line-height: 3;
+}
+
+.info-box table tbody tr{
+    background: #CCCCCC;
+    color: #198B72;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+    line-height: 3;
+}
+.info-box table tbody td:nth-child(2){
+   text-align: center;
+}
+
+
 /*-------------------FOOTER-------------------*/
 
 footer{
@@ -1675,10 +1829,298 @@ footer ul{
    padding-top: 15%;
 }
 
+/*-------------------ADMIN STATS-------------------*/
+
+.entire-admin{
+    display: flex;
+}
+
+.admin-dashboard{
+    background: #197C67;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.admin-dashboard h1{
+    margin: 0;
+    color: #fff;
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+    font-weight: 900;
+}
+
+.admin-page{
+    width: 80%;
+}
+
+.admin-page{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.admin-button-nav{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.admin-button-nav button{
+    background: none;
+    border: none;
+    color: #198B72;
+    width: 15%;
+    height: auto;
+    padding: 0;
+    height: fit-content;
+    margin: auto 5px;
+    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.admin-button-nav .active{
+    font-weight: bold;
+}
+
+.admin-upper{
+    padding: 20% 20%;
+    text-align: center;
+}
+
+.admin-button{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-button button{
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 3% 0;
+}
+.admin-button button:hover{
+    color: #197C67;
+    background: #fff;
+}
+
+.admin-button .active{
+    background: white;
+    color: #198B72;
+}
+
+.admin-upper hr{
+    margin: 15% 0;
+}
+.admin-statistics h3{
+    color: #198B72;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+.logout-admin{
+    padding: 0 20% 20% 20%;
+}
+
+.logout-admin button{
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.admin-nav{
+    height: 5vh;
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-nav img{
+    height: 100%;
+    width: auto;
+    margin-left: 5%;
+}
+
+.this-week{
+    border: solid #198B72;
+    width: fit-content;
+    padding: 0.5% 1.5%;
+    margin-left: 5%;
+}
+
+.admin-statistics{
+    margin-top: 10%;
+}
+
+#week-row1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#week-row1 .week-card{
+    text-align: center;
+    background: #749559;
+    width: 32.9%;
+}
+.week-card#week-purchased h3{
+    font-size: clamp(0.5rem, -0.5938rem + 3.5vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 5% 5%;
+    font-weight:lighter;
+    margin-top: 25%;
+    font-family: 'Montserrat';
+}
+.week-card#week-purchased h2{
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    font-weight: 900;
+    font-family: 'Montserrat';
+}
+.week-card#week-purchased h1{
+    font-size: clamp(0.5rem, -1.5313rem + 6.5vw, 2.125rem);
+    font-weight: 900;
+    font-family: 'Montserrat';
+}
+.week-row#week-row1 h2{
+    font-size: clamp(0.5rem, -0.6719rem + 3.75vw, 1.4375rem);
+}
+.week-card#week-completed{
+    background: #749559;
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+}
+.week-card#week-pending{
+    background: #D3BE00;
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+}
+.week-card#week-canceled{
+    background: rgba(226, 44, 44, 67%);
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+}
+#week-row2{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0;
+}
+
+.stat-container{
+    padding: 2% 5%;
+    color: #fff;
+}
+
+#week-piechart{
+    width: 65.8%;
+}
+
+#week-purchased{
+    width: 32.9%;
+    background: #197C67;
+    display: flex;
+}
+
+.week-purchased-text{
+    text-align: center;
+    margin: auto;
+}
+
+.yearly-monthly-container h3{
+    border: solid #198B72;
+    width: fit-content;
+    padding: 0.5% 5%;
+    margin-left: 5%;
+}
+
+.yearly-monthly-container{
+    margin-top: 5%;
+}
+
+.yearly-monthly-container div{
+    margin: auto;
+}
+
+/*-------------------ADMIN USER-------------------*/
+
+.admin-user{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    color: #198B72;
+}
+
+.admin-user table{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse; 
+}
+
+.admin-user h2{
+    text-align: center;
+    margin-bottom: 7% ;
+    font-size: clamp(0.5rem, -1.375rem + 6vw, 2rem);
+    font-weight: 900;
+    color: #198B72;
+    text-shadow: 0px 4px 4px #fff;
+}
+
+.admin-user table thead{
+    background: #E5E9E1;
+    line-height: 5;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+}
+
+.admin-user tbody tr{
+    border-bottom: 1pt solid #198B72;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+}
+
+.admin-user tbody td{
+    padding: 5% 0;
+}
+
+
+
+
+@media screen and (max-width:1390px) {
+    #week-row2{
+        flex-direction: column;
+    }
+
+    #week-purchased{
+        width: 100%;
+    }
+
+    #week-piechart{
+        margin: auto;
+        width: fit-content;
+        overflow-x:visible ;
+    }
+}
 
 @media screen and (max-width:1000px) {
     .sign-in-section{
         height: 60vh;
+    }
+
+    .news-page .news-card-container{
+        height: 300vh;
+    }
+
+    .home .news-card-container{
+        height: 150vh;
     }
     
 }
@@ -1717,7 +2159,7 @@ footer ul{
         height: 50vh;
     }
 
-    .welcome-section, .contact-page .first-section, .about-page .first-section{
+    .welcome-section, .contact-page .first-section, .about-page .first-section, .news-bg-section{
         height: 30vh;
     }
 
@@ -1777,10 +2219,32 @@ footer ul{
     .contact-page .message-heading p{
         width: 75%;
     }
+
+    .info-container{
+        grid-template-columns: 100%;
+    }
     
 }
 
+@media screen and (max-width:800px) {
+    .admin-dashboard{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
 
+    .admin-page{
+        width: 100%;
+    }
+
+    .admin-button-nav{
+        width: 80%;
+        visibility: visible;
+        height: auto;
+        display: flex;
+        justify-content: end;
+    }
+}
 
 @media screen and (max-width:750px) {
     .footer-left, .footer-vertical-line{
@@ -1827,6 +2291,10 @@ footer ul{
         padding-right: 2%;
     }
 
+    .news-card .news-date img{
+        width: 20px;
+        height: 20px;
+    }
 
 }
 
@@ -1846,6 +2314,8 @@ footer ul{
     .transaction-title{
         flex-direction: column;
     }
+
+    
 }
 
 
@@ -1901,7 +2371,7 @@ footer ul{
         width: 50%;
     }
 
-    .welcome-section, .about-page .first-section, .contact-page .first-section{
+    .welcome-section, .about-page .first-section, .contact-page .first-section, .news-bg-section{
         height: 20vh;
     }
 }
@@ -1909,6 +2379,11 @@ footer ul{
 @media screen and (max-width:400px) {
     #edit-form{
         flex-direction: column;
+    }
+    
+    .news-card .news-date img{
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -1922,7 +2397,7 @@ footer ul{
         width: 70%;
     }
 
-    .welcome-section, .about-page .first-section, .contact-page .first-section{
+    .welcome-section, .about-page .first-section, .contact-page .first-section, .news-bg-section{
         height: 10vh;
     }
 
