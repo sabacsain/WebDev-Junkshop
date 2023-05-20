@@ -994,8 +994,9 @@ nav{
     border-radius: 10px 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
     border: none;
-    color: #23C686;
+    color: #197C67;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    margin-bottom: 10%;
 }
 .create-section #address-label input{
     padding: 20% 30%;
@@ -1566,6 +1567,10 @@ nav{
     
   }
 
+.contact-page hr{
+    color: #23C686;
+}
+
 /*MESSAGE SECTION*/
 
 .contact-page .message-section{
@@ -1666,12 +1671,16 @@ nav{
 
 /*-------------------INFO-------------------*/
 
-.info-section{
-    background: #fff;
+.faq-page hr{
+    color: #23C686;
+}
+
+.faq-page .hr-2nd{
+    color: #F28660;
 }
 
 .faq-section{
-    background: url(images/contact/bg-welcome.png) no-repeat center;
+    background: url(images/faq/faq-banner.jpg) no-repeat center;
     background-size: cover;
     height: 40vh;    
     margin-top: 7%;
@@ -1777,6 +1786,9 @@ nav{
    text-align: center;
 }
 
+.info-box{
+    padding-top: 5% ;
+}
 /*-------------------FOOTER-------------------*/
 
 footer{
@@ -2274,7 +2286,7 @@ footer ul{
     }
 
     .title-section, .dont-throw-section, .join-us-section{
-        height: 50vh;
+        height: 40vh;
     }
 
     .welcome-section, .contact-page .first-section, .about-page .first-section, .news-bg-section{
@@ -2445,7 +2457,7 @@ footer ul{
 @media screen and (max-width:600px) {
 
     .title-section, .dont-throw-section, .join-us-section{
-        height: 40vh;
+        height: 30vh;
     }
 
     .story-section .img-container{
@@ -2513,7 +2525,7 @@ footer ul{
 @media screen and (max-width:300px) {
 
     .title-section, .dont-throw-section, .join-us-section{
-        height: 30vh;
+        height: 20vh;
     }
 
     .create-section label{
