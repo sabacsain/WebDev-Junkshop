@@ -1471,7 +1471,7 @@ nav{
 }
 
 .contact-page .first-section{
-    background: url(images/contact/bg-welcome.png) no-repeat center;
+    background: url(images/contact/contact-banner.jpg) no-repeat center;
     background-size: cover;
     height: 40vh;    
     margin-top: 7%;
@@ -1492,7 +1492,7 @@ nav{
 }
 
 .contact-section p#paragraph-contact{
-    font-size: clamp(0.5rem, 0.0313rem + 1.5vw, 0.875rem);
+    font-size: clamp(0.4375rem, -0.1094rem + 1.75vw, 0.875rem);
     color: #197C67;
     font-family: 'Montserrat';
 }
@@ -1649,7 +1649,7 @@ nav{
     color: white;
     border: none;
     border-radius: 75px 75px;
-    padding: 4% 3%;
+    padding: 2% 5%;
     font-weight:lighter;
     
 }
@@ -1770,6 +1770,7 @@ nav{
 /*-------------------FOOTER-------------------*/
 
 footer{
+    bottom: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
