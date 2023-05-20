@@ -62,6 +62,7 @@ nav{
 
     .logo-box .img-bg{
         margin-left: 10%;
+        cursor: pointer;
     }
 
     .logo-box img{
@@ -1668,6 +1669,14 @@ nav{
 .info-section{
     background: #fff;
 }
+
+.faq-section{
+    background: url(images/contact/bg-welcome.png) no-repeat center;
+    background-size: cover;
+    height: 40vh;    
+    margin-top: 7%;
+}
+
 .info-section h2{
     width: fit-content;
     padding: 2% 5%;
@@ -1681,6 +1690,7 @@ nav{
     font-weight: 900;
     font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
 }
+
 
 .info-box h3{
     padding: 0 7%;
