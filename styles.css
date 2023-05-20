@@ -2,9 +2,13 @@
 
 body{
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
 }
 
+*{
+    font-family: 'Montserrat', sans-serif;
+    outline-color: #197C67;
+
+}
 
 /*-------------------NAV-------------------*/
 
@@ -915,10 +919,11 @@ nav{
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 30%;
+    width: 100%; 
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    margin: 10px 0px;
 }
 .create-section h2{
     font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
@@ -927,16 +932,16 @@ nav{
 .create-section h1{
     background: #197C67;
     width: fit-content;
-    padding: 2% 5%;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -7%;
     margin-bottom: 5%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
-    border-radius: 10px 10px;
+    font-size: clamp(1rem, -0.6094rem + 3.75vw, 1.5rem);
+    border-radius: 8px;
 }
 
 .sign-up-footer{
@@ -950,15 +955,19 @@ nav{
 
 .create-section input{
     text-align: center;
-    padding: 4% 0;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     color: #23C686;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    width:  80%;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 10px;
 }
 .create-section #address-label input{
-    padding: 20% 30%;
+    padding: 20px;
 }
 .create-section .signup-button{
     font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
@@ -966,9 +975,10 @@ nav{
     color: white;
     border: none;
     border-radius: 75px 75px;
-    padding: 1.5% 3%;
+    padding: 10px 20px;
     font-weight:lighter;
     margin-top: 7%;
+    
 }
 .create-section .signup-button:hover{
     cursor: pointer;
@@ -977,11 +987,11 @@ nav{
 }
 .create-section h5{
     color: #fff;
-    font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
+    font-size: clamp(0.8rem, -0.125rem + 2vw, 1rem);
 }
 .create-section a{
     color: #fff;
-    font-size: clamp(0.5625rem, 0.1719rem + 1.25vw, 0.875rem);
+    font-size: clamp(0.8rem, -0.125rem + 2vw, 1rem);
 }
 
 /*-------------------ACCOUNT-------------------*/
@@ -1069,7 +1079,7 @@ nav{
     margin-right: 2%;
 }
 
-#email-label input{
+.edit-section #email-label input{
     width: 100%;
     
 }
@@ -1282,7 +1292,6 @@ nav{
 .sign-in-left{
     width: 50%;
     background: url(images/signin/banner.jpg) no-repeat center;
-    height: auto;
     background-size: cover;
 }
 
@@ -1310,18 +1319,19 @@ nav{
 
 .sign-in-right h2{
     width: fit-content;
-    padding: 2% 5%;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -3%;
     background: green;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
+    border-radius: 8px;
     background: #198B72;
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-size: clamp(1rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 
 .sign-in-box{
@@ -1339,12 +1349,13 @@ nav{
 
 .sign-in-card{
     margin: auto;
-    height: 80%;
+    height: fit-content;
     width: 75%;
     background: #fff;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 4px 4px rgba(0.50, 0.50, 0.50, 0.25);
+    border-radius: 8px;
 }
 
 .sign-in-content{
@@ -1357,7 +1368,7 @@ nav{
     color: white;
     border: none;
     border-radius: 75px 75px;
-    padding: 1.5% 3%;
+    padding: 10px 20px;
     font-weight:lighter;
 }
 
@@ -1372,7 +1383,7 @@ nav{
     padding: 0 15%;
     display: flex;
     flex-direction: column;
-    height: 50%;
+    margin-bottom: 20px;
 }
 
 #sign-in-form label{
@@ -1385,13 +1396,18 @@ nav{
     letter-spacing: 2px;
     color: #198B72;
     line-height: 2;
+    height: fit-content;
+    margin-top: 10px;
+    
 }
 
 #sign-in-form input{
     margin-top: 2%;
     height: 35%;
-    box-shadow: 0px 5px 10px rgba(16, 141, 68, 0.753);
-    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border: 1px solid #23C686;
+    border-radius: 5px;
     color: #23C686;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
 }
@@ -1399,6 +1415,7 @@ nav{
 .sign-in-button-container{
     height: 25%;
     display: flex;
+    padding: 20px;
 }
 
 .sign-in-button-container button{
@@ -1415,7 +1432,7 @@ nav{
     margin-left: auto ;
     margin-right: auto ;
     color: #198B72;
-    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+    font-size: clamp(0.8rem, -0.125rem + 2vw, 1rem);
 }
 .sign-in-section .sign-up a{
     color: #197C67;
@@ -2151,7 +2168,7 @@ footer ul{
 
 @media screen and (max-width:1000px) {
     .sign-in-section{
-        height: 60vh;
+        /* height: 60vh; */
     }
 
     .news-page .news-card-container{
@@ -2243,18 +2260,27 @@ footer ul{
         margin-top: 0;
     }
 
+
+    .sign-in-section{
+        display: block;
+        height: fit-content;
+    }
     .sign-in-left{
-        width: 0;
-        height: 0;
-        visibility: hidden;
+        width:100%;
+        height: 30vh;
     }
 
     .sign-in-right{
         margin: auto;
-        width: 70%;
-        height: 70%;
+        width: calc(100% - 20px);
+        height: fit-content;
+        padding: 10px;
     }
 
+    .sign-in-card{
+        width: 90%;
+        padding: 20px;        
+    }
     .contact-page .message-heading p{
         width: 75%;
     }
@@ -2406,8 +2432,12 @@ footer ul{
         margin-top: -13%;
     }
 
+    .create-section h3{
+        text-align: center;
+    }
+
     .create-section label{
-        width: 50%;
+        width: 100%;
     }
 
     .welcome-section, .about-page .first-section, .contact-page .first-section, .news-bg-section{
@@ -2433,7 +2463,7 @@ footer ul{
     }
 
     .create-section label{
-        width: 70%;
+        width: 100%;
     }
 
     .welcome-section, .about-page .first-section, .contact-page .first-section, .news-bg-section{
