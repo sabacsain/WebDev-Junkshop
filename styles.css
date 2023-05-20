@@ -1103,7 +1103,7 @@ nav{
     border-radius: 10px 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
     border: none;
-    color: #23C686;
+    color: #197C67;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     margin-right: 2%;
 }
@@ -1161,22 +1161,25 @@ nav{
 }
 
 /*TRANSACTION SECTION*/
-.transaction-section{
+.account-page .transaction-section{
     display: flex;
 }
 
-.transaction-container{
+.account-page .transaction-container{
     margin: 10% auto ;
     width: 85%;
     background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    height: fit-content;
 }
 
-.transaction-container h2{
+.account-page .transaction-container h2{
     margin-top: 0;
 }
 
 
-.transaction-title{
+.account-page .transaction-title{
     display: flex;
     justify-content: space-between;
     padding-left: 10%;
@@ -1184,13 +1187,13 @@ nav{
     padding-top: 3%;
 }
 
-.transaction-row{
+.account-page .transaction-row{
     display: flex;
     padding: 2% 10%;
     margin-bottom: 3%;
 }
 
-.transaction-information{
+.account-page .transaction-information{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -1198,21 +1201,20 @@ nav{
     margin-right: auto;
 }
 
-.transaction-row .img-container{
+.account-page .transaction-row .img-container{
     width: 50%;
     display: flex;
     justify-content: start;
 }
 
-.transaction-row img{
-    width: 50%;
-    scale: 0.7;
-    height: auto;
+.account-page .transaction-row img{
+    width: auto;
+    height: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.transaction-section li{
+.account-page .transaction-section li{
     list-style-type: none;
     color: #197C67;
     font-family: 'Montserrat';
@@ -1220,37 +1222,37 @@ nav{
     font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
     line-height: 3;
 }
-.transaction-section h4 span#transaction-completed{
+.account-page .transaction-section h4 span#transaction-completed{
     color: #749559;
 }
-.transaction-section h4 span#transaction-pending{
+.account-page .transaction-section h4 span#transaction-pending{
     color: #D3BE00;
 }
-.transaction-section h4 span#transaction-canceled{
+.account-page .transaction-section h4 span#transaction-canceled{
     color: #E22C2C;
 }
-.transaction-section li span{
+.account-page .transaction-section li span{
     font-weight: 900;
 }
 
-.transaction-section h4{
+.account-page .transaction-section h4{
     color: #197C67;
     font-family: 'Montserrat';
     font-weight: 900;
     font-size: clamp(0.625rem, 0rem + 2vw, 1.125rem);
 }
 
-.transaction-section .thin-hr{
+.account-page .transaction-section .thin-hr{
     width: 80%;
     color:#197C67;
 }
 
-.transaction-underline{
+.account-page .transaction-underline{
     width: 90%;
     border-top: 7px solid #197C67;
 }
 
-.transaction-section h2{
+.account-page .transaction-section h2{
     width: fit-content;
     padding: 2% 5%;
     margin-left: auto;
@@ -2418,6 +2420,11 @@ footer ul{
 
     .transaction-title{
         flex-direction: column;
+        text-align: center;
+    }
+
+    .transaction-row .img-container{
+        margin: auto;
     }
 
     
