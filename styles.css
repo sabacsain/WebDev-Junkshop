@@ -1952,6 +1952,18 @@ footer ul{
     width: 80%;
 }
 
+.admin-page .logo-container{
+    height: 100%;
+    width: 20%;
+    display: flex;
+}
+
+.admin-page .logo-container img{
+    object-fit: cover;
+    height: 100%;
+    margin: auto;
+}
+
 .admin-page{
     height: 100vh;
     overflow-y: scroll;
@@ -1975,6 +1987,10 @@ footer ul{
     font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
     cursor: pointer;
     font-family: 'Montserrat';
+}
+
+.admin-button-nav button:hover{
+    font-style: italic;
 }
 
 .admin-button-nav .active{
@@ -2031,6 +2047,7 @@ footer ul{
 }
 
 .admin-nav{
+    box-shadow: 0 4px 3px -1px gray;
     height: 5vh;
     background: white;
     position: fixed;
@@ -2176,12 +2193,12 @@ footer ul{
 .admin-user table thead{
     background: #E5E9E1;
     line-height: 5;
-    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
 .admin-user tbody tr{
     border-bottom: 1pt solid #198B72;
-    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
 .admin-user tbody td{
@@ -2214,14 +2231,20 @@ footer ul{
 .admin-transactions h2{
     text-align: center;
     margin-bottom: 7% ;
+    font-size: clamp(0.5rem, -1.375rem + 6vw, 2rem);
+    font-weight: 900;
+    color: #198B72;
+    text-shadow: 0px 4px 4px #fff;
 }
 
 .admin-transactions table thead{
-    background: green;
+    background: #E5E9E1;
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
 .admin-transactions tbody tr{
-    border-bottom: 1pt solid black;
+    border-bottom: 1pt solid #198B72;
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
 .admin-transactions tbody td{
@@ -2230,6 +2253,14 @@ footer ul{
 
 .admin-transactions img{
     scale: 0.5;
+}
+
+.admin-transactions th{
+    padding: 0 5%;
+}
+
+.admin-transactions td{
+    width: 500px;
 }
 
 @media screen and (max-width:1390px) {
