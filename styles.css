@@ -529,6 +529,7 @@ nav{
     flex-direction: column;
     padding: 5% 0;
     background: white;
+    height: fit-content;
 }
 
 .news-page .news-bg-section{
@@ -542,22 +543,18 @@ nav{
     height: 200vh;
 }   
 
-.news-page .news-card-container{
-    height: 350vh;
-}
-
 .news-page .news-section h1{
     width: fit-content;
     padding: 2% 7%;
     margin: -8% auto 5% auto;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     background: #198B72;
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-size: clamp(1rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 
 .news-bg-section{
@@ -577,14 +574,14 @@ nav{
 .news-section p{
     font-family: 'Montserrat';
     font-weight:lighter;
-    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
+    font-size: clamp(0.7rem, -0.1875rem + 2vw, 0.9375rem);
     text-align: justify;
 }
 
 .news-section a{
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(0.625rem, 0rem + 2vw, 1.125rem);
+    font-size: clamp(0.9rem, 0rem + 2vw, 1.125rem);
     color: #198b72;
 }
 
@@ -602,7 +599,8 @@ nav{
 .news-card{
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
     margin-bottom: 5%;
     height: 600px;
 }
@@ -656,7 +654,7 @@ nav{
 }
 
 .news-section h5{
-    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
+    font-size: clamp(0.7rem, -0.1875rem + 2vw, 0.9375rem);
 }
 
 .news-card .news-date img{
@@ -2167,12 +2165,9 @@ footer ul{
 }
 
 @media screen and (max-width:1000px) {
-    .sign-in-section{
-        /* height: 60vh; */
-    }
-
+   
     .news-page .news-card-container{
-        height: 300vh;
+        height: fit-content;
     }
 
     .home .news-card-container{
@@ -2443,6 +2438,12 @@ footer ul{
     .welcome-section, .about-page .first-section, .contact-page .first-section, .news-bg-section{
         height: 20vh;
     }
+
+    .news-card-container{
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+        justify-content: center;
+    }    
 }
 
 @media screen and (max-width:400px) {
@@ -2453,6 +2454,11 @@ footer ul{
     .news-card .news-date img{
         width: 15px;
         height: 15px;
+    }
+
+    .news-card-container{
+        grid-template-columns: 90%;
+        gap: 10px;
     }
 }
 
