@@ -808,7 +808,7 @@ nav{
 
 .clutter-section .product-content{
     display: flex;
-    justify-content: space-evenly;
+    margin-left: 5%;
 }
 #name-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
@@ -824,11 +824,14 @@ nav{
     position: relative;
     display: inline-block;
     width: 200px;
-    height: 45px;
+    height: 55px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
-    overflow: hidden;
+    font-family: 'Montserrat';
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    padding: 4% ;
+    color: #23C686;
 }
 #description-label input{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
@@ -842,6 +845,14 @@ nav{
 #weight-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
+}
+#image-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#image-label input{
+    padding: 2% 0 ;
 }
 #product-form{
     display: flex;
@@ -860,19 +871,7 @@ nav{
     line-height: 3;
 }
 
-#image-form{
-    width: 45%;
-}
 
-#image-form label{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-#image-form input{
-    margin: auto;
-}
 
 .clutter-submit{
     display: flex;
