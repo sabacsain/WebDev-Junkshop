@@ -1733,9 +1733,9 @@ nav{
 
 }
 
-.info-box table tbody td{
-   text-align: center;
-}
+.info-box table tbody td:nth-child(2){
+    text-align: center;
+ }
 
 .info-box table tbody tr:nth-child(even) {
     background-color: #EAFBF3;
