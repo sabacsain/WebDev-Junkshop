@@ -38,24 +38,24 @@ nav{
         background: #fff;
         justify-content: center;
         padding: 1% 0;
-        height: fit-content;
     }
 
     .web-elem{
         display: flex;
         width: 75%;
-        justify-content: space-evenly;
+        justify-content:flex-end;
     }
 
     .logo-box{
         width: 20%;
         display: flex;
         justify-content: center;
-        height: fit-content;
+        align-items: center;
     }
 
     .logo-box img{
-        height: 100%;
+        width: 55%;
+        margin-left: 35px;
     }
 
     .web-elem .wrap{
@@ -120,6 +120,7 @@ nav{
         justify-content: center;
         display: flex;
         gap: 10px;
+        
     }
 
     .nav-button:hover{
@@ -203,6 +204,7 @@ nav{
     justify-content: center;
     gap: 30px;
     padding: 2% 0;
+
 }
 
 .title-section h1{
@@ -224,6 +226,10 @@ nav{
 .title-heading{
     text-align: center;
     line-height: 100%;
+}
+
+.title-inline{
+    color: #9eaa58;
 }
 
 .title-button{
@@ -519,6 +525,13 @@ nav{
     flex-direction: column;
     padding: 5% 0;
     background: white;
+}
+
+.news-page .news-bg-section{
+    background: url(images/news/bg-news.png) no-repeat center;
+    background-size: cover;
+    height: 40vh;    
+    margin-top: 7%;
 }
 
 .home .news-card-container{
@@ -1611,8 +1624,15 @@ nav{
 
 /*-------------------INFO-------------------*/
 
-.info-section{
+.info-page{
     background: #fff;
+}
+
+.info-page .first-section{
+    background: url(images/contact/bg-welcome.png) no-repeat center;
+    background-size: cover;
+    height: 40vh;    
+    margin-top: 7%;
 }
 .info-section h2{
     width: fit-content;
@@ -1699,19 +1719,29 @@ nav{
     font-weight: 900;
     font-family: 'Montserrat';
     line-height: 3;
+
 }
 
 .info-box table tbody tr{
-    background: #CCCCCC;
+    background: white;
     color: #198B72;
     font-weight: 900;
     font-family: 'Montserrat';
     font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
     line-height: 3;
+    padding: 10px 10px;
+
 }
-.info-box table tbody td:nth-child(2){
+
+.info-box table tbody td{
    text-align: center;
 }
+
+.info-box table tbody tr:nth-child(even) {
+    background-color: #EAFBF3;
+}
+  
+
 
 
 /*-------------------FOOTER-------------------*/
@@ -1743,8 +1773,18 @@ footer{
     width: 30%;
     margin-left: 10%;
 }
+
 .footer-left h5{
     color: #fff;
+    font-size: large;
+    font-weight: 900;
+    margin-top: 25px;
+}
+
+.footer-left img{
+    margin-right: auto;
+    height: 100%;
+    width: 70%;
 }
 
 .footer-contact{
