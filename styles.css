@@ -749,7 +749,7 @@ nav{
     border-radius: 75px 75px;
     padding: 1.5% 4%;
     font-weight:lighter;
-    margin-top: 7%;
+    margin-top: 4%;
 }
 .clutter-section .submit-button:hover{
     cursor: pointer;
@@ -771,13 +771,19 @@ nav{
     padding-left: 6%;
     font-size: clamp(0.5625rem, -0.2969rem + 2.75vw, 1.25rem);
 }
-.clutter-section ul li span{
-    font-weight: 900;
-    padding-right: 6%;
-    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+.clutter-section .seller-info-container{
+    display: flex;
 }
 .clutter-section ul li{
-    line-height: 2;
+    line-height: 2.5;
+    list-style: none;
+}
+.clutter-section .seller-label{
+    font-weight: 900;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+}
+.clutter-section .seller-detail{
+    font-weight: 100;
 }
 .clutter-section hr{
     color: white;
@@ -796,6 +802,7 @@ nav{
 .clutter-product{
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .clutter-section .product-content{
