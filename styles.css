@@ -723,7 +723,7 @@ nav{
     display: flex;
     flex-direction: column;
     background: white;
-    padding: 13% 0;
+    padding: 10% 0;
     width: 100%;
     color: #fff;
 }
@@ -781,6 +781,7 @@ nav{
 .clutter-section .seller-label{
     font-weight: 900;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    padding-left: 5%;
 }
 .clutter-section .seller-detail{
     font-weight: 100;
@@ -812,18 +813,31 @@ nav{
 #name-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
 }
 #type-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
+}
+#type-label select{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
 }
 #description-label input{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
-    padding: 9% 9%;
+    padding: 9% 4%;
 }
 #description-label {
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
 }
 #weight-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
