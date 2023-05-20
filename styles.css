@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
 
 body{
     margin: 0;
@@ -14,7 +16,7 @@ nav{
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index: 999;
+    z-index: 900;
     top: 0;
 }
 
@@ -33,18 +35,20 @@ nav{
     /* NAV-TOP */
 
     .nav-top{
+        z-index: 999;
         display: flex;
         width: 100%;
         background: #fff;
         justify-content: center;
         padding: 1% 0;
         height: fit-content;
+
     }
 
     .web-elem{
         display: flex;
         width: 75%;
-        justify-content: space-evenly;
+        justify-content: end;
     }
 
     .logo-box{
@@ -53,43 +57,15 @@ nav{
         justify-content: center;
         margin-top: auto;
         margin-bottom: auto;
+        justify-content: start;
+    }
+
+    .logo-box .img-bg{
+        margin-left: 10%;
     }
 
     .logo-box img{
-        height: 100%;
-    }
-
-    .web-elem .wrap{
-        width: 35%;
-
-    }
-
-    .web-elem .searchTerm{
-        border-radius: 50px 0 0 50px;
-        border-style: solid;
-        height: 28.4px;
-        border-color: #23C686;
-        margin: 0;
-        padding: 0;
-        width: 90%;
-    }
-
-    .web-elem .search-button{
-        border-radius: 0 50px 50px 0;
-        border: none;
-        background: #23C686;
-        margin: auto;
-        height: 100%;
-        width: 15%;
-    }
-
-    .web-elem .search-button:hover{
-        cursor: pointer;
-    }
-
-    .web-elem .search{
-        height: 100%;
-        display: flex;
+        width: 100%;
     }
 
     .web-elem .socmed-button{
@@ -144,6 +120,7 @@ nav{
     .nav-bot{
         background: #23C686;
         height: fit-content;
+        box-shadow: 0 4px 3px -1px gray;
     }
 
     .nav-bot li{
@@ -178,11 +155,82 @@ nav{
 
     .nav-bot ul{
         display: flex;
-        width: 55%;
+        width: 70%;
         margin: 0;
         gap: 5px;
         margin-left: 2%;
     }
+
+
+/*-------------------MOBILE NAV-------------------*/
+
+.mobile-nav{
+    margin-left: auto;
+    background: white;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.mobile-nav a{
+    text-decoration: none;
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
+}
+
+.mobile-nav li{
+    list-style-type: none;
+}
+
+.mobile-nav ul{
+    padding: 5% 20%;
+}
+
+.mobile-nav .top li{
+    background: #197C67;
+    text-align: center;
+    margin: 3% 0;
+    padding: 2% 0;
+    display: flex;
+    border-radius: 10px;
+}
+
+.mobile-nav .top a{
+    padding: 1% 0;
+    color: white;
+    margin: auto;
+}
+
+.mobile-nav .bot li{
+    background: #23C686;
+    text-align: center;
+    margin: 1% 0;
+    padding: 2% 0;
+}
+
+.mobile-nav .bot a{
+    color: white;
+}
+
+.mobile-nav img{
+    width: 5%;
+    height: auto;
+}
+
+.mobile-nav .bot a:hover{
+    color: black;
+}
+
+.mobile-nav .top a:hover{
+    color: #23C686;
+}
+
+.mobile-nav .bot li:first-child{
+    border-radius: 5px 5px 0 0 ;
+} 
+
+.mobile-nav .bot li:last-child{
+    border-radius: 0 0 5px 5px;
+} 
 
 /*-------------------HOMEPAGE-------------------*/
 
@@ -207,19 +255,22 @@ nav{
 }
 
 .title-section h1{
+    letter-spacing: 10px;
     margin-top: 0;
-    font-family: 'Montserrat';
-    color: #fff;
+    margin-bottom: 0;
+    font-family: 'Merriweather', serif;
+    color: #CBFFF4;
     line-height: 100%;
-    font-weight: 900;
-    font-size: clamp(2.5rem, 0.9375rem + 5vw, 3.75rem);
+    font-weight: bolder;
+    font-size: clamp(1.875rem, -0.4688rem + 7.5vw, 3.75rem);
 }
 
 .title-section h3{
+    margin-bottom: 0;
     margin-top: 0;
     font-family: 'Montserrat';
     color: black;
-    font-size: clamp(1.875rem, 0.7031rem + 3.75vw, 2.8125rem);
+    font-size: clamp(0.9375rem, 0.1563rem + 2.5vw, 1.5625rem);
 }
 
 .title-heading{
@@ -234,7 +285,7 @@ nav{
 }
 
 .titlebutton{
-    margin-top: 6%;
+    margin-top: 3%;
     font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
     background-color: #fff;
     color: black;
@@ -366,7 +417,7 @@ nav{
 
 .story-text{
     width: 50%;
-    padding: 5% 5%;
+    padding: 3% 3%;
 
 }
 .story-section h2{
@@ -389,10 +440,10 @@ nav{
 }
 
 .story-section p{
+    padding: 0 2%;
     text-align: justify;
-    padding: 7% 0;
     color: black;
-    font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
 .story-section .btn-container{
@@ -402,7 +453,7 @@ nav{
 }
 
 .story-section .read-more{
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
     background-color: #23C686;
     color: white;
@@ -1612,11 +1663,13 @@ nav{
 
 /*-------------------INFO-------------------*/
 
-
+.info-section{
+    background: #fff;
+}
 .info-section h2{
     width: fit-content;
-    padding: 2% 7%;
-    margin: -3% auto 5% auto;
+    padding: 2% 5%;
+    margin: -3% auto 0 auto;
     border-radius: 10px 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
     border: none;
@@ -1629,6 +1682,13 @@ nav{
 
 .info-box h3{
     padding: 0 7%;
+    font-weight: 900;
+    color: #23C686;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+}
+.info-box #info-dont h3 {
+    color: #F28660;
 }
 
 .info-box hr{
@@ -1648,11 +1708,26 @@ nav{
     margin-left:  20px;
     width: 80%;
 }
+.info-title p{
+    color: #197C67;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    line-height: 2;
+}
 
 .info-title h4{
     margin: 0;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-weight: 900;
+    color: #198B72;
 }
-
+.info-box #info-dont h4{
+    color: #F28660;
+}
+.info-box #info-dont p{
+    color: #F28660;
+}
 .info-card{
     padding: 5% 0;
     display: flex;
@@ -1670,11 +1745,24 @@ nav{
 }
 
 .info-box table thead tr{
-    background: green;
+    background: #23C686;
+    color: #fff;
+    font-size: clamp(0.5rem, -0.4375rem + 3vw, 1.25rem);
+    font-weight: 900;
+    font-family: 'Montserrat';
+    line-height: 3;
 }
 
 .info-box table tbody tr{
-    background: gray;
+    background: #CCCCCC;
+    color: #198B72;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+    line-height: 3;
+}
+.info-box table tbody td:nth-child(2){
+   text-align: center;
 }
 
 /*-------------------FOOTER-------------------*/
@@ -1782,6 +1870,10 @@ footer a{
     font-size: clamp(0.4375rem, 0.0469rem + 1.25vw, 0.75rem);
 }
 
+footer a:hover{
+    color: black;
+}
+
 footer li{
     list-style: none;
 }
@@ -1791,6 +1883,15 @@ footer ul{
    padding-top: 15%;
 }
 
+.footer-left .img-container{
+    height: 28%;
+}
+
+.footer-left img{
+    height: 100%;
+}
+
+
 /*-------------------ADMIN STATS-------------------*/
 
 .entire-admin{
@@ -1798,7 +1899,7 @@ footer ul{
 }
 
 .admin-dashboard{
-    background: green;
+    background: #197C67;
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -1807,6 +1908,10 @@ footer ul{
 
 .admin-dashboard h1{
     margin: 0;
+    color: #fff;
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+    font-weight: 900;
 }
 
 .admin-page{
@@ -1827,7 +1932,7 @@ footer ul{
 .admin-button-nav button{
     background: none;
     border: none;
-    color: #197C67;
+    color: #198B72;
     width: 15%;
     height: auto;
     padding: 0;
@@ -1835,6 +1940,7 @@ footer ul{
     margin: auto 5px;
     font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
     cursor: pointer;
+    font-family: 'Montserrat';
 }
 
 .admin-button-nav .active{
@@ -1853,18 +1959,29 @@ footer ul{
 
 .admin-button button{
     background: none;
+    color: #fff;
     border: none;
     padding: 3% 0;
+}
+.admin-button button:hover{
+    color: #197C67;
+    background: #fff;
 }
 
 .admin-button .active{
     background: white;
+    color: #198B72;
 }
 
 .admin-upper hr{
     margin: 15% 0;
 }
-
+.admin-statistics h3{
+    color: #198B72;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
 .logout-admin{
     padding: 0 20% 20% 20%;
 }
@@ -1873,11 +1990,15 @@ footer ul{
     width: 100%;
     background: none;
     border: none;
+    color: #fff;
+    font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
+    cursor: pointer;
+    font-family: 'Montserrat';
 }
 
 .admin-nav{
     height: 5vh;
-    background: greenyellow;
+    background: white;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -1892,7 +2013,7 @@ footer ul{
 }
 
 .this-week{
-    border: solid brown;
+    border: solid #198B72;
     width: fit-content;
     padding: 0.5% 1.5%;
     margin-left: 5%;
@@ -1909,10 +2030,48 @@ footer ul{
 
 #week-row1 .week-card{
     text-align: center;
-    background: blue;
+    background: #749559;
     width: 32.9%;
 }
-
+.week-card#week-purchased h3{
+    font-size: clamp(0.5rem, -0.5938rem + 3.5vw, 1.375rem);
+    background-color: #23C686;
+    color: white;
+    border: none;
+    border-radius: 75px 75px;
+    padding: 5% 5%;
+    font-weight:lighter;
+    margin-top: 25%;
+    font-family: 'Montserrat';
+}
+.week-card#week-purchased h2{
+    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    font-weight: 900;
+    font-family: 'Montserrat';
+}
+.week-card#week-purchased h1{
+    font-size: clamp(0.5rem, -1.5313rem + 6.5vw, 2.125rem);
+    font-weight: 900;
+    font-family: 'Montserrat';
+}
+.week-row#week-row1 h2{
+    font-size: clamp(0.5rem, -0.6719rem + 3.75vw, 1.4375rem);
+}
+.week-card#week-completed{
+    background: #749559;
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+}
+.week-card#week-pending{
+    background: #D3BE00;
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+}
+.week-card#week-canceled{
+    background: rgba(226, 44, 44, 67%);
+    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-family: 'Montserrat';
+}
 #week-row2{
     display: flex;
     justify-content: space-between;
@@ -1921,6 +2080,7 @@ footer ul{
 
 .stat-container{
     padding: 2% 5%;
+    color: #fff;
 }
 
 #week-piechart{
@@ -1929,7 +2089,7 @@ footer ul{
 
 #week-purchased{
     width: 32.9%;
-    background: yellow;
+    background: #197C67;
     display: flex;
 }
 
@@ -1939,7 +2099,7 @@ footer ul{
 }
 
 .yearly-monthly-container h3{
-    border: solid brown;
+    border: solid #198B72;
     width: fit-content;
     padding: 0.5% 5%;
     margin-left: 5%;
@@ -1960,6 +2120,7 @@ footer ul{
     display: flex;
     flex-direction: column;
     padding: 0 10%;
+    color: #198B72;
 }
 
 .admin-user table{
@@ -1972,14 +2133,21 @@ footer ul{
 .admin-user h2{
     text-align: center;
     margin-bottom: 7% ;
+    font-size: clamp(0.5rem, -1.375rem + 6vw, 2rem);
+    font-weight: 900;
+    color: #198B72;
+    text-shadow: 0px 4px 4px #fff;
 }
 
 .admin-user table thead{
-    background: green;
+    background: #E5E9E1;
+    line-height: 5;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
 }
 
 .admin-user tbody tr{
-    border-bottom: 1pt solid black;
+    border-bottom: 1pt solid #198B72;
+    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
 }
 
 .admin-user tbody td{
@@ -1988,6 +2156,47 @@ footer ul{
 
 
 
+/*-------------------ADMIN TRANSACTIONS-------------------*/
+
+.admin-transactions{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+}
+
+.transaction-container{
+    width: 100%;
+    height: 90vh;
+}
+
+.admin-transactions table{
+    margin: auto;
+    overflow: visible;
+    text-align: center;
+    border-collapse: collapse; 
+}
+
+.admin-transactions h2{
+    text-align: center;
+    margin-bottom: 7% ;
+}
+
+.admin-transactions table thead{
+    background: green;
+}
+
+.admin-transactions tbody tr{
+    border-bottom: 1pt solid black;
+}
+
+.admin-transactions tbody td{
+    padding: 5% 0;
+}
+
+.admin-transactions img{
+    scale: 0.5;
+}
 
 @media screen and (max-width:1390px) {
     #week-row2{
@@ -2028,6 +2237,7 @@ footer ul{
     
     .nav-top{
         justify-content: space-between;
+        box-shadow: 0 4px 3px -1px gray;
     }
 
     .hamburger{
