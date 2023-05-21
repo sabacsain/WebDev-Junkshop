@@ -11,6 +11,8 @@
   
   
     <!-- JS -->
+
+    <script>window.onresize=function(){ location.reload()}</script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load("current", { packages: ["corechart"] });
@@ -226,8 +228,9 @@
           <div class="week-row" id="week-row2">
             
             <!-- PIE CHART -->
-            <div class="week-card" id="week-piechart" 
-              style="width: 900px; height: 500px">
+            <div class="week-card" id="week-pie-container">
+              <div id="week-piechart">
+              </div>
             </div>
 
             <!-- MOST PURCHASED -->
@@ -247,10 +250,10 @@
           <h3>2023</h3>
 
           <!-- MONTHLY GRAPH -->
-          <div id="monthly-column-graph" style="width: 900px; height: 500px"></div>
+          <div id="monthly-column-graph"></div>
 
           <!-- YEARLY GRAPH -->
-          <div id="yearly-column-graph" style="width: 900px; height: 500px"></div>
+          <div id="yearly-column-graph"></div>
         </div>
 
       </div>

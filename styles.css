@@ -1553,20 +1553,20 @@ nav{
 
 .contact-section h2{
     width: fit-content;
-    padding: 2% 5%;
-    margin: -3% auto 0 auto;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    padding: 2% 7%;
+    margin: -3% auto 0% auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     background: #198B72;
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-size: clamp(1rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 
 .contact-section p#paragraph-contact{
-    font-size: clamp(0.4375rem, -0.1094rem + 1.75vw, 0.875rem);
+    font-size: clamp(0.75rem, -0.1094rem + 1.75vw, 0.875rem);
     color: #197C67;
     font-family: 'Montserrat';
 }
@@ -1582,8 +1582,8 @@ nav{
     flex-direction: column;
     width: 32%;
     background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
-    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
 }
 
 .card-heading{
@@ -1598,7 +1598,7 @@ nav{
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: clamp(0.5rem, -0.4375rem + 3vw, 1.25rem);
+    font-size: clamp(0.875rem, -0.4375rem + 3vw, 1.25rem);
     border-radius: 0px 0px 10px 10px;
     width: fit-content;
     margin: auto;
@@ -1639,6 +1639,10 @@ nav{
     
   }
 
+.contact-page .fa:hover{
+    background-color:#23c686
+}
+
 .contact-page hr{
     color: #23C686;
 }
@@ -1657,27 +1661,33 @@ nav{
 }
 
 .contact-page .message-heading p{
-    width: 35%;
+    width: 70%;
+    max-width: 600px;
     margin: auto;
     color: #197C67;
     font-family: 'Montserrat';
-    font-size: clamp(0.5rem, -0.4375rem + 3vw, 1.25rem);
+    font-size: clamp(0.8rem, -0.4375rem + 3vw, 1.25rem);
 }
 
 .contact-page .message-form-container{
-    padding: 2% 30%;
+    padding: 2% 10%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
 .message-heading h3{
     font-weight: 900;
     color: #23C686;
     font-family: 'Montserrat';
-    font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
+    font-size: clamp(1.25rem, 0.0938rem + 2.5vw, 1.5rem);
 }
+
 #message-form{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 #message-form label{
@@ -1689,37 +1699,41 @@ nav{
     letter-spacing: 2px;
     color: #197C67;
     line-height: 2;
+    width: 80%;
+    max-width: 645px;
+    margin-bottom: 20px;
 }
 
 #message-form input{
-    width: 100%;
-    padding: 3% 0%;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
-    border: none;
+    width: calc(100% - 40px);
+    max-width: 645px;
+    padding: 20px;
+    border: 1px solid #F2F4F3;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
     color: #198B72;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
-    margin-right: 2%;
-    
 }
 
 #message-form textarea{
     height: 200px;
-    width: 100%;
-    padding: 3% 0%;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
-    border: none;
+    width: calc(100% - 40px);
+    max-width: 645px;
+    padding: 20px;
+    border: 1px solid #F2F4F3;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
     color: #198B72;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     margin-right: 2%;
+    resize: none;
 }
 
 .contact-page .message-button-container{
     width: 100%;
     display: flex;
     flex-direction: center;
-    padding-top: 13%;
+    padding: 2%;
 }
 .contact-page .message-button{
     font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
@@ -1727,7 +1741,7 @@ nav{
     color: white;
     border: none;
     border-radius: 75px 75px;
-    padding: 2% 5%;
+    padding: 10px 20px;
     font-weight:lighter;
     
 }
@@ -2111,7 +2125,7 @@ footer ul{
 }
 .admin-statistics h3{
     color: #198B72;
-    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-size: clamp(1rem, -0.2813rem + 2.5vw, 1.125rem);
     cursor: pointer;
     font-family: 'Montserrat';
 }
@@ -2166,50 +2180,58 @@ footer ul{
     text-align: center;
     background: #749559;
     width: 32.9%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
 }
 .week-card#week-purchased h3{
-    font-size: clamp(0.5rem, -0.5938rem + 3.5vw, 1.375rem);
+    font-size: clamp(0.5rem, -0.5938rem + 3.5vw, 1rem);
     background-color: #23C686;
     color: white;
     border: none;
     border-radius: 75px 75px;
-    padding: 5% 5%;
+    width: 60%;
+    text-align: center;
+    padding: 20px;
     font-weight:lighter;
     margin-top: 25%;
+    margin: auto;
     font-family: 'Montserrat';
 }
 .week-card#week-purchased h2{
-    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    font-size: clamp(1rem, -1.0625rem + 5vw, 1.75rem);
     font-weight: 900;
     font-family: 'Montserrat';
 }
 .week-card#week-purchased h1{
-    font-size: clamp(0.5rem, -1.5313rem + 6.5vw, 2.125rem);
+    font-size: clamp(1rem, -1.5313rem + 6.5vw, 2.125rem);
     font-weight: 900;
     font-family: 'Montserrat';
 }
 .week-row#week-row1 h2{
-    font-size: clamp(0.5rem, -0.6719rem + 3.75vw, 1.4375rem);
+    font-size: clamp(1rem, -0.6719rem + 3.75vw, 1.4375rem);
 }
 .week-card#week-completed{
     background: #749559;
-    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-size: clamp(0.8rem, -0.75rem + 4vw, 1.5rem);
     font-family: 'Montserrat';
 }
 .week-card#week-pending{
     background: #D3BE00;
-    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-size: clamp(0.8rem, -0.75rem + 4vw, 1.5rem);
     font-family: 'Montserrat';
 }
 .week-card#week-canceled{
     background: rgba(226, 44, 44, 67%);
-    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-size: clamp(0.8rem, -0.75rem + 4vw, 1.5rem);
     font-family: 'Montserrat';
 }
 #week-row2{
     display: flex;
     justify-content: space-between;
     padding: 1% 0;
+    gap: 10px;
+    height: 300px;
+
 }
 
 .stat-container{
@@ -2217,19 +2239,45 @@ footer ul{
     color: #fff;
 }
 
-#week-piechart{
+#week-pie-container{
     width: 65.8%;
+    height: 100%;
+    margin: auto;
+    border: 1px solid #E5E9E1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+#week-piechart{
+    height: 100%;
 }
 
 #week-purchased{
     width: 32.9%;
     background: #197C67;
     display: flex;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 3px;
 }
 
 .week-purchased-text{
     text-align: center;
     margin: auto;
+}
+
+
+#monthly-column-graph{
+    height: 300px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#yearly-column-graph{
+    height: 300px;
+    max-width: 800px;
+
+
 }
 
 .yearly-monthly-container h3{
@@ -2353,19 +2401,13 @@ footer ul{
 
 
 @media screen and (max-width:1390px) {
-    #week-row2{
-        flex-direction: column;
-    }
-
-    #week-purchased{
-        width: 100%;
-    }
-
-    #week-piechart{
+    #week-pie-container{
         margin: auto;
-        width: fit-content;
-        overflow-x:visible ;
+        overflow:hidden;
     }
+    
+   
+
 }
 
 @media screen and (max-width:1000px) {
@@ -2467,7 +2509,7 @@ footer ul{
     }
     .sign-in-left{
         width:100%;
-        height: 30vh;
+        height: 50vh;
     }
 
     .sign-in-right{
@@ -2483,6 +2525,14 @@ footer ul{
     }
     .contact-page .message-heading p{
         width: 75%;
+    }
+
+    .contact-row{
+        padding: 2% 5%;
+    }
+    
+    .card-heading{
+        padding: 0 5% 20% 5%;
     }
 
     .info-container{
@@ -2508,6 +2558,22 @@ footer ul{
         height: auto;
         display: flex;
         justify-content: end;
+    }
+
+    #week-row2{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+
+    #week-pie-container{    
+        width: 100%;
+    }
+
+    #week-purchased{
+        width: 100%;
+        padding: 20px 0;
+        
     }
 }
 
@@ -2666,7 +2732,32 @@ footer ul{
         grid-template-columns: 50% 50%;
         gap: 10px;
         justify-content: center;
-    }    
+    }
+    
+    .contact-row{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-card{
+        margin: auto;
+        height: max-content;
+        width: 70%;
+    }
+
+    .contact-socmed{
+        padding-top: 39%;
+        padding-bottom: 33%;
+    }
+
+    .card-heading{
+        padding: 0 15% 10% 15%;
+
+    }
+
+    .card-heading svg{
+        margin: 10% auto 10% auto;
+    }
 }
 
 @media screen and (max-width:400px) {
