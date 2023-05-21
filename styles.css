@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 body{
     margin: 0;
@@ -14,7 +16,7 @@ nav{
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index: 999;
+    z-index: 900;
     top: 0;
 }
 
@@ -33,18 +35,20 @@ nav{
     /* NAV-TOP */
 
     .nav-top{
+        z-index: 999;
         display: flex;
         width: 100%;
         background: #fff;
         justify-content: center;
         padding: 1% 0;
         height: fit-content;
+
     }
 
     .web-elem{
         display: flex;
         width: 75%;
-        justify-content: space-evenly;
+        justify-content: end;
     }
 
     .logo-box{
@@ -53,43 +57,16 @@ nav{
         justify-content: center;
         margin-top: auto;
         margin-bottom: auto;
+        justify-content: start;
     }
 
-    .logo-box img{
-        height: 100%;
-    }
-
-    .web-elem .wrap{
-        width: 35%;
-
-    }
-
-    .web-elem .searchTerm{
-        border-radius: 50px 0 0 50px;
-        border-style: solid;
-        height: 28.4px;
-        border-color: #23C686;
-        margin: 0;
-        padding: 0;
-        width: 90%;
-    }
-
-    .web-elem .search-button{
-        border-radius: 0 50px 50px 0;
-        border: none;
-        background: #23C686;
-        margin: auto;
-        height: 100%;
-        width: 15%;
-    }
-
-    .web-elem .search-button:hover{
+    .logo-box .img-bg{
+        margin-left: 10%;
         cursor: pointer;
     }
 
-    .web-elem .search{
-        height: 100%;
-        display: flex;
+    .logo-box img{
+        width: 100%;
     }
 
     .web-elem .socmed-button{
@@ -144,6 +121,7 @@ nav{
     .nav-bot{
         background: #23C686;
         height: fit-content;
+        box-shadow: 0 4px 3px -1px gray;
     }
 
     .nav-bot li{
@@ -178,11 +156,82 @@ nav{
 
     .nav-bot ul{
         display: flex;
-        width: 55%;
+        width: 70%;
         margin: 0;
         gap: 5px;
         margin-left: 2%;
     }
+
+
+/*-------------------MOBILE NAV-------------------*/
+
+.mobile-nav{
+    margin-left: auto;
+    background: white;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.mobile-nav a{
+    text-decoration: none;
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
+}
+
+.mobile-nav li{
+    list-style-type: none;
+}
+
+.mobile-nav ul{
+    padding: 5% 20%;
+}
+
+.mobile-nav .top li{
+    background: #197C67;
+    text-align: center;
+    margin: 3% 0;
+    padding: 2% 0;
+    display: flex;
+    border-radius: 10px;
+}
+
+.mobile-nav .top a{
+    padding: 1% 0;
+    color: white;
+    margin: auto;
+}
+
+.mobile-nav .bot li{
+    background: #23C686;
+    text-align: center;
+    margin: 1% 0;
+    padding: 2% 0;
+}
+
+.mobile-nav .bot a{
+    color: white;
+}
+
+.mobile-nav img{
+    width: 5%;
+    height: auto;
+}
+
+.mobile-nav .bot a:hover{
+    color: black;
+}
+
+.mobile-nav .top a:hover{
+    color: #23C686;
+}
+
+.mobile-nav .bot li:first-child{
+    border-radius: 5px 5px 0 0 ;
+} 
+
+.mobile-nav .bot li:last-child{
+    border-radius: 0 0 5px 5px;
+} 
 
 /*-------------------HOMEPAGE-------------------*/
 
@@ -207,19 +256,22 @@ nav{
 }
 
 .title-section h1{
+    letter-spacing: 10px;
     margin-top: 0;
-    font-family: 'Montserrat';
-    color: #fff;
+    margin-bottom: 0;
+    font-family: 'Merriweather', serif;
+    color: #CBFFF4;
     line-height: 100%;
-    font-weight: 900;
-    font-size: clamp(2.5rem, 0.9375rem + 5vw, 3.75rem);
+    font-weight: bolder;
+    font-size: clamp(1.875rem, -0.4688rem + 7.5vw, 3.75rem);
 }
 
 .title-section h3{
+    margin-bottom: 0;
     margin-top: 0;
     font-family: 'Montserrat';
     color: black;
-    font-size: clamp(1.875rem, 0.7031rem + 3.75vw, 2.8125rem);
+    font-size: clamp(0.9375rem, 0.1563rem + 2.5vw, 1.5625rem);
 }
 
 .title-heading{
@@ -234,7 +286,7 @@ nav{
 }
 
 .titlebutton{
-    margin-top: 6%;
+    margin-top: 3%;
     font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
     background-color: #fff;
     color: black;
@@ -366,7 +418,7 @@ nav{
 
 .story-text{
     width: 50%;
-    padding: 5% 5%;
+    padding: 3% 3%;
 
 }
 .story-section h2{
@@ -389,10 +441,10 @@ nav{
 }
 
 .story-section p{
+    padding: 0 2%;
     text-align: justify;
-    padding: 7% 0;
     color: black;
-    font-size: clamp(0.9375rem, 0.3906rem + 1.75vw, 1.375rem);
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
 .story-section .btn-container{
@@ -402,7 +454,7 @@ nav{
 }
 
 .story-section .read-more{
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
     background-color: #23C686;
     color: white;
@@ -942,8 +994,9 @@ nav{
     border-radius: 10px 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
     border: none;
-    color: #23C686;
+    color: #197C67;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    margin-bottom: 10%;
 }
 .create-section #address-label input{
     padding: 20% 30%;
@@ -1052,7 +1105,7 @@ nav{
     border-radius: 10px 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
     border: none;
-    color: #23C686;
+    color: #197C67;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     margin-right: 2%;
 }
@@ -1110,22 +1163,25 @@ nav{
 }
 
 /*TRANSACTION SECTION*/
-.transaction-section{
+.account-page .transaction-section{
     display: flex;
 }
 
-.transaction-container{
+.account-page .transaction-container{
     margin: 10% auto ;
     width: 85%;
     background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    height: fit-content;
 }
 
-.transaction-container h2{
+.account-page .transaction-container h2{
     margin-top: 0;
 }
 
 
-.transaction-title{
+.account-page .transaction-title{
     display: flex;
     justify-content: space-between;
     padding-left: 10%;
@@ -1133,13 +1189,13 @@ nav{
     padding-top: 3%;
 }
 
-.transaction-row{
+.account-page .transaction-row{
     display: flex;
     padding: 2% 10%;
     margin-bottom: 3%;
 }
 
-.transaction-information{
+.account-page .transaction-information{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -1147,21 +1203,20 @@ nav{
     margin-right: auto;
 }
 
-.transaction-row .img-container{
+.account-page .transaction-row .img-container{
     width: 50%;
     display: flex;
     justify-content: start;
 }
 
-.transaction-row img{
-    width: 50%;
-    scale: 0.7;
-    height: auto;
+.account-page .transaction-row img{
+    width: auto;
+    height: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.transaction-section li{
+.account-page .transaction-section li{
     list-style-type: none;
     color: #197C67;
     font-family: 'Montserrat';
@@ -1169,37 +1224,37 @@ nav{
     font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
     line-height: 3;
 }
-.transaction-section h4 span#transaction-completed{
+.account-page .transaction-section h4 span#transaction-completed{
     color: #749559;
 }
-.transaction-section h4 span#transaction-pending{
+.account-page .transaction-section h4 span#transaction-pending{
     color: #D3BE00;
 }
-.transaction-section h4 span#transaction-canceled{
+.account-page .transaction-section h4 span#transaction-canceled{
     color: #E22C2C;
 }
-.transaction-section li span{
+.account-page .transaction-section li span{
     font-weight: 900;
 }
 
-.transaction-section h4{
+.account-page .transaction-section h4{
     color: #197C67;
     font-family: 'Montserrat';
     font-weight: 900;
     font-size: clamp(0.625rem, 0rem + 2vw, 1.125rem);
 }
 
-.transaction-section .thin-hr{
+.account-page .transaction-section .thin-hr{
     width: 80%;
     color:#197C67;
 }
 
-.transaction-underline{
+.account-page .transaction-underline{
     width: 90%;
     border-top: 7px solid #197C67;
 }
 
-.transaction-section h2{
+.account-page .transaction-section h2{
     width: fit-content;
     padding: 2% 5%;
     margin-left: auto;
@@ -1218,7 +1273,7 @@ nav{
 /*-------------------ABOUT-------------------*/
 
 .about-page .first-section{
-    background: url(images/about/bg-welcome.png) no-repeat center;
+    background: url(images/about/about-us-banner.jpg) no-repeat center;
     background-size: cover;
     height: 40vh;
     margin-top: 7%;
@@ -1268,6 +1323,7 @@ nav{
 }
 
 .sign-in-left{
+    display: flex;
     width: 50%;
     background: url(images/signin/banner.jpg) no-repeat center;
     height: auto;
@@ -1275,15 +1331,20 @@ nav{
 }
 
 .sign-in-left h1{
+    letter-spacing: 10px;
     margin-top: 0;
-    font-family: 'Montserrat';
-    font-weight: 900;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
     font-size: clamp(1.25rem, -1.7188rem + 9.5vw, 3.625rem);
     line-height: 0.1;
-    -webkit-text-stroke: 3px white;
-    text-shadow: 10px 10px 7px rgb(0, 0, 0);
+    color: #23C686;
+    text-shadow: 2px 10px 10px rgb(0, 0, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
+
 .sign-in-left h3{
+    text-align: center;
     font-family: 'Montserrat';
     font-weight: bold;
     color: black;
@@ -1314,9 +1375,10 @@ nav{
 
 .sign-in-box{
     background: rgba(255, 255, 255, 0.37);
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
     display: flex;
+    margin: auto;
 }
 
 .sign-in-heading{
@@ -1376,6 +1438,7 @@ nav{
 }
 
 #sign-in-form input{
+    text-align: center;
     margin-top: 2%;
     height: 35%;
     box-shadow: 0px 5px 10px rgba(16, 141, 68, 0.753);
@@ -1418,7 +1481,7 @@ nav{
 }
 
 .contact-page .first-section{
-    background: url(images/contact/bg-welcome.png) no-repeat center;
+    background: url(images/contact/contact-banner.jpg) no-repeat center;
     background-size: cover;
     height: 40vh;    
     margin-top: 7%;
@@ -1439,7 +1502,7 @@ nav{
 }
 
 .contact-section p#paragraph-contact{
-    font-size: clamp(0.5rem, 0.0313rem + 1.5vw, 0.875rem);
+    font-size: clamp(0.4375rem, -0.1094rem + 1.75vw, 0.875rem);
     color: #197C67;
     font-family: 'Montserrat';
 }
@@ -1511,6 +1574,10 @@ nav{
     background: #198B72;
     
   }
+
+.contact-page hr{
+    color: #23C686;
+}
 
 /*MESSAGE SECTION*/
 
@@ -1596,7 +1663,7 @@ nav{
     color: white;
     border: none;
     border-radius: 75px 75px;
-    padding: 4% 3%;
+    padding: 2% 5%;
     font-weight:lighter;
     
 }
@@ -1612,9 +1679,21 @@ nav{
 
 /*-------------------INFO-------------------*/
 
-.info-section{
-    background: #fff;
+.faq-page hr{
+    color: #23C686;
 }
+
+.faq-page .hr-2nd{
+    color: #F28660;
+}
+
+.faq-section{
+    background: url(images/faq/faq-banner.jpg) no-repeat center;
+    background-size: cover;
+    height: 40vh;    
+    margin-top: 7%;
+}
+
 .info-section h2{
     width: fit-content;
     padding: 2% 5%;
@@ -1628,6 +1707,7 @@ nav{
     font-weight: 900;
     font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
 }
+
 
 .info-box h3{
     padding: 0 7%;
@@ -1714,10 +1794,14 @@ nav{
    text-align: center;
 }
 
+.info-box{
+    padding-top: 5% ;
+}
 
 /*-------------------FOOTER-------------------*/
 
 footer{
+    bottom: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1820,6 +1904,10 @@ footer a{
     font-size: clamp(0.4375rem, 0.0469rem + 1.25vw, 0.75rem);
 }
 
+footer a:hover{
+    color: black;
+}
+
 footer li{
     list-style: none;
 }
@@ -1828,6 +1916,15 @@ footer ul{
     padding: 0;
    padding-top: 15%;
 }
+
+.footer-left .img-container{
+    height: 28%;
+}
+
+.footer-left img{
+    height: 100%;
+}
+
 
 /*-------------------ADMIN STATS-------------------*/
 
@@ -1855,6 +1952,18 @@ footer ul{
     width: 80%;
 }
 
+.admin-page .logo-container{
+    height: 100%;
+    width: 20%;
+    display: flex;
+}
+
+.admin-page .logo-container img{
+    object-fit: cover;
+    height: 100%;
+    margin: auto;
+}
+
 .admin-page{
     height: 100vh;
     overflow-y: scroll;
@@ -1878,6 +1987,10 @@ footer ul{
     font-size: clamp(0.4375rem, -0.1875rem + 2vw, 0.9375rem);
     cursor: pointer;
     font-family: 'Montserrat';
+}
+
+.admin-button-nav button:hover{
+    font-style: italic;
 }
 
 .admin-button-nav .active{
@@ -1934,6 +2047,7 @@ footer ul{
 }
 
 .admin-nav{
+    box-shadow: 0 4px 3px -1px gray;
     height: 5vh;
     background: white;
     position: fixed;
@@ -2078,13 +2192,12 @@ footer ul{
 
 .admin-user table thead{
     background: #E5E9E1;
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
     line-height: 5;
-    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
 }
-
 .admin-user tbody tr{
     border-bottom: 1pt solid #198B72;
-    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
 .admin-user tbody td{
@@ -2093,6 +2206,64 @@ footer ul{
 
 
 
+/*-------------------ADMIN TRANSACTIONS-------------------*/
+
+.admin-transactions{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    color: #198B72;
+}
+
+.transaction-container{
+    width: 100%;
+    height: 90vh;
+}
+
+.admin-transactions table{
+    margin: auto;
+    overflow: visible;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.admin-transactions h2{
+    text-align: center;
+    margin-bottom: 7% ;
+    font-size: clamp(0.5rem, -1.375rem + 6vw, 2rem);
+    font-weight: 900;
+    color: #198B72;
+    text-shadow: 0px 4px 4px #fff;
+}
+
+.admin-transactions table thead{
+    background: #E5E9E1;
+    line-height: 2;
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
+}
+
+.admin-transactions tbody tr{
+    border-bottom: 1pt solid #198B72;
+    font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
+}
+
+.admin-transactions tbody td{
+    padding: 5% 0;
+}
+
+.admin-transactions img{
+    scale: 0.5;
+}
+
+.admin-transactions th{
+    padding: 0 2%;
+}
+
+.admin-transactions td{
+    width: 500px;
+}
 
 @media screen and (max-width:1390px) {
     #week-row2{
@@ -2133,6 +2304,7 @@ footer ul{
     
     .nav-top{
         justify-content: space-between;
+        box-shadow: 0 4px 3px -1px gray;
     }
 
     .hamburger{
@@ -2156,7 +2328,7 @@ footer ul{
     }
 
     .title-section, .dont-throw-section, .join-us-section{
-        height: 50vh;
+        height: 40vh;
     }
 
     .welcome-section, .contact-page .first-section, .about-page .first-section, .news-bg-section{
@@ -2313,6 +2485,11 @@ footer ul{
 
     .transaction-title{
         flex-direction: column;
+        text-align: center;
+    }
+
+    .transaction-row .img-container{
+        margin: auto;
     }
 
     
@@ -2322,7 +2499,7 @@ footer ul{
 @media screen and (max-width:600px) {
 
     .title-section, .dont-throw-section, .join-us-section{
-        height: 40vh;
+        height: 30vh;
     }
 
     .story-section .img-container{
@@ -2390,7 +2567,7 @@ footer ul{
 @media screen and (max-width:300px) {
 
     .title-section, .dont-throw-section, .join-us-section{
-        height: 30vh;
+        height: 20vh;
     }
 
     .create-section label{
