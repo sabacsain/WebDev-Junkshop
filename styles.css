@@ -20,7 +20,7 @@ nav{
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index: 999;
+    z-index: 900;
     top: 0;
 }
 
@@ -39,6 +39,7 @@ nav{
     /* NAV-TOP */
 
     .nav-top{
+        z-index: 999;
         display: flex;
         width: 100%;
         background: #fff;
@@ -1764,6 +1765,7 @@ nav{
     height: 40vh;    
     margin-top: 7%;
 }
+
 .info-section h2{
     width: fit-content;
     padding: 2% 5%;
@@ -2273,10 +2275,9 @@ footer ul{
 
 .admin-user table thead{
     background: #E5E9E1;
-    line-height: 5;
     font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
+    line-height: 5;
 }
-
 .admin-user tbody tr{
     border-bottom: 1pt solid #198B72;
     font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
@@ -2295,6 +2296,7 @@ footer ul{
     display: flex;
     flex-direction: column;
     padding: 0 10%;
+    color: #198B72;
 }
 
 .transaction-container{
@@ -2305,8 +2307,9 @@ footer ul{
 .admin-transactions table{
     margin: auto;
     overflow: visible;
+    width: 100%;
     text-align: center;
-    border-collapse: collapse; 
+    border-collapse: collapse;
 }
 
 .admin-transactions h2{
@@ -2320,6 +2323,7 @@ footer ul{
 
 .admin-transactions table thead{
     background: #E5E9E1;
+    line-height: 2;
     font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
 }
 
@@ -2337,7 +2341,7 @@ footer ul{
 }
 
 .admin-transactions th{
-    padding: 0 5%;
+    padding: 0 2%;
 }
 
 .admin-transactions td{
