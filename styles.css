@@ -169,7 +169,7 @@ nav{
     }
 
     .nav-bot a:hover{
-        color: black;
+        color:#104136;
     }
 
     .nav-bot img{
@@ -243,7 +243,7 @@ nav{
 }
 
 .mobile-nav .bot a:hover{
-    color: black;
+    color:#104136;
 }
 
 .mobile-nav .top a:hover{
@@ -776,7 +776,7 @@ nav{
     font-family: 'Montserrat';
     font-weight: 900;
     color: #749559;
-    font-size: clamp(0.5625rem, -2.6406rem + 10.25vw, 3.125rem);
+    font-size: clamp(1rem, -2.6406rem + 10.25vw, 3.125rem);
     line-height: 0.1;
     
 }
@@ -784,7 +784,7 @@ nav{
     font-family: 'Montserrat';
     font-weight: bold;
     color: #749559;
-    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    font-size: clamp(1rem, -1.0625rem + 5vw, 1.75rem);
     padding-bottom: 100%;
     line-height: 0.1;
 }
@@ -808,10 +808,11 @@ nav{
     margin-right: auto;
     margin-top: -10%;
     margin-bottom: 5%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-size: clamp(1rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 .clutter-section .submit-button{
     font-size: clamp(0.75rem, 0.4375rem + 1.75vw, 1.375rem);
@@ -835,13 +836,13 @@ nav{
     padding: 5% 15%;
 }
 .clutter-section h2{
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-size: clamp(0.75rem, -0.6094rem + 3.75vw, 1.5rem);
     font-weight: 900;
 }
 .clutter-section h3{
     color: #23C686;
     padding-left: 6%;
-    font-size: clamp(0.5625rem, -0.2969rem + 2.75vw, 1.25rem);
+    font-size: clamp(0.75rem, -0.2969rem + 2.75vw, 1.25rem);
 }
 .clutter-section .seller-info-container{
     display: flex;
@@ -1011,6 +1012,7 @@ nav{
     font-weight: 500;
     letter-spacing: 2px;
     margin: 10px 0px;
+    gap: 10px;
 }
 .create-section h2{
     font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
@@ -1048,7 +1050,9 @@ nav{
     border: none;
     color: #197C67;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
-    margin-bottom: 10%;
+    width:  80%;
+    max-width: 450px;
+    margin: auto;
 }
 .create-section #address-label input{
     padding: 20px;
@@ -1348,22 +1352,21 @@ nav{
 .about-section h2{
     background: green;
     width: fit-content;
-    padding: 2% 5%;
+    padding: 2% 7%;
     margin: -3% auto 0 auto;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
-    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: #198B72;
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-size: clamp(1rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 
 .about-section p{
     color: #197C67;
     text-align: justify;
-    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-size: clamp(0.75rem, -0.2813rem + 2.5vw, 1.125rem);
     font-family: 'Montserrat';
 }
 
@@ -1400,7 +1403,7 @@ nav{
     font-family: 'Montserrat';
     font-weight: bold;
     color: black;
-    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    font-size: clamp(1rem, -1.0625rem + 5vw, 1.75rem);
     line-height: 0.1;
 }
 
@@ -1777,16 +1780,16 @@ nav{
 
 .info-section h2{
     width: fit-content;
-    padding: 2% 5%;
+    padding: 2% 7%;
     margin: -3% auto 0 auto;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     background: #198B72;
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 900;
-    font-size: clamp(0.5625rem, -0.6094rem + 3.75vw, 1.5rem);
+    font-size: clamp(1rem, -0.6094rem + 3.75vw, 1.5rem);
 }
 
 
@@ -1795,7 +1798,7 @@ nav{
     font-weight: 900;
     color: #23C686;
     font-family: 'Montserrat';
-    font-size: clamp(0.5rem, -1.0625rem + 5vw, 1.75rem);
+    font-size: clamp(1rem, -1.0625rem + 5vw, 1.75rem);
 }
 .info-box #info-dont h3 {
     color: #F28660;
@@ -1821,14 +1824,15 @@ nav{
 .info-title p{
     color: #197C67;
     font-family: 'Montserrat';
-    font-size: clamp(0.5rem, -0.2813rem + 2.5vw, 1.125rem);
+    font-size: clamp(0.75rem, -0.2813rem + 2.5vw, 1.125rem);
     line-height: 2;
+    text-align: justify;
 }
 
 .info-title h4{
     margin: 0;
     font-family: 'Montserrat';
-    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    font-size: clamp(0.875rem, -0.75rem + 4vw, 1.5rem);
     font-weight: 900;
     color: #198B72;
 }
@@ -1857,7 +1861,7 @@ nav{
 .info-box table thead tr{
     background: #23C686;
     color: #fff;
-    font-size: clamp(0.5rem, -0.4375rem + 3vw, 1.25rem);
+    font-size: clamp(0.8rem, -0.4375rem + 3vw, 1.25rem);
     font-weight: 900;
     font-family: 'Montserrat';
     line-height: 3;
@@ -1868,7 +1872,7 @@ nav{
     color: #198B72;
     font-weight: 900;
     font-family: 'Montserrat';
-    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+    font-size: clamp(0.75rem, -0.125rem + 2vw, 1rem);
     line-height: 3;
     padding: 10px 10px;
 }
@@ -1998,7 +2002,7 @@ footer a{
 }
 
 footer a:hover{
-    color: black;
+    color:#08251f;
 }
 
 footer li{
@@ -2415,6 +2419,12 @@ border-radius: 3px;
     
 }
 
+@media screen and (min-width: 921px) {
+    .mobile-nav{
+        visibility: hidden !important;
+    }
+}
+
 @media screen and (max-width:920px) {
     nav .web-elem{
         visibility: hidden;
@@ -2448,10 +2458,12 @@ border-radius: 3px;
 
     .title-section, .dont-throw-section, .join-us-section{
         height: 40vh;
+        margin-top: 100px;
     }
 
     .welcome-section, .contact-page .first-section, .about-page .first-section, .news-bg-section{
         height: 30vh;
+        margin-top: 100px;
     }
 
     .client-card-row{
@@ -2503,6 +2515,7 @@ border-radius: 3px;
     .sign-in-left{
         width:100%;
         height: 50vh;
+        margin-top: 100px;
     }
 
     .sign-in-right{
@@ -2653,9 +2666,13 @@ border-radius: 3px;
 
 
 @media screen and (max-width:600px) {
+    .mobile-nav{
+        width: 100% !important;
+    }
 
     .title-section, .dont-throw-section, .join-us-section{
         height: 30vh;
+        margin-top: 100px;
     }
 
     .story-section .img-container{
@@ -2718,7 +2735,8 @@ border-radius: 3px;
     }
 
     .welcome-section, .about-page .first-section, .contact-page .first-section, .news-bg-section{
-        height: 20vh;
+        height: 30vh;
+        margin-top: 100px;
     }
 
     .news-card-container{
@@ -2780,6 +2798,7 @@ border-radius: 3px;
 
     .title-section, .dont-throw-section, .join-us-section{
         height: 20vh;
+        margin-top: 70px;
     }
 
     .create-section label{
@@ -2787,7 +2806,8 @@ border-radius: 3px;
     }
 
     .welcome-section, .about-page .first-section, .contact-page .first-section, .news-bg-section{
-        height: 10vh;
+        height: 20vh;
+        margin-top: 70px;
     }
 
     .edit-section h3{
