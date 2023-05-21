@@ -19,7 +19,7 @@
     <section class="nav-top">
 
       <div class="logo-box">
-        <div class="img-bg" onclick="location.href='index.html';"><img src="images/home/#" alt="Online Junkshop Logo"></div>
+        <div class="img-bg" onclick="location.href='index.html';"><img src="images/logo1.png" alt="Online Junkshop Logo"></div>
       </div>
 
       <div class="web-elem">
@@ -37,7 +37,7 @@
 
       </div>
 
-      <div class="hamburger">
+      <div class="hamburger" id="hamburger-nav" onclick="openMobileNav()">
         <hr> <hr> <hr>
       </div>
 
@@ -57,7 +57,7 @@
         </li>
         <li>
           <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="info.html">Information</a>
+          <a href="faq.html">FAQ</a>
         </li>
         <li>
           <img src="images/home/nav-about.png" alt="About Logo">
@@ -70,6 +70,61 @@
       </ul>
     </section>
 
+    <section class="mobile-nav" id="mobile-nav">
+
+      <ul class="top">
+        <li>
+          <a href="signin.html">Log In</a>
+        </li>
+        <li>
+          <a href="signup.html">Sign Up</a>
+        </li>
+      </ul>
+
+      <ul class="bot">
+        <li>
+          <img src="images/home/nav-sell.png" alt="News Logo">
+          <a href="sell.html">Sell a Product</a>
+        </li>
+        <li>
+          <img src="images/home/nav-news.png" alt="News Logo">
+          <a href="news.html">News</a>
+        </li>
+        <li>
+          <img src="images/home/nav-info.png" alt="Information Logo">
+          <a href="faq.html">FAQ</a>
+        </li>
+        <li>
+          <img src="images/home/nav-about.png" alt="About Logo">
+          <a href="about.html">About Us</a>
+        </li>
+        <li>
+          <img src="images/home/nav-contact.png" alt="Contact Logo">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+
+      function openMobileNav(){
+        var hamburger = document.getElementById("hamburger-nav");
+        var mobileNav = document.getElementById("mobile-nav");
+        
+        if(window.getComputedStyle(mobileNav).visibility === "hidden"){
+          mobileNav.style.visibility = 'visible';
+          mobileNav.style.width = '50%';
+          mobileNav.style.height = '100vh'
+        }
+        else{
+          mobileNav.style.visibility = 'hidden';
+          mobileNav.style.width = '0';
+          mobileNav.style.height = '0'
+        }
+
+      }
+
+    </script>
   </nav>
 
   <!-- SIGN IN PAGE -->
@@ -82,7 +137,7 @@
           <div class="sign-in-box">
             <div class="sign-in-heading">
                 <h1>JunKonnect</h1>
-                <h3>SOME TAGLINE</h3>
+                <h3>Turn your Trash into Cash</h3>
             </div>
           </div>
         </div>
@@ -166,7 +221,7 @@
             <div class="contact-details">
               <img src="images/home/email-logo.png" alt="Email Logo"> 
               <p id="paragraph-footer">
-                namengwebsite@gmail.com
+                junkonnect@gmail.com
               </p>
             </div>
           </div>
@@ -176,9 +231,9 @@
 
             <div class="footer-about-container">
               <ul>
-                <li><a href="index.html#story-section">Our Story</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <a href="index.html#story-section"><li>Our Story</li></a>
+                <a href="about.html"><li>About Us</li></a>
+                <a href="contact.html"><li>Contact Us</li></a>
               </ul>
             </div>
           </div>
@@ -195,10 +250,11 @@
       </div>
 
       <div class="footer-disclaimer">
-        <h5>Copyright © 2023 | JunKonnect | All rights reserved</h5>
+        <h5>Copyright © 2023 JunKonnect. All rights reserved</h5>
       </div>
 
     </footer>
+
 
 
 
