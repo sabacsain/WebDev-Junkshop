@@ -899,7 +899,6 @@ nav{
 #type-label select{
     position: relative;
     display: inline-block;
-    width: 408px;
     height: 55px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -2527,6 +2526,10 @@ footer ul{
         width: 100%;
         padding: 0;
     }
+
+    .seller-info-container li {
+        font-size: 2vw; 
+    }
 }
 
 @media screen and (max-width:720px) {
@@ -2630,6 +2633,15 @@ footer ul{
         width: 100%;
     }
 
+    #type-label select{
+      max-width: 100%;
+      width: auto;
+    }
+
+    .seller-detail .seller-label {
+        flex: 1 0 100%;
+    }
+
     .clutter-section h1{
         margin-top: -13%;
     }
@@ -2666,6 +2678,10 @@ footer ul{
     .news-card-container{
         grid-template-columns: 90%;
         gap: 10px;
+    }
+
+    .seller-info-container li {
+        font-size: 2.5vw; 
     }
 }
 
