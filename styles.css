@@ -2348,6 +2348,10 @@ footer ul{
     width: 500px;
 }
 
+
+
+
+
 @media screen and (max-width:1390px) {
     #week-row2{
         flex-direction: column;
