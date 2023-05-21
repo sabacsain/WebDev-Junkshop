@@ -763,7 +763,7 @@ nav{
     display: flex;
     flex-direction: column;
     background: white;
-    padding: 13% 0;
+    padding: 10% 0;
     width: 100%;
     color: #fff;
 }
@@ -789,7 +789,7 @@ nav{
     border-radius: 75px 75px;
     padding: 1.5% 4%;
     font-weight:lighter;
-    margin-top: 7%;
+    margin-top: 4%;
 }
 .clutter-section .submit-button:hover{
     cursor: pointer;
@@ -811,13 +811,20 @@ nav{
     padding-left: 6%;
     font-size: clamp(0.5625rem, -0.2969rem + 2.75vw, 1.25rem);
 }
-.clutter-section ul li span{
-    font-weight: 900;
-    padding-right: 6%;
-    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+.clutter-section .seller-info-container{
+    display: flex;
 }
 .clutter-section ul li{
-    line-height: 2;
+    line-height: 2.5;
+    list-style: none;
+}
+.clutter-section .seller-label{
+    font-weight: 900;
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    padding-left: 5%;
+}
+.clutter-section .seller-detail{
+    font-weight: 100;
 }
 .clutter-section hr{
     color: white;
@@ -836,31 +843,56 @@ nav{
 .clutter-product{
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .clutter-section .product-content{
     display: flex;
-    justify-content: space-evenly;
+    margin-left: 5%;
 }
 #name-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
 }
 #type-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
+}
+#type-label select{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 55px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    padding: 4% ;
+    color: #23C686;
 }
 #description-label input{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
-    padding: 9% 9%;
+    padding: 9% 4%;
 }
 #description-label {
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
 }
 #weight-label{
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     font-weight: 900;
+    margin-bottom: 5%;
+}
+#image-label{
+    font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    font-weight: 900;
+}
+#image-label input{
+    padding: 2% 0 ;
 }
 #product-form{
     display: flex;
@@ -879,24 +911,13 @@ nav{
     line-height: 3;
 }
 
-#image-form{
-    width: 45%;
-}
 
-#image-form label{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-#image-form input{
-    margin: auto;
-}
 
 .clutter-submit{
     display: flex;
     justify-content: center;
 }
+
 
 /*-------------------SIGNUP-------------------*/
 
@@ -1566,7 +1587,7 @@ nav{
     margin: auto;
 }
 
-.contact-page .fa {
+.contact-page .contact-socmed .fa {
     padding: 6% 8%;   
     text-align: center;
     text-decoration: none;
