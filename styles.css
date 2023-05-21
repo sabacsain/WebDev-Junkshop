@@ -1855,19 +1855,20 @@ nav{
 }
 
 .info-box table tbody tr{
-    background: #CCCCCC;
+    background: solid white;
     color: #198B72;
     font-weight: 900;
     font-family: 'Montserrat';
     font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
     line-height: 3;
+    padding: 10px 10px;
 }
 .info-box table tbody td:nth-child(2){
    text-align: center;
 }
 
-.info-box{
-    padding-top: 5% ;
+.info-box table tbody tr:nth-child(even) {
+    background-color: #EAFBF3;
 }
   
 
