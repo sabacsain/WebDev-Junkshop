@@ -101,11 +101,19 @@
 
               <hr>
 
-              <ul class="seller-information">
-                <li><span class="detail-label">Name:</span> Samantha De Jesus</li>
-                <li><span class="detail-label">Contact No:</span> 09123456789</li>
-                <li><span class="detail-label">Address:</span> General Tinio Street, Sto. Nino Gapan Nueva Ecija</li>
-              </ul>
+              <div class="seller-info-container">
+                <ul class="seller-label">
+                  <li>Name: </li>
+                  <li>Contact No: </li>
+                  <li>Address: </li>
+                </ul>
+  
+                <ul class="seller-detail">
+                  <li>Samantha De Jesus</li>
+                  <li>09123456789</li>
+                  <li>General Tinio Street, Sto. Nino Gapan Nueva Ecija</li>
+                </ul>
+              </div>
 
 
             </div>
@@ -130,12 +138,13 @@
                     </label>
 
                     <label for="type" id="type-label">TYPE OF JUNK
-                      <input
-                        id="type"
-                        type="text"
-                        placeholder="Pet Bottle"
-                        required>
-                      </input>
+                      <select>
+                        <option value="option1" selected>Paper</option>
+                        <option value="option2">Plastic</option>
+                        <option value="option3">Metal</option>
+                        <option value="option4">Electronic Waste</option>
+                        <option value="option5">Glass</option>
+                      </select>
                     </label>
 
                     <label for="description" id="description-label">DESCRIPTION
@@ -156,7 +165,7 @@
                       </input>
                     </label>
 
-                    <label for="image">PRODUCT IMAGE:
+                    <label for="image" id="image-label">PRODUCT IMAGE:
                       <input type="file" id="image" name="image">
                       <!-- <input type="submit" value="Submit"> -->
                     </label>

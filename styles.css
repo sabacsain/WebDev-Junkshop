@@ -863,7 +863,7 @@ nav{
 #type-label select{
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 408px;
     height: 55px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -917,7 +917,6 @@ nav{
     display: flex;
     justify-content: center;
 }
-
 
 /*-------------------SIGNUP-------------------*/
 
