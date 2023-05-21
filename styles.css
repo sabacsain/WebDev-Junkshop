@@ -613,10 +613,6 @@ nav{
     margin-top: 7%;
 }
 
-.home .news-card-container{
-    height: 200vh;
-}   
-
 .news-page .news-section h1{
     width: fit-content;
     padding: 2% 7%;
@@ -2416,9 +2412,6 @@ border-radius: 3px;
         height: fit-content;
     }
 
-    .home .news-card-container{
-        height: 150vh;
-    }
     
 }
 
