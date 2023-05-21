@@ -2682,11 +2682,14 @@ footer ul{
     .news-card-container{
         grid-template-columns: 90%;
         gap: 10px;
+        width: 80%;
+        margin: auto;
     }
 
     .seller-info-container li {
         font-size: 2.5vw; 
     }
+
 }
 
 @media screen and (max-width:300px) {
