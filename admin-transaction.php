@@ -1,0 +1,375 @@
+<?php
+require 'connection.php';
+$conn = Connect();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JunKonnect</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/home/#" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+  
+
+
+  
+
+  <!-- BODY -->
+<body>
+
+<!-- WHOLE ADMIN PAGE -->
+<div class="entire-admin">
+
+  <!-- ADMIN DASHBOARD -->
+  <section class="admin-dashboard">
+   
+      <div class="admin-upper">
+    
+        <h1>Admin Dashboard</h1>
+        <hr>
+
+        <div class="admin-button">    
+            <button onclick="location.href='admin-message.php'">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_199_345)">
+                  <path d="M10.5 6.75H7.5C7.30109 6.75 7.11032 6.82902 6.96967 6.96967C6.82902 7.11032 6.75 7.30109 6.75 7.5V16.5C6.75 16.6989 6.82902 16.8897 6.96967 17.0303C7.11032 17.171 7.30109 17.25 7.5 17.25H10.5C10.6989 17.25 10.8897 17.171 11.0303 17.0303C11.171 16.8897 11.25 16.6989 11.25 16.5V7.5C11.25 7.30109 11.171 7.11032 11.0303 6.96967C10.8897 6.82902 10.6989 6.75 10.5 6.75ZM9.75 15.75H8.25V8.25H9.75V15.75ZM16.5 0.75H13.5C13.3011 0.75 13.1103 0.829018 12.9697 0.96967C12.829 1.11032 12.75 1.30109 12.75 1.5V16.5C12.75 16.6989 12.829 16.8897 12.9697 17.0303C13.1103 17.171 13.3011 17.25 13.5 17.25H16.5C16.6989 17.25 16.8897 17.171 17.0303 17.0303C17.171 16.8897 17.25 16.6989 17.25 16.5V1.5C17.25 1.30109 17.171 1.11032 17.0303 0.96967C16.8897 0.829018 16.6989 0.75 16.5 0.75ZM15.75 15.75H14.25V2.25H15.75V15.75ZM4.5 11.25H1.5C1.30109 11.25 1.11032 11.329 0.96967 11.4697C0.829018 11.6103 0.75 11.8011 0.75 12V16.5C0.75 16.6989 0.829018 16.8897 0.96967 17.0303C1.11032 17.171 1.30109 17.25 1.5 17.25H4.5C4.69891 17.25 4.88968 17.171 5.03033 17.0303C5.17098 16.8897 5.25 16.6989 5.25 16.5V12C5.25 11.8011 5.17098 11.6103 5.03033 11.4697C4.88968 11.329 4.69891 11.25 4.5 11.25ZM3.75 15.75H2.25V12.75H3.75V15.75Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_199_345">
+                  <rect width="18" height="18" fill="white"/>
+                  </clipPath>
+                  </defs>
+              </svg>         
+            Messages
+            </button>
+
+            <button onclick="location.href='admin-user.php'" >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="6" r="3" fill="white"/>
+                <path d="M3.94488 13.2521C4.42256 10.983 6.68109 9.75 9 9.75V9.75C11.3189 9.75 13.5774 10.983 14.0551 13.2521C14.1083 13.5049 14.1531 13.7637 14.1862 14.0259C14.2538 14.5611 13.8127 15 13.2732 15H4.72678C4.18732 15 3.74616 14.5611 3.8138 14.0259C3.84694 13.7637 3.89167 13.5049 3.94488 13.2521Z" fill="white"/>
+            </svg> 
+              Users
+            </button>
+
+            <button onclick="location.href='admin-transaction.html'"class="active">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="#fff">
+                <path d="M7.5 6H12C12.1989 6 12.3897 5.92098 12.5303 5.78033C12.671 5.63968 12.75 5.44891 12.75 5.25C12.75 5.05109 12.671 4.86032 12.5303 4.71967C12.3897 4.57902 12.1989 4.5 12 4.5H7.5C7.30109 4.5 7.11032 4.57902 6.96967 4.71967C6.82902 4.86032 6.75 5.05109 6.75 5.25C6.75 5.44891 6.82902 5.63968 6.96967 5.78033C7.11032 5.92098 7.30109 6 7.5 6V6ZM6 9H12C12.1989 9 12.3897 8.92098 12.5303 8.78033C12.671 8.63968 12.75 8.44891 12.75 8.25C12.75 8.05109 12.671 7.86032 12.5303 7.71967C12.3897 7.57902 12.1989 7.5 12 7.5H6C5.80109 7.5 5.61032 7.57902 5.46967 7.71967C5.32902 7.86032 5.25 8.05109 5.25 8.25C5.25 8.44891 5.32902 8.63968 5.46967 8.78033C5.61032 8.92098 5.80109 9 6 9ZM6 12H12C12.1989 12 12.3897 11.921 12.5303 11.7803C12.671 11.6397 12.75 11.4489 12.75 11.25C12.75 11.0511 12.671 10.8603 12.5303 10.7197C12.3897 10.579 12.1989 10.5 12 10.5H6C5.80109 10.5 5.61032 10.579 5.46967 10.7197C5.32902 10.8603 5.25 11.0511 5.25 11.25C5.25 11.4489 5.32902 11.6397 5.46967 11.7803C5.61032 11.921 5.80109 12 6 12ZM15 1.5H3C2.80109 1.5 2.61032 1.57902 2.46967 1.71967C2.32902 1.86032 2.25 2.05109 2.25 2.25V15.75C2.25 15.8893 2.28879 16.0258 2.36201 16.1443C2.43524 16.2628 2.54001 16.3585 2.66459 16.4208C2.78917 16.4831 2.92863 16.5095 3.06735 16.497C3.20608 16.4845 3.33857 16.4336 3.45 16.35L5.0025 15.1875L6.5475 16.35C6.67732 16.4474 6.83522 16.5 6.9975 16.5C7.15978 16.5 7.31768 16.4474 7.4475 16.35L9 15.1875L10.5525 16.35C10.6823 16.4474 10.8402 16.5 11.0025 16.5C11.1648 16.5 11.3227 16.4474 11.4525 16.35L12.9975 15.1875L14.55 16.35C14.662 16.4334 14.795 16.484 14.9341 16.4959C15.0733 16.5078 15.213 16.4807 15.3375 16.4175C15.4612 16.3552 15.5652 16.2598 15.638 16.142C15.7108 16.0242 15.7496 15.8885 15.75 15.75V2.25C15.75 2.05109 15.671 1.86032 15.5303 1.71967C15.3897 1.57902 15.1989 1.5 15 1.5V1.5ZM14.25 14.25L13.4475 13.65C13.3177 13.5526 13.1598 13.5 12.9975 13.5C12.8352 13.5 12.6773 13.5526 12.5475 13.65L11.0025 14.8125L9.45 13.65C9.32018 13.5526 9.16228 13.5 9 13.5C8.83772 13.5 8.67982 13.5526 8.55 13.65L6.9975 14.8125L5.4525 13.65C5.32268 13.5526 5.16478 13.5 5.0025 13.5C4.84022 13.5 4.68232 13.5526 4.5525 13.65L3.75 14.25V3H14.25V14.25Z" fill="#198B72"/>
+                </svg>
+            Transactions
+            </button>
+        </div>
+
+      </div>
+
+      <div class="logout-admin">
+        <button onclick="location.href='logout.php'">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.75 1.5H5.25C3.975 1.5 3 2.475 3 3.75V8.25H9.45L7.725 6.525C7.425 6.225 7.425 5.775 7.725 5.475C8.025 5.175 8.475 5.175 8.775 5.475L11.775 8.475C12.075 8.775 12.075 9.225 11.775 9.525L8.775 12.525C8.475 12.825 8.025 12.825 7.725 12.525C7.425 12.225 7.425 11.775 7.725 11.475L9.45 9.75H3V14.25C3 15.525 3.975 16.5 5.25 16.5H12.75C14.025 16.5 15 15.525 15 14.25V3.75C15 2.475 14.025 1.5 12.75 1.5Z" fill="white"/>
+            </svg>  
+            Log Out
+        </button>
+      </div>
+
+  </section>
+
+  <!-- ADMIN PAGE (RIGHT SIDE)-->
+  <section class="admin-page">
+
+      <div class="admin-nav">
+        <div class="logo-container">
+          <img src="images/home/nav-junkonnect.png" alt="Junkconnect logo">
+        </div>
+  
+          <div class="admin-button-nav">    
+              <button onclick="location.href='admin-message.php'" >         
+              Messages
+              </button>
+  
+              <button onclick="location.href='admin-user.php'">
+              Users
+              </button>
+  
+              <button onclick="location.href='admin-transaction.php'" class="active">
+              Transactions
+              </button>
+  
+              <button onclick="location.href='logout.php'">
+                  Log Out
+              </button>
+          </div>
+  
+      </div>
+
+      <div class="admin-transactions">
+        <h2>TRANSACTIONS</h2>
+
+            
+   <!--EDIT STARTS HERE-->
+    
+    <!--Search field-->
+    <form method="POST">
+        <div class="input-group mb-3 search-input">
+            <input type="text" class="form-control" placeholder="Search transaction id, seller, or status" name="word">
+            <button class="btn btn-outline-#23C686" type="submit" id="button-addon2" name="search" >Search</button>
+        </div>
+    </form>
+
+    <!--Table-->
+    <div class="table-container">
+        <table class="table table-light table-striped align-middle table-hover table-condensed"id="table">
+        <thead >
+                <tr>
+                    <th>#</th>
+                    <th class="align-middle">TRANSACTION ID</th>
+                    <th class="align-middle">USER ID</th>
+                    <th class="align-middle">PRODUCT NAME</th>
+                    <th class="align-middle">TYPE OF JUNK</th>
+                    <th class="align-middle">DESCRIPTION</th>
+                    <th class="align-middle">ESTIMATED WEIGHT</th>
+                    <th class="align-middle">IMG PATH</th>
+                    <th class="align-middle">PRICE</th>
+                    <th class="align-middle">DATE OF PICKUP</th>
+                    <th class="align-middle">STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $results = "";
+                if(isset($_POST['search'])){
+                    $word = $_POST['word'];
+                    $query = "SELECT * FROM transaction WHERE transaction_id LIKE '%$word%' 
+                    OR user_id LIKE '%$word%' OR status LIKE '%$word%'";
+                    $stmt = $conn->prepare($query);
+                    $stmt->execute();
+                    $stmt -> setFetchMode(PDO::FETCH_OBJ);
+                    $results = $stmt ->fetchAll();
+                    $i=1;
+                    if($results){
+                        foreach($results as $record){
+                            $id = $record->transaction_id;
+                    
+                    ?>  
+                    
+                    <!--set values of table rows-->
+                    <tr >
+                        <td> <?=$i++?></td>
+                        <td><?=$record -> transaction_id ?> </td>
+                        <td><?=$record -> user_id ?> </td>
+                        <td><?=$record -> product_name ?> </td>
+                        <td><?=$record -> type_of_junk ?> </td>
+                        <td><?=$record -> description ?> </td>
+                        <td><?=$record -> estimated_weight ?> </td>
+                        <td><?=$record -> img_path ?> </td>
+                        <td><?=$record -> price ?> </td>
+                        <td><?=$record -> date_of_pickup ?> </td>
+                        <td><?=$record -> status ?> </td>
+                    </tr>
+                    <?php
+                    
+                        }
+                    }
+                }
+
+                else{
+                    $query = "SELECT * FROM transaction";
+                    $stmt = $conn->prepare($query);
+                    $stmt->execute();
+                    $stmt -> setFetchMode(PDO::FETCH_OBJ);
+                    $results = $stmt ->fetchAll();
+                    $i=1;
+                    if($results){
+                        foreach($results as $record){
+                            $id = $record->transaction_id;
+                    
+                    ?>  
+                    
+                    <!--set values of table rows-->
+                    <tr >
+                        <td> <?=$i++?></td>
+                        <td><?=$record -> transaction_id ?> </td>
+                        <td><?=$record -> user_id ?> </td>
+                        <td><?=$record -> product_name ?> </td>
+                        <td><?=$record -> type_of_junk ?> </td>
+                        <td><?=$record -> description ?> </td>
+                        <td><?=$record -> estimated_weight ?> </td>
+                        <td><?=$record -> img_path ?> </td>
+                        <td><?=$record -> price ?> </td>
+                        <td><?=$record -> date_of_pickup ?> </td>
+                        <td><?=$record -> status ?> </td>
+                    </tr>
+                    <?php
+                        }
+                    }
+                }
+               
+                ?>
+            
+            </tbody>
+        </table>
+     </div>
+    
+    <!--TRANSACTION INFO FORM-->
+    <div class="student-info-form" >
+        <br>
+        <div>
+            <h5>TRANSACTION</h5>
+            <button type="button" class="btn btn-#23C686" id="clear-btn">Clear text fields</button>
+        </div>
+        <hr>
+
+        <form method="POST" action="transaction-operations.php">
+        <!-- <input type="text" class="form-control"  disabled> -->       
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control form-control-sm" id="transaction_id_input" required placeholder="Transaction ID" name="transactionID_input">
+            <label for="transaction_id_input">Transaction ID</label>
+        </div>  
+
+        <div class="form-floating mb-1">
+                    <input type="number" class="form-control" id="user_id_input" required placeholder="User ID" name='userID_input'>
+                    <label for="user_id_input">User ID</label>
+            </div>
+        
+            
+            <div style="display:flex; gap: 4px;">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="product_name_input" required placeholder="Product Name" name='product_name_input'>
+                <label for="product_name_input">Product Name</label>
+            </div>
+     
+
+        <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="type_of_junk_input" required placeholder="Type of Junk" name='type_of_junk_input'>
+                <label for="type_of_junk_input">Type of Junk</label>
+            </div>
+            </div>
+
+        <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="description_input" required placeholder="Description" name='description_input'>
+                <label for="description_input">Description</label>
+            </div>
+      
+            <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="estimated_weight_input" required placeholder=1 min=1 max=9999999999 name='estimated_weight_input'>
+                    <label for="estimated_weight_input">Estimated Weight</label>
+            </div>
+            <div style="display:flex; gap: 4px;">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img_path_input" required placeholder="Img Path" name='img_path_input'>
+                <label for="img_path_input">Img Path</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="price_input" required placeholder=1 min=1 max=9999999999 name='price_input'>
+                    <label for="price_input">Price</label>
+            </div>
+            </div>
+            <div style="display:flex; gap: 4px;">
+            <div class="form-floating mb-1">
+                    <input type="date" class="form-control" id="date_of_pickup_input" required name='date_of_pickup_input'>
+                    <label for="date_of_pickup_input">Date of Pickup</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="status_input" required placeholder="Status" name='status_input'>
+                    <label for="status_input">Status</label>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-green btn-lg me-md-2" id="add-btn" name="add-to-form" >
+                    Add
+            </button>
+            <button type="submit" class="btn btn-gray btn-lg me-md-2" id="update-btn" name="update-record">
+                Update
+            </button>
+            <button type="submit" class="btn btn-red btn-lg me-md-2" id="delete-btn" name="delete-record">
+                Delete
+            </button>
+        </div>
+        <br>
+  <br>
+  <br>
+        </div>
+        
+        </form>
+    </div>
+   
+    <script>    
+        
+        /*Disable update and delete button if no record was clicked*/
+        document.getElementById("update-btn").disabled = true;
+        document.getElementById("delete-btn").disabled = true;
+
+        /*refreshes page; to clear text*/
+        var clear = document.getElementById("clear-btn");
+        if (clear){
+            clear.onclick = function (){
+                location.reload(true);
+            }
+        }
+        
+        // <!--Retrieve data when table row is clicked-->
+
+        var table = document.getElementById("table");
+        if (table) {
+            for (let i = 0; i < table.rows.length; i++) {
+                table.rows[i].onclick = function() {
+                let transaction_id = this.cells[1].innerHTML;
+                let user_id = this.cells[2].innerHTML;
+                let product_name = this.cells[3].innerHTML;
+                let type_of_junk = this.cells[4].innerHTML;
+                let description = this.cells[5].innerHTML;
+                let estimated_weight = this.cells[6].innerHTML;
+                let img_path = this.cells[7].innerHTML;
+                let price = this.cells[8].innerHTML;
+                let date_of_pickup = this.cells[9].innerHTML;
+                date_of_pickup = date_of_pickup.split("-");
+                let status = this.cells[10].innerHTML;
+
+                /*assign column values to text fields   */
+                document.getElementById("transaction_id_input").value = parseInt(transaction_id);
+                document.getElementById("transaction_id_input").readOnly = true;
+
+                document.getElementById("user_id_input").value = parseInt(user_id);
+                document.getElementById("product_name_input").value = product_name;
+                document.getElementById("type_of_junk_input").value = type_of_junk;
+                document.getElementById("description_input").value = description;
+                document.getElementById("estimated_weight_input").value = parseInt(estimated_weight);
+                document.getElementById("img_path_input").value = img_path;
+                document.getElementById("price_input").value = parseInt(price);
+                document.getElementById("date_of_pickup_input").value = (String(date_of_pickup[0]) + '-' + String(date_of_pickup[1]) + '-' + String(date_of_pickup[2])).trim();
+                document.getElementById("status_input").value = status;
+                
+                /*Disable add button if a record is clicked from the table*/
+                document.getElementById("add-btn").disabled = true;
+                document.getElementById("update-btn").disabled = false;
+                document.getElementById("delete-btn").disabled = false;
+
+                };
+            };
+        }
+
+
+    </script>
+   
+          </tbody>
+
+        </table>
+        
+        
+      </div>
+  
+    </section>
+
+
+  </div>
+    <!--EDIT ENDS HERE-->
+</body>
+</html>
