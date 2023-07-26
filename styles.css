@@ -137,8 +137,15 @@ nav{
         border-radius: 75px 75px;
         border: none;
         color: #fff;
-        padding: 2% 5%;
+        padding: 3% 5%;
         font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
+    }
+
+    .login-signup a{
+        text-decoration: none;
+        height: fit-content;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
 
@@ -840,7 +847,6 @@ nav{
     font-weight: 900;
 }
 .clutter-section h3{
-    cursor: pointer;
     color: #23C686;
     padding-left: 6%;
     font-size: clamp(0.75rem, -0.2969rem + 2.75vw, 1.25rem);
@@ -1147,31 +1153,52 @@ nav{
 }
 
 #edit-form{
-    width: 50%;
-    display: flex;
+    /* width: 50%;
     margin-left: auto;
-    text-align: center;
+    text-align: center; */
 }
 
-.edit-section .form-row{
+/* .edit-section .form-row{
     display: flex;
     flex-direction: column;
-}
+} */
 .edit-section input{
     text-align: center;
-    padding: 3% 0%;
-    border-radius: 10px 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0.25, 0.50);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
     color: #197C67;
     font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
     margin-right: 2%;
+    /* width: 500px; */
+    display: block !important;
+}
+
+.edit-section .input-row{
+    display:flex;
+    margin-left: auto;
+    width: 615px;
+}
+
+.edit-section .input-row input{
+    /* width: 300px; */
+}
+
+.edit-section .contact-row{
+    display: flex;
+    flex-direction: column;
+    width: 615px;
+    margin-left: auto;
+    padding: 0;
+
 }
 
 .edit-section #email-label input{
-    width: 100%;
+    /* width: 100%; */
     
 }
+
 
 .account-button-container{
     margin-left: auto;
@@ -1268,8 +1295,8 @@ nav{
 }
 
 .account-page .transaction-row img{
-    width: auto;
-    height: 70%;
+    width: 236px;
+    height: 185px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -2397,7 +2424,118 @@ border-radius: 3px;
     width: 500px;
 }
 
+/*-------------------EDIT STARTS HERE-------------------*/
+.alert {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .proceed-btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .proceed-btn button {
+    width: 60%;
+  }
+  
+  .admin-transactions h2 {
+    margin-top: -50px !important;
+    margin-bottom: 50px !important;
+  }
 
+  .admin-user h2 {
+    margin-top: -50px !important;
+    margin-bottom: 50px !important;
+  }
+  
+  
+  .search-input {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .table-container {
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    overflow: auto !important;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .table {
+    width: 120%;
+    vertical-align: middle !important;
+    
+  }
+  
+  
+  
+  th {
+    font-size: 14px;
+    color: #198B72;
+  }
+  
+  th:nth-child(1) {
+    border-radius: 8px 0px 0px 0px !important;
+  }
+  
+  th:last-child {
+    border-radius: 0px 8px 0px 0px !important;
+  }
+  
+  .student-info-form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  .form-floating input {
+    width: 100px;
+  }
+  th:nth-child(5) {
+              width: 100px;
+          }
+  
+          .admin-transactions a {
+              text-decoration: none;
+              color: white;
+          }
+  
+          .admin-transactions a:hover{
+              background-color: white;
+          }
+
+          .admin-user a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .admin-user a:hover{
+            background-color: white;
+        }
+  
+     
+  #transaction_id_input,
+  #user_id_input,
+  #img_path_input,
+  #product_name_input,
+  #type_of_junk_input,
+  #estimated_weight_input,
+  #price_input,
+  #status_input {
+    width: 250px;
+  }
+  #description_input {
+    width: 500px;
+  }
+  #date_of_pickup_input {
+    width: 150px;
+  }
+  tr:hover {background-color: coral;}    
+  /*-------------------EDIT ENDS HERE-------------------*/
 
 
 
