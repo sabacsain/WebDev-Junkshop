@@ -1,7 +1,9 @@
 
 <?php
 //VALIDATION
-include("connection.php");  
+session_start();
+require 'connection.php';
+$connect = Connect();
 
 $fNameError = "";
 $lNameError = "";
@@ -66,19 +68,20 @@ if(isset($_POST['submit'])){
 
 
     $query = "SELECT * FROM user WHERE email='$email' OR username='$username'";
-    $result = mysqli_query($con, $query);
+    $stmt = $connect->prepare($query);
+    $stmt->execute();
+    $stmt -> setFetchMode(PDO::FETCH_OBJ);
+    $result = $stmt ->fetchAll();
 
-    if(mysqli_num_rows($result)===0){
-
-      $query = "insert into user (email,first_name,last_name,phone,address,password,telephone,username) values('$email','$fname','$lname','$phone','$address','$hashed_password','$tel','$email')";
-      mysqli_query($con, $query);
+    if($result){
+      $takenError = "<p style='color: #FFFF8F;'>Email or Username is already taken.</p>";
+    }
+    else{
+      $query = "insert into user (email,first_name,last_name,phone,address,password,telephone,username) values('$email','$fname','$lname','$phone','$address','$hashed_password','$tel','$username')";
+      $stmt = $connect->exec($query);
   
       header("Location:signin.php");
       die;
-
-    }
-    else{
-      $takenError = "<p style='color: #FFFF8F;'>Email or Username is already taken.</p>";
     }
 
   }
@@ -101,119 +104,28 @@ if(isset($_POST['submit'])){
 <!-- BODY -->
 <body>
 
-  <!-- NAVIGATION BAR -->
-  <nav>
-    <!-- NAVBAR TOP -->
-    <section class="nav-top">
+<?php include("nav.php"); ?>
 
-      <div class="logo-box">
-        <div class="img-bg" onclick="location.href='index.html';"><img src="images/home/nav-junkonnect.png" alt="Online Junkshop Logo"></div>
-      </div>
+<script>
 
-      <div class="web-elem">
+  function openMobileNav(){
+    var hamburger = document.getElementById("hamburger-nav");
+    var mobileNav = document.getElementById("mobile-nav");
+    
+    if(window.getComputedStyle(mobileNav).visibility === "hidden"){
+      mobileNav.style.visibility = 'visible';
+      mobileNav.style.width = '50%';
+      mobileNav.style.height = '100vh'
+    }
+    else{
+      mobileNav.style.visibility = 'hidden';
+      mobileNav.style.width = '0';
+      mobileNav.style.height = '0'
+    }
 
-        <div class="socmed-button">
-          <i href="#" class="fa fa-facebook"></i>
-          <i href="#" class="fa fa-instagram"></i>
-          <i href="#" class="fa fa-twitter"></i>
-        </div>
+  }
 
-        <div class="login-signup">
-          <button class="nav-button" onclick="location.href='signin.html'">Log In</button>
-          <button class="nav-button" onclick="location.href='signup.html'">Sign Up</button>
-        </div>
-
-      </div>
-
-      <div class="hamburger" id="hamburger-nav" onclick="openMobileNav()">
-        <hr> <hr> <hr>
-      </div>
-
-    </section>
-
-
-    <!-- NAVBAR BOTTOM -->
-    <section class="nav-bot">
-      <ul>
-        <li>
-          <img src="images/home/nav-sell.png" alt="News Logo">
-          <a href="sell.html">Sell a Product</a>
-        </li>
-        <li>
-          <img src="images/home/nav-news.png" alt="News Logo">
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="faq.html">FAQ</a>
-        </li>
-        <li>
-          <img src="images/home/nav-about.png" alt="About Logo">
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <img src="images/home/nav-contact.png" alt="Contact Logo">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="mobile-nav" id="mobile-nav">
-
-      <ul class="top">
-        <li>
-          <a href="signin.html">Log In</a>
-        </li>
-        <li>
-          <a href="signup.html">Sign Up</a>
-        </li>
-      </ul>
-
-      <ul class="bot">
-        <li>
-          <img src="images/home/nav-sell.png" alt="News Logo">
-          <a href="sell.html">Sell a Product</a>
-        </li>
-        <li>
-          <img src="images/home/nav-news.png" alt="News Logo">
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="faq.html">FAQ</a>
-        </li>
-        <li>
-          <img src="images/home/nav-about.png" alt="About Logo">
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <img src="images/home/nav-contact.png" alt="Contact Logo">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </section>
-
-    <script>
-
-      function openMobileNav(){
-        var hamburger = document.getElementById("hamburger-nav");
-        var mobileNav = document.getElementById("mobile-nav");
-        
-        if(window.getComputedStyle(mobileNav).visibility === "hidden"){
-          mobileNav.style.visibility = 'visible';
-          mobileNav.style.width = '50%';
-          mobileNav.style.height = '100vh'
-        }
-        else{
-          mobileNav.style.visibility = 'hidden';
-          mobileNav.style.width = '0';
-          mobileNav.style.height = '0'
-        }
-
-      }
-
-    </script>
-  </nav>
+</script>
 
   <!-- SIGN UP PAGE -->
   <div class="signup-page">   
@@ -408,9 +320,9 @@ if(isset($_POST['submit'])){
 
             <div class="footer-about-container">
               <ul>
-                <a href="index.html#story-section"><li>Our Story</li></a>
-                <a href="about.html"><li>About Us</li></a>
-                <a href="contact.html"><li>Contact Us</li></a>
+                <a href="index.php#story-section"><li>Our Story</li></a>
+                <a href="about.php"><li>About Us</li></a>
+                <a href="contact.php"><li>Contact Us</li></a>
               </ul>
             </div>
           </div>
