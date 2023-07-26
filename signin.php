@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("connection.php");  
-
+require 'connection.php';
+$conn = Connect();
 
 //VALIDATION
 $usernameError = "";
@@ -21,26 +21,43 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];
 
       $query = "select * from user where username = '$username' limit 1";     
-      $result = mysqli_query($con, $query);
+      $stmt = $conn->prepare($query);
+      $stmt->execute();
+      $stmt -> setFetchMode(PDO::FETCH_OBJ);
+      $result = $stmt ->fetchAll();
+      
 
-      if($result){
+          if($result){
 
-          if($result && mysqli_num_rows($result)>0){
-            $user_data = mysqli_fetch_assoc($result);
-            
-            if(password_verify($password,$user_data['password'])){
+            foreach($result as $row){
+              $resultPass = $row -> password;
+              $resultID = $row -> user_id;
+              $resultType = $row -> user_type;
+            }
               
-              $_SESSION['user_id'] = $user_data['user_id'];
-              header("Location: index.php");
-              die;
+            if(password_verify($password,$resultPass)){
+              $_SESSION['user_id'] = $resultID;
+
+              if($resultType == 0){
+                header("Location: index.php");
+                die;
+              }
+              else{
+                header("Location: admin-message.php");
+                die;
+              }
+             
             }
             else{
               $passwordError  = "<p style='color: red;'>Wrong username or password.</p>";
             }
 
           }
+          else{
+            $passwordError  = "<p style='color: red;'>Wrong username or password.1</p>";
+          }
 
-      }
+      
   }
 
 }
@@ -63,119 +80,28 @@ if(isset($_POST['submit'])){
 <!-- BODY -->
 <body>
 
-   <!-- NAVIGATION BAR -->
-   <nav>
-    <!-- NAVBAR TOP -->
-    <section class="nav-top">
+<?php include("nav.php"); ?>
 
-      <div class="logo-box">
-        <div class="img-bg" onclick="location.href='index.html';"><img src="images/home/nav-junkonnect.png" alt="Online Junkshop Logo"></div>
-      </div>
+<script>
 
-      <div class="web-elem">
+  function openMobileNav(){
+    var hamburger = document.getElementById("hamburger-nav");
+    var mobileNav = document.getElementById("mobile-nav");
+    
+    if(window.getComputedStyle(mobileNav).visibility === "hidden"){
+      mobileNav.style.visibility = 'visible';
+      mobileNav.style.width = '50%';
+      mobileNav.style.height = '100vh'
+    }
+    else{
+      mobileNav.style.visibility = 'hidden';
+      mobileNav.style.width = '0';
+      mobileNav.style.height = '0'
+    }
 
-        <div class="socmed-button">
-          <i href="#" class="fa fa-facebook"></i>
-          <i href="#" class="fa fa-instagram"></i>
-          <i href="#" class="fa fa-twitter"></i>
-        </div>
+  }
 
-        <div class="login-signup">
-          <button class="nav-button" onclick="location.href='signin.html'">Log In</button>
-          <button class="nav-button" onclick="location.href='signup.html'">Sign Up</button>
-        </div>
-
-      </div>
-
-      <div class="hamburger" id="hamburger-nav" onclick="openMobileNav()">
-        <hr> <hr> <hr>
-      </div>
-
-    </section>
-
-
-    <!-- NAVBAR BOTTOM -->
-    <section class="nav-bot">
-      <ul>
-        <li>
-          <img src="images/home/nav-sell.png" alt="Sell Logo">
-          <a href="sell.html">Sell a Product</a>
-        </li>
-        <li>
-          <img src="images/home/nav-news.png" alt="News Logo">
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="faq.html">FAQ</a>
-        </li>
-        <li>
-          <img src="images/home/nav-about.png" alt="About Logo">
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <img src="images/home/nav-contact.png" alt="Contact Logo">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="mobile-nav" id="mobile-nav">
-
-      <ul class="top">
-        <li>
-          <a href="signin.html">Log In</a>
-        </li>
-        <li>
-          <a href="signup.html">Sign Up</a>
-        </li>
-      </ul>
-
-      <ul class="bot">
-        <li>
-          <img src="images/home/nav-sell.png" alt="News Logo">
-          <a href="sell.html">Sell a Product</a>
-        </li>
-        <li>
-          <img src="images/home/nav-news.png" alt="News Logo">
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="faq.html">FAQ</a>
-        </li>
-        <li>
-          <img src="images/home/nav-about.png" alt="About Logo">
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <img src="images/home/nav-contact.png" alt="Contact Logo">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </section>
-
-    <script>
-
-      function openMobileNav(){
-        var hamburger = document.getElementById("hamburger-nav");
-        var mobileNav = document.getElementById("mobile-nav");
-        
-        if(window.getComputedStyle(mobileNav).visibility === "hidden"){
-          mobileNav.style.visibility = 'visible';
-          mobileNav.style.width = '50%';
-          mobileNav.style.height = '100vh'
-        }
-        else{
-          mobileNav.style.visibility = 'hidden';
-          mobileNav.style.width = '0';
-          mobileNav.style.height = '0'
-        }
-
-      }
-
-    </script>
-  </nav>
+</script>
 
   <!-- SIGN IN PAGE -->
   <div class="signin-page">   
@@ -237,78 +163,76 @@ if(isset($_POST['submit'])){
 
     </section>
 
+   <!-- FOOTER -->
+   <footer>
 
-    <!-- FOOTER -->
-    <footer>
+  <div class="footer-container">
 
-      <div class="footer-container">
+    <div class="footer-left">
+        <div class="img-container">
+          <img src="images/home/nav-junkonnect.png" alt="Online Junkshop Logo">
+        </div>
+        <h5>Turn your Trash into Cash</h5>
+    </div>
 
-        <div class="footer-left">
-          <div class="img-container">
-            <img src="images/home/nav-junkonnect.png" alt="Online Junkshop Logo">
+    <div class="footer-vertical-line"></div>
+
+    <div class="footer-right">
+
+      <div class="footer-contact">
+        <h3>CONTACT</h3>
+        <div class="footer-contact-container">
+          <div class="contact-details">
+            <img src="images/home/location-logo.png" alt="Location Logo"> 
+            <p id="paragraph-footer">
+              General Tinio Street, Sto.<br>Nino Gapan Nueva Ecija
+            </p>
           </div>
-          <h5>Turn your Trash into Cash</h5>
+
+          <div class="contact-details">
+            <img src="images/home/phone-logo.png" alt="Phone Logo"> 
+            <p id="paragraph-footer">
+              (044) 486-0527
+            </p>
+          </div>
         </div>
 
-        <div class="footer-vertical-line"></div>
-
-        <div class="footer-right">
-
-          <div class="footer-contact">
-            <h3>CONTACT</h3>
-            <div class="footer-contact-container">
-              <div class="contact-details">
-                <img src="images/home/location-logo.png" alt="Location Logo"> 
-                <p id="paragraph-footer">
-                  General Tinio Street, Sto.<br>Nino Gapan Nueva Ecija
-                </p>
-              </div>
-
-              <div class="contact-details">
-                <img src="images/home/phone-logo.png" alt="Phone Logo"> 
-                <p id="paragraph-footer">
-                  (044) 486-0527
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-details">
-              <img src="images/home/email-logo.png" alt="Email Logo"> 
-              <p id="paragraph-footer">
-                junkonnect@gmail.com
-              </p>
-            </div>
-          </div>
-
-          <div class="footer-about">
-            <h3>ABOUT</h3>
-
-            <div class="footer-about-container">
-              <ul>
-                <a href="index.html#story-section"><li>Our Story</li></a>
-                <a href="about.html"><li>About Us</li></a>
-                <a href="contact.html"><li>Contact Us</li></a>
-              </ul>
-            </div>
-          </div>
-
-          <div class="footer-follow">
-            <h3>FOLLOW US</h3>
-            <i href="#" class="fa fa-facebook"></i>
-            <i href="#" class="fa fa-instagram"></i>
-            <i href="#" class="fa fa-twitter"></i>
-          </div>
-
+        <div class="contact-details">
+          <img src="images/home/email-logo.png" alt="Email Logo"> 
+          <p id="paragraph-footer">
+            junkonnect@gmail.com
+          </p>
         </div>
-
       </div>
 
-      <div class="footer-disclaimer">
-        <h5>Copyright © 2023 JunKonnect. All rights reserved</h5>
+      <div class="footer-about">
+        <h3>ABOUT</h3>
+
+        <div class="footer-about-container">
+          <ul>
+            <a href="index.php#story-section"><li>Our Story</li></a>
+            <a href="about.php"><li>About Us</li></a>
+            <a href="contact.php"><li>Contact Us</li></a>
+          </ul>
+        </div>
       </div>
 
-    </footer>
+      <div class="footer-follow">
+        <h3>FOLLOW US</h3>
+        <i href="#" class="fa fa-facebook"></i>
+        <i href="#" class="fa fa-instagram"></i>
+        <i href="#" class="fa fa-twitter"></i>
+      </div>
 
+    </div>
+
+  </div>
+
+  <div class="footer-disclaimer">
+    <h5>Copyright © 2023 JunKonnect. All rights reserved</h5>
+  </div>
+
+  </footer>
 
 
 
