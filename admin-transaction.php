@@ -60,7 +60,7 @@ $conn = Connect();
               Users
             </button>
 
-            <button onclick="location.href='admin-transaction.html'"class="active">
+            <button onclick="location.href='admin-transaction.php'"class="active">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="#fff">
                 <path d="M7.5 6H12C12.1989 6 12.3897 5.92098 12.5303 5.78033C12.671 5.63968 12.75 5.44891 12.75 5.25C12.75 5.05109 12.671 4.86032 12.5303 4.71967C12.3897 4.57902 12.1989 4.5 12 4.5H7.5C7.30109 4.5 7.11032 4.57902 6.96967 4.71967C6.82902 4.86032 6.75 5.05109 6.75 5.25C6.75 5.44891 6.82902 5.63968 6.96967 5.78033C7.11032 5.92098 7.30109 6 7.5 6V6ZM6 9H12C12.1989 9 12.3897 8.92098 12.5303 8.78033C12.671 8.63968 12.75 8.44891 12.75 8.25C12.75 8.05109 12.671 7.86032 12.5303 7.71967C12.3897 7.57902 12.1989 7.5 12 7.5H6C5.80109 7.5 5.61032 7.57902 5.46967 7.71967C5.32902 7.86032 5.25 8.05109 5.25 8.25C5.25 8.44891 5.32902 8.63968 5.46967 8.78033C5.61032 8.92098 5.80109 9 6 9ZM6 12H12C12.1989 12 12.3897 11.921 12.5303 11.7803C12.671 11.6397 12.75 11.4489 12.75 11.25C12.75 11.0511 12.671 10.8603 12.5303 10.7197C12.3897 10.579 12.1989 10.5 12 10.5H6C5.80109 10.5 5.61032 10.579 5.46967 10.7197C5.32902 10.8603 5.25 11.0511 5.25 11.25C5.25 11.4489 5.32902 11.6397 5.46967 11.7803C5.61032 11.921 5.80109 12 6 12ZM15 1.5H3C2.80109 1.5 2.61032 1.57902 2.46967 1.71967C2.32902 1.86032 2.25 2.05109 2.25 2.25V15.75C2.25 15.8893 2.28879 16.0258 2.36201 16.1443C2.43524 16.2628 2.54001 16.3585 2.66459 16.4208C2.78917 16.4831 2.92863 16.5095 3.06735 16.497C3.20608 16.4845 3.33857 16.4336 3.45 16.35L5.0025 15.1875L6.5475 16.35C6.67732 16.4474 6.83522 16.5 6.9975 16.5C7.15978 16.5 7.31768 16.4474 7.4475 16.35L9 15.1875L10.5525 16.35C10.6823 16.4474 10.8402 16.5 11.0025 16.5C11.1648 16.5 11.3227 16.4474 11.4525 16.35L12.9975 15.1875L14.55 16.35C14.662 16.4334 14.795 16.484 14.9341 16.4959C15.0733 16.5078 15.213 16.4807 15.3375 16.4175C15.4612 16.3552 15.5652 16.2598 15.638 16.142C15.7108 16.0242 15.7496 15.8885 15.75 15.75V2.25C15.75 2.05109 15.671 1.86032 15.5303 1.71967C15.3897 1.57902 15.1989 1.5 15 1.5V1.5ZM14.25 14.25L13.4475 13.65C13.3177 13.5526 13.1598 13.5 12.9975 13.5C12.8352 13.5 12.6773 13.5526 12.5475 13.65L11.0025 14.8125L9.45 13.65C9.32018 13.5526 9.16228 13.5 9 13.5C8.83772 13.5 8.67982 13.5526 8.55 13.65L6.9975 14.8125L5.4525 13.65C5.32268 13.5526 5.16478 13.5 5.0025 13.5C4.84022 13.5 4.68232 13.5526 4.5525 13.65L3.75 14.25V3H14.25V14.25Z" fill="#198B72"/>
                 </svg>
@@ -122,7 +122,7 @@ $conn = Connect();
             <button class="btn btn-outline-#23C686" type="submit" id="button-addon2" name="search" >Search</button>
         </div>
     </form>
-
+    
     <!--Table-->
     <div class="table-container">
         <table class="table table-light table-striped align-middle table-hover table-condensed"id="table">
@@ -135,7 +135,7 @@ $conn = Connect();
                     <th class="align-middle">TYPE OF JUNK</th>
                     <th class="align-middle">DESCRIPTION</th>
                     <th class="align-middle">ESTIMATED WEIGHT</th>
-                    <th class="align-middle">IMG PATH</th>
+                    <th class="align-middle">IMAGE</th>
                     <th class="align-middle">PRICE</th>
                     <th class="align-middle">DATE OF PICKUP</th>
                     <th class="align-middle">STATUS</th>
@@ -156,7 +156,13 @@ $conn = Connect();
                     if($results){
                         foreach($results as $record){
                             $id = $record->transaction_id;
-                    
+                            
+                            $file = "images/PRODUCT_IMAGES/".$record->img_path;
+                            if (file_exists($file))
+                            {
+                                $b64image = base64_encode(file_get_contents($file));
+                                $imgDisplay ="<img class='trash-img' alt='An image containing junks' src = 'data:image/png;base64,$b64image'>";
+                            }
                     ?>  
                     
                     <!--set values of table rows-->
@@ -168,7 +174,7 @@ $conn = Connect();
                         <td><?=$record -> type_of_junk ?> </td>
                         <td><?=$record -> description ?> </td>
                         <td><?=$record -> estimated_weight ?> </td>
-                        <td><?=$record -> img_path ?> </td>
+                        <td><?= $imgDisplay ?> </td>
                         <td><?=$record -> price ?> </td>
                         <td><?=$record -> date_of_pickup ?> </td>
                         <td><?=$record -> status ?> </td>
@@ -189,7 +195,13 @@ $conn = Connect();
                     if($results){
                         foreach($results as $record){
                             $id = $record->transaction_id;
-                    
+                                                        
+                            $file = "images/PRODUCT_IMAGES/".$record->img_path;
+                            if (file_exists($file))
+                            {
+                                $b64image = base64_encode(file_get_contents($file));
+                                $imgDisplay ="<img class='trans-img' alt='An image containing junks' src = 'data:image/png;base64,$b64image'>";
+                            }
                     ?>  
                     
                     <!--set values of table rows-->
@@ -201,7 +213,7 @@ $conn = Connect();
                         <td><?=$record -> type_of_junk ?> </td>
                         <td><?=$record -> description ?> </td>
                         <td><?=$record -> estimated_weight ?> </td>
-                        <td><?=$record -> img_path ?> </td>
+                        <td><?=$imgDisplay?> </td>
                         <td><?=$record -> price ?> </td>
                         <td><?=$record -> date_of_pickup ?> </td>
                         <td><?=$record -> status ?> </td>
@@ -257,16 +269,11 @@ $conn = Connect();
                 <label for="description_input">Description</label>
             </div>
       
+            <div style="display:flex; gap: 4px;">
             <div class="form-floating mb-3">
                     <input type="number" class="form-control" id="estimated_weight_input" required placeholder=1 min=1 max=9999999999 name='estimated_weight_input'>
                     <label for="estimated_weight_input">Estimated Weight</label>
             </div>
-            <div style="display:flex; gap: 4px;">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="img_path_input" required placeholder="Img Path" name='img_path_input'>
-                <label for="img_path_input">Img Path</label>
-            </div>
-
             <div class="form-floating mb-3">
                     <input type="number" class="form-control" id="price_input" required placeholder=1 min=1 max=9999999999 name='price_input'>
                     <label for="price_input">Price</label>
@@ -327,7 +334,6 @@ $conn = Connect();
                 let type_of_junk = this.cells[4].innerHTML;
                 let description = this.cells[5].innerHTML;
                 let estimated_weight = this.cells[6].innerHTML;
-                let img_path = this.cells[7].innerHTML;
                 let price = this.cells[8].innerHTML;
                 let date_of_pickup = this.cells[9].innerHTML;
                 date_of_pickup = date_of_pickup.split("-");
@@ -342,7 +348,6 @@ $conn = Connect();
                 document.getElementById("type_of_junk_input").value = type_of_junk;
                 document.getElementById("description_input").value = description;
                 document.getElementById("estimated_weight_input").value = parseInt(estimated_weight);
-                document.getElementById("img_path_input").value = img_path;
                 document.getElementById("price_input").value = parseInt(price);
                 document.getElementById("date_of_pickup_input").value = (String(date_of_pickup[0]) + '-' + String(date_of_pickup[1]) + '-' + String(date_of_pickup[2])).trim();
                 document.getElementById("status_input").value = status;
