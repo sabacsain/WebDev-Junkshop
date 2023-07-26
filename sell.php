@@ -3,7 +3,7 @@ session_start();
 require 'connection.php';
 $connect = Connect();
 
-$product_nameErr = $junk_typeErr = $descriptionErr = $weightErr = $image_pathErr = "";
+$product_nameErr = $junk_typeErr = $descriptionErr = $weightErr = $image_pathErr = $loginError = "";
 $user_id = $product_name = $junk_type = $description = $weight = $image_path = "";
 
 if (!empty($_SESSION["user_id"])) {
@@ -16,6 +16,8 @@ if (!empty($_SESSION["user_id"])) {
 
 }
 if(isset($_POST["submit"])) {
+
+  if(!empty($_SESSION["user_id"])){
 
   $product_name = $_POST["product_name"];
   $junk_type = $_POST["junk_type"];
@@ -83,6 +85,10 @@ if(isset($_POST["submit"])) {
         }
       }
     }
+   }
+   else{
+      $loginError ="Please sign in first.";
+   }
   }
 
   
@@ -174,13 +180,17 @@ if(isset($_POST["submit"])) {
               </ul>
 
               <ul class="seller-detail">
-              <?php foreach($result as $record){
-                
-                echo'
-                <li>'.$record -> first_name .' '.$record -> last_name.'</li>
-                <li>0'.$record -> phone.'</li>
-                <li>'.$record -> address.'</li>';
+              <?php 
+              
+              if (!empty($_SESSION["user_id"])) {
+                foreach($result as $record){
+                  
+                  echo'
+                  <li>'.$record -> first_name .' '.$record -> last_name.'</li>
+                  <li>0'.$record -> phone.'</li>
+                  <li>'.$record -> address.'</li>';
 
+                }
               }
                 ?>
               </ul>
@@ -198,7 +208,7 @@ if(isset($_POST["submit"])) {
 
 
               <form class="" action="" method="post" autocomplete="off" id="product-form" enctype="multipart/form-data">
-
+                <span class="error"><?php echo $loginError; ?></span>
                 <label for="" id="name-label">PRODUCT NAME
                   <input type="text" value="<?php echo $_POST['name'] ?? ''; ?>" name="product_name" placeholder="Enter your product" required>
                   </input>
