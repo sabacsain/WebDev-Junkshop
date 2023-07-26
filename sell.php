@@ -47,7 +47,6 @@ if(isset($_POST["submit"])) {
             "
           <script> alert('Data Saved Successfully'); </script>
           ";
-            echo $_POST = array();
           } else {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
