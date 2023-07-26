@@ -21,53 +21,71 @@ if(isset($_POST["submit"])) {
   $junk_type = $_POST["junk_type"];
   $description = $_POST["description"];
   $weight = $_POST['weight'];
-  $image_path = $_POST['image_path'];
 
-  if ($user_id && $product_name && $junk_type && $description && $weight && $image_path) {
+  /*PUT UPLOADED FILE TO PRODUCT_IMAGES FOLDER*/
+  $filename = $_FILES['image_path']['name'];
+  $tempname = $_FILES['image_path']['tmp_name'];
 
-    $query = "INSERT INTO transaction (user_id,product_name,type_of_junk, description,estimated_weight, img_path,date_of_pickup)VALUES('$user_id','$product_name', '$junk_type', '$description','$weight', '$image_path', DATE_ADD(CURDATE(), INTERVAL 3 DAY))";
-    $stmt = $connect->exec($query);
-  
-    echo
-    "
-  <script> alert('Data Saved Successfully'); </script>
-  ";
-    echo $_POST = array();
-  } else {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if(isset($filename) && !empty($filename)){
+    if (!empty($filename)){
+      $destination = "images/PRODUCT_IMAGES/";
+      $filename_new = $result[0]->username.uniqid('',true).$filename;
+      if(move_uploaded_file($tempname,$destination.$filename_new)){
 
-      if (empty($_POST["product_name"])) {
-        $product_nameErr = "Product name is required";
-      } else {
-        $product_name = $_POST["product_name"];
+        /*CREATE NEW IMAGE PATH (FILENAME) */
+          $image_path = $filename_new;
+
+
+          if ($user_id && $product_name && $junk_type && $description && $weight && $image_path) {
+
+            $query = "INSERT INTO transaction (user_id,product_name,type_of_junk, description,estimated_weight, img_path,date_of_pickup)VALUES('$user_id','$product_name', '$junk_type', '$description','$weight', '$image_path', DATE_ADD(CURDATE(), INTERVAL 3 DAY))";
+            $stmt = $connect->exec($query);
+          
+            echo
+            "
+          <script> alert('Data Saved Successfully'); </script>
+          ";
+            echo $_POST = array();
+          } else {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+              if (empty($_POST["product_name"])) {
+                $product_nameErr = "Product name is required";
+              } else {
+                $product_name = $_POST["product_name"];
+              }
+            }
+
+            if (empty($_POST["junk_type"])) {
+              $junk_typeErr = "Type of junk is required";
+            } else {
+              $junk_type = $_POST["junk_type"];
+            }
+
+            if (empty($_POST["description"])) {
+              $descriptionErr = "Description is required";
+            } else {
+              $description = $_POST["description"];
+            }
+
+            if (empty($_POST["weight"])) {
+              $weightErr = "Weight is required";
+            } else {
+              $weight = $_POST["weight"];
+            }
+
+            if (empty($_POST["image_path"])) {
+              $image_pathErr = "Image is required";
+            } else {
+              $image_path = $_POST["image_path"];
+            }
+          }
+        }
       }
     }
-
-    if (empty($_POST["junk_type"])) {
-      $junk_typeErr = "Type of junk is required";
-    } else {
-      $junk_type = $_POST["junk_type"];
-    }
-
-    if (empty($_POST["description"])) {
-      $descriptionErr = "Description is required";
-    } else {
-      $description = $_POST["description"];
-    }
-
-    if (empty($_POST["weight"])) {
-      $weightErr = "Weight is required";
-    } else {
-      $weight = $_POST["weight"];
-    }
-
-    if (empty($_POST["image_path"])) {
-      $image_pathErr = "Image is required";
-    } else {
-      $image_path = $_POST["image_path"];
-    }
   }
-}
+
+  
 
 ?>
 
@@ -179,7 +197,7 @@ if(isset($_POST["submit"])) {
             <div class="product-content">
 
 
-              <form class="" action="" method="post" autocomplete="off" id="product-form">
+              <form class="" action="" method="post" autocomplete="off" id="product-form" enctype="multipart/form-data">
 
                 <label for="" id="name-label">PRODUCT NAME
                   <input type="text" value="<?php echo $_POST['name'] ?? ''; ?>" name="product_name" placeholder="Enter your product" required>
@@ -211,7 +229,7 @@ if(isset($_POST["submit"])) {
                 </label>
 
                 <label for="" id="image-label">PRODUCT IMAGE:
-                  <input type="file" value="<?php echo $_POST['image_path'] ?? ''; ?>" name="image_path"></input>
+                  <input type="file" name="image_path" accept="image/*"></input>
                   <span class="error"><?php echo $image_pathErr; ?></span>
                   <!-- <input type="submit" value="Submit"> -->
                 </label>

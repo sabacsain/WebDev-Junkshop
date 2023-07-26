@@ -2,25 +2,29 @@
 session_start();
 require "connection.php";
 
+$conn = Connect();
+
+
 // Put here the UID from Session variable
 $uid = $_SESSION["user_id"];
 
 try{
   //select all info then place it on the text fields 
-  $query = "SELECT username, first_name, last_name, phone, email, telephone, `address` FROM `user` WHERE  user_id=$uid;";
-
-  $result  = mysqli_query($con,$query);
-  $user_data = mysqli_fetch_assoc($result); 
+  $query = "SELECT username, first_name, last_name, phone, email, telephone, `address` FROM `user` WHERE  user_id=$uid;";  
+  $stmt = $conn->prepare($query);
+  $stmt->execute();
+  $stmt -> setFetchMode(PDO::FETCH_OBJ);
+  $result = $stmt ->fetchObject();
 
   if($result){
-  $username = $user_data['username'];
-  $first_name = $user_data['first_name'];
-  $last_name = $user_data['last_name'];
-  $phone = $user_data['phone'];
-  $email = $user_data['email'];
-  $telephone = $user_data['telephone'];
-  $address = $user_data['address'];
-  }
+    $username = $result->username;
+    $first_name = $result->first_name;
+    $last_name = $result ->last_name;
+    $phone = $result->phone;
+    $email = $result->email;
+    $telephone = $result->telephone;
+    $address = $result->address;
+    }
 
 }catch(PDOException $ex){
   echo $ex->getMessage();
@@ -42,7 +46,7 @@ try{
 
     try{
         $query = "UPDATE user SET first_name='$first_name', last_name='$last_name', phone='$phone', telephone='$telephone', email='$email', `address`='$address' WHERE user_id='$uid'";
-        $stmt = $con->prepare($query);
+        $stmt = $conn->prepare($query);
         $stmt -> execute();
 
     }catch(PDOEXception $ex){
@@ -188,7 +192,7 @@ try{
     <section class="welcome-section">
 
       <div class="welcome-container">
-          <!-- <h1>Welcome, <?=$username?>!</h1> -->
+          <h1>Welcome, <?=$username?>!</h1>
       </div>
 
     </section>
@@ -306,13 +310,16 @@ try{
         <!--GET ALL TRANSACTION DETAILS-->
         <?php
           $query = "SELECT * FROM `transaction` WHERE user_id='$uid'";
-          $result  = mysqli_query($con,$query);
+          $stmt = $conn->prepare($query);
+          $stmt->execute();
+          $stmt -> setFetchMode(PDO::FETCH_OBJ);
+          $result = $stmt ->fetchAll();
 
           // $user_data = mysqli_fetch_assoc($result);
             
           if($result){
             foreach($result as $transaction){
-              $transaction_id = $transaction['transaction_id'];
+              $transaction_id = $transaction->transaction_id;
 
             ?>
 
@@ -320,7 +327,7 @@ try{
               <h4>TRANSACTION ID: 101015173</h4>
               
               <?php
-                switch($transaction['status']){
+                switch($transaction->status){
                   case "COMPLETED": echo '<h4>STATUS: <span id="transaction-completed">COMPLETED</span></h4>';
                   break;
                   case "PENDING": echo '<h4>STATUS: <span id="transaction-pending">PENDING</span></h4>';
@@ -336,16 +343,16 @@ try{
               
             <div class="transaction-row">
               <ul class="transaction-information">
-                <li><span class="transaction-label">PRODUCT NAME: </span><?=$transaction["product_name"]?></li>
-                <li><span class="transaction-label">TYPE OF JUNK: </span><?=$transaction["type_of_junk"]?></li>
-                <li><span class="transaction-label">DESCRIPTION: </span><?=$transaction["description"]?></li>
-                <li><span class="transaction-label">WEIGHT: </span><?=$transaction["estimated_weight"]?></li>
-                <li><span class="transaction-label">PICK-UP DATE: </span><?=$transaction["date_of_pickup"]?></li>
+              <li><span class="transaction-label">PRODUCT NAME: </span><?=$transaction->product_name?></li>
+                <li><span class="transaction-label">TYPE OF JUNK: </span><?=$transaction->type_of_junk?></li>
+                <li><span class="transaction-label">DESCRIPTION: </span><?=$transaction->description?></li>
+                <li><span class="transaction-label">WEIGHT: </span><?=$transaction->estimated_weight?></li>
+                <li><span class="transaction-label">PICK-UP DATE: </span><?=$transaction->date_of_pickup?></li>
               </ul>
                 <div class="img-container">
                   <?php
-          
-                    $file = "{$transaction['img_path']}";
+                    $file = "images/PRODUCT_IMAGES/".$transaction->img_path;
+                    // $file = "$transaction->img_path";
                     if (file_exists($file))
                     {
                         $b64image = base64_encode(file_get_contents($file));
