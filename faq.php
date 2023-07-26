@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Junkshop</title>
+    <title>JunKonnect</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="images/home/#" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,92 +13,48 @@
 <!-- BODY -->
 <body>
 
-   <!-- NAVIGATION BAR -->
-   <nav>
-    <!-- NAVBAR TOP -->
-    <section class="nav-top">
+  <?php session_start(); include("nav.php"); ?>
 
-      <div class="logo-box">
-        <div class="img-bg" onclick="location.href='index.html';"><img src="images/home/#" alt="Online Junkshop Logo"></div>
-      </div>
+  <script>
 
-      <div class="web-elem">
+    function openMobileNav(){
+      var hamburger = document.getElementById("hamburger-nav");
+      var mobileNav = document.getElementById("mobile-nav");
+      
+      if(window.getComputedStyle(mobileNav).visibility === "hidden"){
+        mobileNav.style.visibility = 'visible';
+        mobileNav.style.width = '50%';
+        mobileNav.style.height = '100vh'
+      }
+      else{
+        mobileNav.style.visibility = 'hidden';
+        mobileNav.style.width = '0';
+        mobileNav.style.height = '0'
+      }
 
-        <div class="wrap">
-          <div class="search">
-            <input type="text" class="searchTerm" placeholder="  Search" style="font-family:Arial, FontAwesome">
-            <button class="search-button">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.8025 12.6225L14.25 11.0325C13.916 10.7151 13.4948 10.5048 13.0404 10.4286C12.586 10.3524 12.1192 10.4138 11.7 10.605L11.025 9.93002C11.8204 8.86721 12.1837 7.54253 12.0416 6.22264C11.8996 4.90276 11.2629 3.68569 10.2596 2.81642C9.25626 1.94715 7.96089 1.49023 6.63424 1.53766C5.30759 1.58508 4.04815 2.13331 3.10947 3.07199C2.17079 4.01068 1.62255 5.27011 1.57513 6.59677C1.52771 7.92342 1.98462 9.21878 2.85389 10.2221C3.72316 11.2254 4.94024 11.8622 6.26012 12.0042C7.58 12.1462 8.90468 11.7829 9.96749 10.9875L10.635 11.655C10.4213 12.0747 10.3447 12.5509 10.416 13.0165C10.4874 13.4821 10.703 13.9135 11.0325 14.25L12.6225 15.84C13.0444 16.2614 13.6162 16.498 14.2125 16.498C14.8087 16.498 15.3806 16.2614 15.8025 15.84C16.0168 15.6305 16.1871 15.3802 16.3033 15.104C16.4196 14.8277 16.4795 14.531 16.4795 14.2313C16.4795 13.9315 16.4196 13.6348 16.3033 13.3586C16.1871 13.0823 16.0168 12.8321 15.8025 12.6225ZM9.44249 9.44252C8.91767 9.96602 8.24947 10.3222 7.5223 10.4662C6.79513 10.6101 6.04161 10.5353 5.35694 10.2512C4.67227 9.96705 4.08716 9.4864 3.67553 8.86992C3.26389 8.25344 3.0442 7.52879 3.0442 6.78752C3.0442 6.04624 3.26389 5.32159 3.67553 4.70511C4.08716 4.08864 4.67227 3.60798 5.35694 3.32388C6.04161 3.03977 6.79513 2.96495 7.5223 3.10888C8.24947 3.25281 8.91767 3.60902 9.44249 4.13252C9.79172 4.48086 10.0688 4.89468 10.2578 5.35026C10.4469 5.80585 10.5442 6.29426 10.5442 6.78752C10.5442 7.28077 10.4469 7.76918 10.2578 8.22477C10.0688 8.68036 9.79172 9.09417 9.44249 9.44252ZM14.745 14.745C14.6753 14.8153 14.5923 14.8711 14.5009 14.9092C14.4095 14.9473 14.3115 14.9669 14.2125 14.9669C14.1135 14.9669 14.0155 14.9473 13.9241 14.9092C13.8327 14.8711 13.7497 14.8153 13.68 14.745L12.09 13.155C12.0197 13.0853 11.9639 13.0023 11.9258 12.9109C11.8877 12.8196 11.8681 12.7215 11.8681 12.6225C11.8681 12.5235 11.8877 12.4255 11.9258 12.3341C11.9639 12.2427 12.0197 12.1597 12.09 12.09C12.1597 12.0197 12.2427 11.9639 12.3341 11.9258C12.4255 11.8878 12.5235 11.8682 12.6225 11.8682C12.7215 11.8682 12.8195 11.8878 12.9109 11.9258C13.0023 11.9639 13.0853 12.0197 13.155 12.09L14.745 13.68C14.8153 13.7497 14.8711 13.8327 14.9092 13.9241C14.9472 14.0155 14.9668 14.1135 14.9668 14.2125C14.9668 14.3115 14.9472 14.4096 14.9092 14.5009C14.8711 14.5923 14.8153 14.6753 14.745 14.745Z" fill="white"/>
-              </svg>
-            </button>
-          </div>
-        </div>
+    }
 
-        <div class="socmed-button">
-          <i href="#" class="fa fa-facebook"></i>
-          <i href="#" class="fa fa-instagram"></i>
-          <i href="#" class="fa fa-twitter"></i>
-        </div>
-
-        <div class="login-signup">
-          <button class="nav-button" onclick="location.href='signin.html'">Log In</button>
-          <button class="nav-button" onclick="location.href='signup.html'">Sign Up</button>
-        </div>
-
-      </div>
-
-      <div class="hamburger">
-        <hr> <hr> <hr>
-      </div>
-
-    </section>
-
-
-    <!-- NAVBAR BOTTOM -->
-    <section class="nav-bot">
-      <ul>
-        <li>
-          <img src="images/home/nav-sell.png" alt="Sell Logo">
-          <a href="sell.html">Sell a Product</a>
-        </li>
-        <li>
-          <img src="images/home/nav-news.png" alt="News Logo">
-          <a href="index.html#news-section">News</a>
-        </li>
-        <li>
-          <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="index.html#information-section">Information</a>
-        </li>
-        <li>
-          <img src="images/home/nav-about.png" alt="About Logo">
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <img src="images/home/nav-contact.png" alt="Contact Logo">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </section>
-
-  </nav>
+  </script>
 
   <!-- INFO PAGE -->
-  <div class="contact-page">   
+  <div class="faq-page">   
 
     <!-- FIRST SECTION -->
-    <section class="first-section">
+    <section class="faq-section">
 
     </section>
 
     <!-- INFO SECTION -->
     <section class="info-section">
+        
+      
+        <h2>FAQ</h2>
 
-      <h2>INFO</h2>
+      
 
       <!-- JUNK WE ACCEPT -->
       <div class="info-box" id="info-accept">
-        <h3>Junks We Accept</h3>
+        <h3>What Are The Junks That We Accept?</h3>
         <hr>
 
         <!-- ROW 1 -->
@@ -189,21 +145,22 @@
           </div>
 
         </div>
-    </div>
+      </div>
 
       <!-- JUNK WE DONT ACCEPT -->
       <div class="info-box" id="info-dont">
-        <h3>Junks We Do Not Accept</h3>
+        <h3>What Are The Junks That We Do Not Accept?</h3>
         <hr>
 
         <div class="info-container">
           
           <div class="info-card">
 
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="20" height="20" fill="#198B72"/>
-                <path d="M15.5837 6C15.2503 5.66667 14.7503 5.66667 14.417 6L8.16699 12.25L5.58366 9.66667C5.25033 9.33333 4.75033 9.33333 4.41699 9.66667C4.08366 10 4.08366 10.5 4.41699 10.8333L7.58366 14C7.75033 14.1667 7.91699 14.25 8.16699 14.25C8.41699 14.25 8.58366 14.1667 8.75033 14L15.5837 7.16667C15.917 6.83333 15.917 6.33333 15.5837 6Z" fill="white"/>
-                </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="20" fill="#F28660"/>
+              <path d="M5.83316 14.9999C5.66836 14.9999 5.50728 14.951 5.37027 14.8594C5.23327 14.7679 5.12648 14.6377 5.06342 14.4855C5.00037 14.3332 4.98386 14.1657 5.016 14.0041C5.04814 13.8425 5.12748 13.694 5.24399 13.5774L13.5773 5.24411C13.7341 5.09018 13.9452 5.00438 14.1649 5.00538C14.3846 5.00637 14.595 5.09408 14.7503 5.24942C14.9057 5.40476 14.9934 5.61516 14.9944 5.83484C14.9954 6.05452 14.9096 6.2657 14.7557 6.42244L6.42232 14.7558C6.34505 14.8333 6.25322 14.8948 6.15211 14.9367C6.051 14.9786 5.9426 15.0001 5.83316 14.9999Z" fill="white"/>
+              <path d="M14.1671 14.9999C14.0577 15.0001 13.9493 14.9786 13.8481 14.9367C13.747 14.8948 13.6552 14.8333 13.5779 14.7558L5.2446 6.42244C5.09067 6.2657 5.00487 6.05452 5.00587 5.83484C5.00686 5.61516 5.09457 5.40476 5.24991 5.24942C5.40525 5.09408 5.61565 5.00637 5.83533 5.00538C6.05501 5.00438 6.26619 5.09018 6.42293 5.24411L14.7563 13.5774C14.8728 13.694 14.9521 13.8425 14.9843 14.0041C15.0164 14.1657 14.9999 14.3332 14.9368 14.4855C14.8738 14.6377 14.767 14.7679 14.63 14.8594C14.493 14.951 14.3319 14.9999 14.1671 14.9999Z" fill="white"/>
+              </svg>
             <div class="info-title">
                 <h4>Compost/Green Waste</h4>
 
@@ -218,10 +175,11 @@
 
           <div class="info-card">
             
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="20" height="20" fill="#198B72"/>
-                <path d="M15.5837 6C15.2503 5.66667 14.7503 5.66667 14.417 6L8.16699 12.25L5.58366 9.66667C5.25033 9.33333 4.75033 9.33333 4.41699 9.66667C4.08366 10 4.08366 10.5 4.41699 10.8333L7.58366 14C7.75033 14.1667 7.91699 14.25 8.16699 14.25C8.41699 14.25 8.58366 14.1667 8.75033 14L15.5837 7.16667C15.917 6.83333 15.917 6.33333 15.5837 6Z" fill="white"/>
-                </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="20" fill="#F28660"/>
+              <path d="M5.83316 14.9999C5.66836 14.9999 5.50728 14.951 5.37027 14.8594C5.23327 14.7679 5.12648 14.6377 5.06342 14.4855C5.00037 14.3332 4.98386 14.1657 5.016 14.0041C5.04814 13.8425 5.12748 13.694 5.24399 13.5774L13.5773 5.24411C13.7341 5.09018 13.9452 5.00438 14.1649 5.00538C14.3846 5.00637 14.595 5.09408 14.7503 5.24942C14.9057 5.40476 14.9934 5.61516 14.9944 5.83484C14.9954 6.05452 14.9096 6.2657 14.7557 6.42244L6.42232 14.7558C6.34505 14.8333 6.25322 14.8948 6.15211 14.9367C6.051 14.9786 5.9426 15.0001 5.83316 14.9999Z" fill="white"/>
+              <path d="M14.1671 14.9999C14.0577 15.0001 13.9493 14.9786 13.8481 14.9367C13.747 14.8948 13.6552 14.8333 13.5779 14.7558L5.2446 6.42244C5.09067 6.2657 5.00487 6.05452 5.00587 5.83484C5.00686 5.61516 5.09457 5.40476 5.24991 5.24942C5.40525 5.09408 5.61565 5.00637 5.83533 5.00538C6.05501 5.00438 6.26619 5.09018 6.42293 5.24411L14.7563 13.5774C14.8728 13.694 14.9521 13.8425 14.9843 14.0041C15.0164 14.1657 14.9999 14.3332 14.9368 14.4855C14.8738 14.6377 14.767 14.7679 14.63 14.8594C14.493 14.951 14.3319 14.9999 14.1671 14.9999Z" fill="white"/>
+              </svg>
             <div class="info-title">
                 <h4>Liquid/Solid Waste/Junk</h4>
 
@@ -235,29 +193,30 @@
           
           <div class="info-card">
             
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="20" height="20" fill="#198B72"/>
-                <path d="M15.5837 6C15.2503 5.66667 14.7503 5.66667 14.417 6L8.16699 12.25L5.58366 9.66667C5.25033 9.33333 4.75033 9.33333 4.41699 9.66667C4.08366 10 4.08366 10.5 4.41699 10.8333L7.58366 14C7.75033 14.1667 7.91699 14.25 8.16699 14.25C8.41699 14.25 8.58366 14.1667 8.75033 14L15.5837 7.16667C15.917 6.83333 15.917 6.33333 15.5837 6Z" fill="white"/>
-                </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="20" fill="#F28660"/>
+              <path d="M5.83316 14.9999C5.66836 14.9999 5.50728 14.951 5.37027 14.8594C5.23327 14.7679 5.12648 14.6377 5.06342 14.4855C5.00037 14.3332 4.98386 14.1657 5.016 14.0041C5.04814 13.8425 5.12748 13.694 5.24399 13.5774L13.5773 5.24411C13.7341 5.09018 13.9452 5.00438 14.1649 5.00538C14.3846 5.00637 14.595 5.09408 14.7503 5.24942C14.9057 5.40476 14.9934 5.61516 14.9944 5.83484C14.9954 6.05452 14.9096 6.2657 14.7557 6.42244L6.42232 14.7558C6.34505 14.8333 6.25322 14.8948 6.15211 14.9367C6.051 14.9786 5.9426 15.0001 5.83316 14.9999Z" fill="white"/>
+              <path d="M14.1671 14.9999C14.0577 15.0001 13.9493 14.9786 13.8481 14.9367C13.747 14.8948 13.6552 14.8333 13.5779 14.7558L5.2446 6.42244C5.09067 6.2657 5.00487 6.05452 5.00587 5.83484C5.00686 5.61516 5.09457 5.40476 5.24991 5.24942C5.40525 5.09408 5.61565 5.00637 5.83533 5.00538C6.05501 5.00438 6.26619 5.09018 6.42293 5.24411L14.7563 13.5774C14.8728 13.694 14.9521 13.8425 14.9843 14.0041C15.0164 14.1657 14.9999 14.3332 14.9368 14.4855C14.8738 14.6377 14.767 14.7679 14.63 14.8594C14.493 14.951 14.3319 14.9999 14.1671 14.9999Z" fill="white"/>
+              </svg>
             <div class="info-title">
                 <h4>Medical and Hazardous Waste</h4>
-            
+                
 
-            <p id="paragraph-info">
-              This waste is a mixture between flammable, toxic, corrosive reactive that is commonly used 
-              by factories and households and wastes by health care centers, clinics, hospitals, and 
-              vets that could spread diseases and be hazardous. Examples: mercury, aerosol cans, 
-              gasoline, fuel, needles, bandages, gloves, gowns, masks, packaging, and samples.
-            </p>
-          </div>
+                <p id="paragraph-info">
+                  This waste is a mixture between flammable, toxic, corrosive reactive that is commonly used 
+                  by factories and households and wastes by health care centers, clinics, hospitals, and 
+                  vets that could spread diseases and be hazardous. Examples: mercury, aerosol cans, 
+                  gasoline, fuel, needles, bandages, gloves, gowns, masks, packaging, and samples.
+                </p>
+            </div>
             </div>
         </div>
 
-    </div>
+      </div>
 
       <!-- PRICE -->
       <div class="info-box" id="info-price">
-        <h3>Price</h3>
+        <h3>What Are The Prices For Different Junks?</h3>
         <hr>
 
         <table> 
@@ -271,7 +230,7 @@
           <tbody>
             <tr>
               <td>Cardboard (Karton)</td>
-              <td>550</td>
+              <td>15</td>
             </tr>
             <tr>
               <td>News Paper</td>
@@ -413,8 +372,10 @@
       <div class="footer-container">
 
         <div class="footer-left">
-            <img src="#" alt="Online Junkshop Logo">
-            <h5>SOME TAGLINE</h5>
+          <div class="img-container">
+            <img src="images/home/nav-junkonnect.png" alt="Online Junkshop Logo">
+          </div>
+          <h5>Turn your Trash into Cash</h5>
         </div>
 
         <div class="footer-vertical-line"></div>
@@ -442,7 +403,7 @@
             <div class="contact-details">
               <img src="images/home/email-logo.png" alt="Email Logo"> 
               <p id="paragraph-footer">
-                namengwebsite@gmail.com
+                junkonnect@gmail.com
               </p>
             </div>
           </div>
@@ -452,9 +413,9 @@
 
             <div class="footer-about-container">
               <ul>
-                <li><a href="index.html#story-section">Our Story</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <a href="index.php#story-section"><li>Our Story</li></a>
+                <a href="about.php"><li>About Us</li></a>
+                <a href="contact.php"><li>Contact Us</li></a>
               </ul>
             </div>
           </div>
@@ -471,7 +432,7 @@
       </div>
 
       <div class="footer-disclaimer">
-        <h5>Copyright © 2023 | JunKonnect | All rights reserved</h5>
+        <h5>Copyright © 2023 JunKonnect. All rights reserved</h5>
       </div>
 
     </footer>
