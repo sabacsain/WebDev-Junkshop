@@ -20,8 +20,8 @@ echo '  <!-- NAVIGATION BAR -->
      </div>
 
      <div class="login-signup">
-       <a class="nav-button" href="account.php"><i class="fa-solid fa-user"></i>Username</a>
-       <a class="nav-button" href="logout.php">Logout</a>
+       <a class="nav-button" href="account.php"><i class="fa fa-user icon">&nbsp;</i>Username</a>
+       <a class="nav-button" href="logout.php"><i class="fa fa-sign-out icon">&nbsp;</i>Logout</a>
      </div>
 
    </div>
