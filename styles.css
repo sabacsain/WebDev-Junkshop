@@ -101,14 +101,14 @@ nav{
     }
 
     .socmed-button i{
-        width: 25px;
-        height: 25px;
+        width: 45px;
+        height: 45px;
         margin: auto 0;
         text-align: center;
         color: #fff;;
         background-color:#23C686;;
         border-radius: 50px;
-        line-height: 160%;
+        line-height: 280%;
     }
 
     .socmed-button i:hover{
@@ -118,11 +118,10 @@ nav{
     }
 
     .web-elem .login-signup{
-        width: 25%;
+        width: 10%;
         justify-content: center;
-        display: flex;
-        gap: 10px;
-        
+        display: inline-block;
+        gap: 20px;
     }
 
     .nav-button:hover{
@@ -133,18 +132,19 @@ nav{
 
     .nav-button{
         font-family: 'Montserrat';
-        background: #23C686;
-        border-radius: 75px 75px;
+        background: #197C67;
+        border-radius: 8px;
         border: none;
         color: #fff;
-        padding: 3% 5%;
-        font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
+        padding: 6% 10%;
+        display: flex;
+        font-size: clamp(0.5rem, 0.1094rem + 1.25vw, 0.8125rem);
     }
 
     .login-signup a{
         text-decoration: none;
         height: fit-content;
-        margin-top: auto;
+        margin-top: 3%;
         margin-bottom: auto;
     }
 
