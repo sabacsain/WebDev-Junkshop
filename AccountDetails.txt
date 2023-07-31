@@ -1,0 +1,18 @@
+ADMINS:
+
+username: admin1
+password: 123junkonnect
+
+username: admin2
+password: 123junkonnect
+
+USERS:
+
+username: maricrism
+password: 123junkonnect
+
+username: shanb
+password: 123junkonnect
+
+username: jersonl
+password: 123junkonnect
