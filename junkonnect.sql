@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2023 at 03:31 PM
+-- Generation Time: Jul 31, 2023 at 12:07 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -66,7 +66,8 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`transaction_id`, `user_id`, `product_name`, `type_of_junk`, `description`, `estimated_weight`, `img_path`, `price`, `date_of_pickup`, `status`) VALUES
-(6, 104, 'Dyaryo', 'Paper', 'Marami ito', 6, 'shanb64c11f7228b173.38908673WIN_20220711_10_26_01_Pro.jpg', '0.00', '2023-07-29', 'Pending');
+(8, 103, 'Bote ', 'Plastic ', 'Malinis na ', 3, 'maricrism64c1d661bbd256.58957922bottles.jpg', '55.00', '2023-07-30', 'Completed'),
+(9, 104, 'Dyaryo', 'Paper', 'Marami po ito', 6, 'shanb64c786fb1c1dc6.07461115newspaper.jpg', '0.00', '2023-08-03', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -138,7 +139,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `transaction_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `transaction_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
