@@ -1,7 +1,9 @@
 <?php
 
 if(isset($_SESSION['user_id'])){
-    
+  $username = $_SESSION['username'];
+
+
 echo '  <!-- NAVIGATION BAR -->
 <nav>
  <!-- NAVBAR TOP -->
@@ -14,14 +16,14 @@ echo '  <!-- NAVIGATION BAR -->
    <div class="web-elem">
 
      <div class="socmed-button">
-       <i href="#" class="fa fa-facebook"></i>
-       <i href="#" class="fa fa-instagram"></i>
-       <i href="#" class="fa fa-twitter"></i>
+       <i href="#" class="fa-brands fa-facebook-f"></i>
+       <i href="#" class="fa-brands fa-instagram"></i>
+       <i href="#" class="fa-brands fa-twitter"></i>
      </div>
 
-     <div class="login-signup">
-       <a class="nav-button" href="account.php"><i class="fa fa-user icon">&nbsp;</i>Username</a>
-       <a class="nav-button" href="logout.php"><i class="fa fa-sign-out icon">&nbsp;</i>Logout</a>
+     <div class="logged-in">
+       <a class="nav-button" href="account.php"><i class="fa-solid fa-user"></i>'.$username.'</a>
+       <a class="nav-button" href="logout.php">Logout</a>
      </div>
 
    </div>
@@ -63,7 +65,7 @@ echo '  <!-- NAVIGATION BAR -->
 
    <ul class="top">
      <li>
-         <a href="account.php"><i class="fa-solid fa-user"></i>Username</a>
+         <a href="account.php"><i class="fa-solid fa-user"></i>'.$username.'</a>
      </li>
      <li>
         <a href="logout.php">Logout</a>
@@ -110,9 +112,9 @@ echo '  <!-- NAVIGATION BAR -->
       <div class="web-elem">
 
         <div class="socmed-button">
-          <i href="#" class="fa fa-facebook"></i>
-          <i href="#" class="fa fa-instagram"></i>
-          <i href="#" class="fa fa-twitter"></i>
+       <i href="#" class="fa-brands fa-facebook-f"></i>
+       <i href="#" class="fa-brands fa-instagram"></i>
+       <i href="#" class="fa-brands fa-twitter"></i>
         </div>
 
         <div class="login-signup">

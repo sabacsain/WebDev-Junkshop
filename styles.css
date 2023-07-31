@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+@import url('assets/fonts/Merriweather/Merriweather-Bold.ttf');
+@import url('assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf');
 
 body{
     margin: 0;
@@ -101,14 +101,14 @@ nav{
     }
 
     .socmed-button i{
-        width: 45px;
-        height: 45px;
+        width: 25px;
+        height: 25px;
         margin: auto 0;
         text-align: center;
         color: #fff;;
         background-color:#23C686;;
         border-radius: 50px;
-        line-height: 280%;
+        line-height: 160%;
     }
 
     .socmed-button i:hover{
@@ -118,10 +118,20 @@ nav{
     }
 
     .web-elem .login-signup{
-        width: 10%;
+        width: 25%;
         justify-content: center;
-        display: inline-block;
-        gap: 20px;
+        display: flex;
+        gap: 10px;
+        
+    }
+
+    .web-elem .logged-in{
+        width: 25%;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+        height: 100%;
+        
     }
 
     .nav-button:hover{
@@ -132,22 +142,31 @@ nav{
 
     .nav-button{
         font-family: 'Montserrat';
-        background: #197C67;
-        border-radius: 8px;
+        background: #23C686;
+        border-radius: 75px 75px;
         border: none;
         color: #fff;
-        padding: 6% 10%;
-        display: flex;
-        font-size: clamp(0.5rem, 0.1094rem + 1.25vw, 0.8125rem);
+        padding: 3% 5%;
+        font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1rem);
     }
 
     .login-signup a{
         text-decoration: none;
         height: fit-content;
-        margin-top: 3%;
+        margin-top: auto;
         margin-bottom: auto;
     }
 
+    .logged-in a{
+        text-decoration: none;
+        height: fit-content;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .logged-in i{
+        margin: 0 5px;
+    }
 
     /* NAV-BOT */
     .nav-bot{
@@ -438,7 +457,7 @@ nav{
     border: none;
     border-radius: 75px 75px;
     padding: 2% 3%;
-    font-weight: bolder;
+    font-weight: lighter;
 }
 .client-button:hover{
     cursor: pointer;
@@ -1158,10 +1177,11 @@ nav{
     text-align: center; */
 }
 
-/* .edit-section .form-row{
-    display: flex;
-    flex-direction: column;
-} */
+.edit-section .form-row{
+    width: 50%;
+    margin-left: auto;
+} 
+
 .edit-section input{
     text-align: center;
     padding: 20px;
@@ -1178,7 +1198,7 @@ nav{
 .edit-section .input-row{
     display:flex;
     margin-left: auto;
-    width: 615px;
+    width: 100%;
 }
 
 .edit-section .input-row input{
@@ -1188,21 +1208,26 @@ nav{
 .edit-section .contact-row{
     display: flex;
     flex-direction: column;
-    width: 615px;
+    width: 100%;
     margin-left: auto;
     padding: 0;
 
 }
 
-.edit-section #email-label input{
-    /* width: 100%; */
-    
+
+.edit-section #email-label, #address-label{
+     width: 100%;  
+}
+
+
+.edit-section #first-name-label, #last-name-label, #phone-label, #telephone-label{
+    width: 50%;  
 }
 
 
 .account-button-container{
     margin-left: auto;
-    width: 50%;
+    width: 100%;
     display: flex;
     margin-top: 5%;
 }
@@ -1295,8 +1320,8 @@ nav{
 }
 
 .account-page .transaction-row img{
-    width: 236px;
-    height: 185px;
+    width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -2733,6 +2758,20 @@ border-radius: 3px;
         width: 100%;
         padding: 20px 0;
         
+    }
+
+    .edit-section .input-row{
+        flex-direction: column;
+    }
+
+    .edit-section .form-row{
+        width: 80%;
+        margin: auto;
+    }
+    
+    
+    .edit-section #first-name-label, #last-name-label, #phone-label, #telephone-label{
+        width: 100%;  
     }
 }
 

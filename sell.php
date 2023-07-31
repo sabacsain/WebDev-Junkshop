@@ -8,11 +8,17 @@ $user_id = $product_name = $junk_type = $description = $weight = $image_path = "
 
 if (!empty($_SESSION["user_id"])) {
   $user_id = $_SESSION["user_id"];
+
+  try{
   $query = "SELECT * FROM user WHERE user_id = $user_id";
   $stmt = $connect->prepare($query);
   $stmt->execute();
   $stmt -> setFetchMode(PDO::FETCH_OBJ);
   $result = $stmt ->fetchAll();
+  }catch(PDOException $ex){
+    echo $ex->getMessage();
+  }
+  
 
 }
 if(isset($_POST["submit"])) {
@@ -39,14 +45,17 @@ if(isset($_POST["submit"])) {
 
 
           if ($user_id && $product_name && $junk_type && $description && $weight && $image_path) {
-
+            try{
             $query = "INSERT INTO transaction (user_id,product_name,type_of_junk, description,estimated_weight, img_path,date_of_pickup)VALUES('$user_id','$product_name', '$junk_type', '$description','$weight', '$image_path', DATE_ADD(CURDATE(), INTERVAL 3 DAY))";
             $stmt = $connect->exec($query);
           
-            echo
-            "
-          <script> alert('Data Saved Successfully'); </script>
-          ";
+              echo
+              "
+            <script> alert('Data Saved Successfully'); </script>
+            ";}catch(PDOException $ex){
+              echo $ex->getMessage();
+            }
+          
           } else {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -109,7 +118,7 @@ if(isset($_POST["submit"])) {
   <title>JunKonnect</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="icon" href="images/home/#" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.css">
 </head>
 
 <!-- BODY -->
@@ -316,9 +325,9 @@ if(isset($_POST["submit"])) {
 
           <div class="footer-follow">
             <h3>FOLLOW US</h3>
-            <i href="#" class="fa fa-facebook"></i>
-            <i href="#" class="fa fa-instagram"></i>
-            <i href="#" class="fa fa-twitter"></i>
+            <i href="#" class="fa-brands fa-facebook-f"></i>
+            <i href="#" class="fa-brands fa-instagram"></i>
+            <i href="#" class="fa-brands fa-twitter"></i>
           </div>
 
         </div>

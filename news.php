@@ -7,7 +7,7 @@
     <title>JunKonnect</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="images/home/#" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
   </head>
   
 <!-- BODY -->
@@ -332,9 +332,9 @@ function openMobileNav(){
 
           <div class="footer-follow">
             <h3>FOLLOW US</h3>
-            <i href="#" class="fa fa-facebook"></i>
-            <i href="#" class="fa fa-instagram"></i>
-            <i href="#" class="fa fa-twitter"></i>
+            <i href="#" class="fa-brands fa-facebook-f"></i>
+            <i href="#" class="fa-brands fa-instagram"></i>
+            <i href="#" class="fa-brands fa-twitter"></i>
           </div>
 
         </div>

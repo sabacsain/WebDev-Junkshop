@@ -1,6 +1,46 @@
 <?php
 session_start();
-require "connection.php";
+require 'connection.php';
+$connect = Connect(); 
+
+//VALIDATION
+$nameError = "";
+$emailError = "";
+$messageError = "";
+
+
+if(isset($_POST['submit'])){  
+
+  if (empty($_POST['name'])) {
+    $nameError = "<p style='color: red;'>Please enter your name!</p>";
+  }
+  if (empty($_POST['email'])) {
+    $emailError  = "<p style='color: red;'>Please enter your email!</p>";
+  }
+  if (empty($_POST['message'])) {
+    $messageError  = "<p style='color: red;'>Please enter your message!</p>";
+  }
+
+  if(empty($nameError) && empty($emailError) && empty($messageError)){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    try{
+    $query = "insert into message (email,name,message) values('$email','$name','$message')";     
+    $stmt = $connect->exec($query);
+
+    echo " <script> alert('Message Sent Successfully'); </script>";
+    }catch(PDOException $ex){
+      echo $ex->getMessage();
+    }
+    
+
+  }
+
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,125 +52,34 @@ require "connection.php";
     <title>JunKonnect</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="images/home/#" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
   </head>
   
 <!-- BODY -->
 <body>
 
-   <!-- NAVIGATION BAR -->
-   <nav>
-    <!-- NAVBAR TOP -->
-    <section class="nav-top">
+ <?php include("nav.php"); ?>
 
-      <div class="logo-box">
-        <div class="img-bg" onclick="location.href='index.html';"><img src="images/home/nav-junkonnect.png" alt="Online Junkshop Logo"></div>
-      </div>
+  <script>
 
-      <div class="web-elem">
+  function openMobileNav(){
+    var hamburger = document.getElementById("hamburger-nav");
+    var mobileNav = document.getElementById("mobile-nav");
+    
+    if(window.getComputedStyle(mobileNav).visibility === "hidden"){
+      mobileNav.style.visibility = 'visible';
+      mobileNav.style.width = '50%';
+      mobileNav.style.height = '100vh'
+    }
+    else{
+      mobileNav.style.visibility = 'hidden';
+      mobileNav.style.width = '0';
+      mobileNav.style.height = '0'
+    }
 
-        <div class="socmed-button">
-          <i href="#" class="fa fa-facebook"></i>
-          <i href="#" class="fa fa-instagram"></i>
-          <i href="#" class="fa fa-twitter"></i>
-        </div>
+  }
 
-        <div class="login-signup">
-          <button class="nav-button" onclick="location.href='signin.html'">Log In</button>
-          <button class="nav-button" onclick="location.href='signup.html'">Sign Up</button>
-        </div>
-
-      </div>
-
-      <div class="hamburger" id="hamburger-nav" onclick="openMobileNav()">
-        <hr> <hr> <hr>
-      </div>
-
-    </section>
-
-
-    <!-- NAVBAR BOTTOM -->
-    <section class="nav-bot">
-      <ul>
-        <li>
-          <img src="images/home/nav-sell.png" alt="News Logo">
-          <a href="sell.html">Sell a Product</a>
-        </li>
-        <li>
-          <img src="images/home/nav-news.png" alt="News Logo">
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="faq.html">FAQ</a>
-        </li>
-        <li>
-          <img src="images/home/nav-about.png" alt="About Logo">
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <img src="images/home/nav-contact.png" alt="Contact Logo">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="mobile-nav" id="mobile-nav">
-
-      <ul class="top">
-        <li>
-          <a href="signin.html">Log In</a>
-        </li>
-        <li>
-          <a href="signup.html">Sign Up</a>
-        </li>
-      </ul>
-
-      <ul class="bot">
-        <li>
-          <img src="images/home/nav-sell.png" alt="News Logo">
-          <a href="sell.html">Sell a Product</a>
-        </li>
-        <li>
-          <img src="images/home/nav-news.png" alt="News Logo">
-          <a href="news.html">News</a>
-        </li>
-        <li>
-          <img src="images/home/nav-info.png" alt="Information Logo">
-          <a href="faq.html">FAQ</a>
-        </li>
-        <li>
-          <img src="images/home/nav-about.png" alt="About Logo">
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <img src="images/home/nav-contact.png" alt="Contact Logo">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </section>
-
-    <script>
-
-      function openMobileNav(){
-        var hamburger = document.getElementById("hamburger-nav");
-        var mobileNav = document.getElementById("mobile-nav");
-        
-        if(window.getComputedStyle(mobileNav).visibility === "hidden"){
-          mobileNav.style.visibility = 'visible';
-          mobileNav.style.width = '50%';
-          mobileNav.style.height = '100vh'
-        }
-        else{
-          mobileNav.style.visibility = 'hidden';
-          mobileNav.style.width = '0';
-          mobileNav.style.height = '0'
-        }
-
-      }
-
-    </script>
-  </nav>
+  </script>
 
   <!-- CONTACT PAGE -->
   <div class="contact-page">   
@@ -206,65 +155,44 @@ require "connection.php";
       </div>
 
       <div class="message-form-container">
-        <form id="message-form" method="POST">
+        <form id="message-form" method="post">
           <label for="name" id="name-label">NAME
             <input
               id="name"
+              name="name"
               type="text"
               placeholder="Type your name"
-              required
-              name="name">
-            </input>
+              >
+              <?php echo $nameError;?>
           </label>
 
           <label for="email" id="email-label">EMAIL
             <input
               id="email"
-              type="email"
+              name="email"
+              type="text"
               placeholder="Type your email"
-              required
-              name="email">
-            </input>
+              >
+              <?php echo $emailError;?>
           </label>
 
           <label for="message" id="message-label">MESSAGE
             <textarea
               id="message"
+              name="message"
               type="text"
               placeholder="Type your message here."
-              required
-              name="message"></textarea>
+              ></textarea>
+              <?php echo $messageError;?>
           </label>
         
-          <div class="message-button-container">
-            <button type="submit" class="message-button" name="message-submit">Save Changes</button>
-          </div>
-        
+
+        <div class="message-button-container">
+          <button class="message-button" type="submit" name="submit">Save Changes</button>
+        </div>
+
         </form>
       </div>
-
-      <!--BACKEND FOR STORING MESSAGES IN THE DATABASE-->
-      <?php
-      if (isset($_POST['message-submit'])){
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $date_sent = date("Y/m/d"); 
-
-        try{
-         
-           $query_insert_message = "INSERT INTO `message` (`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
-           mysqli_query($con, $query_insert_message);
-
-           echo '<script>alert("Message Has Been Sent to the Admin");</script>';
-
-
-        }catch(PDOException $ex){
-          echo $ex->getMessage();
-        }
-      }
-      
-      ?>
     </section>
 
 
@@ -316,18 +244,18 @@ require "connection.php";
 
             <div class="footer-about-container">
               <ul>
-                <a href="index.html#story-section"><li>Our Story</li></a>
-                <a href="about.html"><li>About Us</li></a>
-                <a href="contact.html"><li>Contact Us</li></a>
+                <a href="index.php#story-section"><li>Our Story</li></a>
+                <a href="about.php"><li>About Us</li></a>
+                <a href="contact.php"><li>Contact Us</li></a>
               </ul>
             </div>
           </div>
 
           <div class="footer-follow">
             <h3>FOLLOW US</h3>
-            <i href="#" class="fa fa-facebook"></i>
-            <i href="#" class="fa fa-instagram"></i>
-            <i href="#" class="fa fa-twitter"></i>
+            <i href="#" class="fa-brands fa-facebook-f"></i>
+            <i href="#" class="fa-brands fa-instagram"></i>
+            <i href="#" class="fa-brands fa-twitter"></i>
           </div>
 
         </div>

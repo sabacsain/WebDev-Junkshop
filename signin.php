@@ -32,11 +32,13 @@ if(isset($_POST['submit'])){
             foreach($result as $row){
               $resultPass = $row -> password;
               $resultID = $row -> user_id;
+              $resultUsername = $row -> username;
               $resultType = $row -> user_type;
             }
               
             if(password_verify($password,$resultPass)){
               $_SESSION['user_id'] = $resultID;
+              $_SESSION['username'] = $resultUsername;
 
               if($resultType == 0){
                 header("Location: index.php");
@@ -74,7 +76,7 @@ if(isset($_POST['submit'])){
     <title>JunKonnect</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="images/home/#" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
   </head>
   
 <!-- BODY -->
@@ -219,9 +221,9 @@ if(isset($_POST['submit'])){
 
       <div class="footer-follow">
         <h3>FOLLOW US</h3>
-        <i href="#" class="fa fa-facebook"></i>
-        <i href="#" class="fa fa-instagram"></i>
-        <i href="#" class="fa fa-twitter"></i>
+        <i href="#" class="fa-brands fa-facebook-f"></i>
+        <i href="#" class="fa-brands fa-instagram"></i>
+        <i href="#" class="fa-brands fa-twitter"></i>
       </div>
 
     </div>
