@@ -136,7 +136,7 @@ $conn = Connect();
                     <th class="align-middle">REGISTRATION DATE</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-start">
             <?php
                 $results = "";
                 if(isset($_POST['search'])){

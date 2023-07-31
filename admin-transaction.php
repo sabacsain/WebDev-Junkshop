@@ -126,8 +126,8 @@ $conn = Connect();
     <!--Table-->
     <div class="table-container">
         <table class="table table-light table-striped align-middle table-hover table-condensed"id="table">
-        <thead >
-                <tr>
+        <thead class="text-start">
+                <tr >
                     <th>#</th>
                     <th class="align-middle">TRANSACTION ID</th>
                     <th class="align-middle">USER ID</th>
@@ -286,7 +286,11 @@ $conn = Connect();
             </div>
 
             <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="status_input" required placeholder="Status" name='status_input'>
+                     <select id="status_input" class="form-select" name='status_input'>
+                        <option value="Pending" class="option-label">Pending</option>
+                        <option value="Completed" class="option-label">Completed</option>
+                        <option value="Canceled" class="option-label">Canceled</option>
+                    </select>
                     <label for="status_input">Status</label>
             </div>
             </div>
@@ -337,7 +341,7 @@ $conn = Connect();
                 let price = this.cells[8].innerHTML;
                 let date_of_pickup = this.cells[9].innerHTML;
                 date_of_pickup = date_of_pickup.split("-");
-                let status = this.cells[10].innerHTML;
+                let status = this.cells[10].innerHTML.trim();
 
                 /*assign column values to text fields   */
                 document.getElementById("transaction_id_input").value = parseInt(transaction_id);

@@ -45,13 +45,8 @@ try{
 
             $stmt = $connect->prepare($query);
             $stmt -> execute($data);
-            echo $success_alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Success!</strong> Record Has Been Updated Succesfully.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            
-                
-            <a href="admin-transaction.php" class="proceed-btn"><button type="button" class="btn btn-outline-dark ">Go Back to Admin </button></a>';
+            header('Location: admin-transaction.php');
+
 
         }catch(PDOException $e){
             echo $error_alert =  '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -72,13 +67,8 @@ try{
             $stmt= $connect->prepare($query);
             $stmt->execute([$transaction_id]);
 
-            echo $success_alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Success!</strong> Record Has Been Deleted Succesfully.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            
-                
-            <a href="admin-transaction.php" class="proceed-btn"><button type="button" class="btn btn-outline-dark ">Go Back to Admin </button></a>';
+            header('Location: admin-transaction.php');
+
 
         }catch(PDOException $e){
             echo $error_alert =  '<div class="alert alert-danger alert-dismissible fade show" role="alert">

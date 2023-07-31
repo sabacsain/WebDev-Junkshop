@@ -2363,11 +2363,15 @@ border-radius: 3px;
     color: #198B72;
 }
 
-.admin-user table{
+.admin-transactions table{
     margin: auto;
+    overflow: visible;
     width: 100%;
     text-align: center;
-    border-collapse: collapse; 
+    border-collapse: collapse;
+    width: 120% !important;
+    vertical-align: middle !important;
+  
 }
 
 .admin-user h2{
@@ -2377,6 +2381,15 @@ border-radius: 3px;
     font-weight: 900;
     color: #198B72;
     text-shadow: 0px 4px 4px #fff;
+}
+
+.admin-user table{
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse; 
+    width: 120% !important;
+    vertical-align: middle !important;
+    white-space: nowrap;
 }
 
 .admin-user table thead{
@@ -2390,7 +2403,7 @@ border-radius: 3px;
 }
 
 .admin-user tbody td{
-    padding: 5% 0;
+    padding: auto;
 }
 
 
@@ -2416,6 +2429,9 @@ border-radius: 3px;
     width: 100%;
     text-align: center;
     border-collapse: collapse;
+    width: 120% !important;
+    vertical-align: middle !important;
+  
 }
 
 .admin-transactions h2{
@@ -2431,6 +2447,8 @@ border-radius: 3px;
     background: #E5E9E1;
     line-height: 2;
     font-size: clamp(0.625rem, 0.2344rem + 1.25vw, 0.9375rem);
+    white-space: nowrap;
+
 }
 
 .admin-transactions tbody tr{
@@ -2439,11 +2457,14 @@ border-radius: 3px;
 }
 
 .admin-transactions tbody td{
-    padding: 5% 0;
+    padding: auto;
+    white-space: nowrap;
+
 }
 
+
 .admin-transactions img{
-    scale: 0.5;
+    scale: 1;
 }
 
 .admin-transactions th{
@@ -2500,9 +2521,8 @@ border-radius: 3px;
     border-radius: 5px;
   }
   .table {
-    width: 120%;
+    width: 120% !important;
     vertical-align: middle !important;
-    
   }
   
   
@@ -2580,6 +2600,8 @@ border-radius: 3px;
 
 .trans-img:hover{
     transform: scale(5);
+    transition: all 0.5s;
+
 }
 
 
