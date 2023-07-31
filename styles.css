@@ -1682,7 +1682,7 @@ nav{
     margin: auto;
 }
 
-.contact-page .contact-socmed .fa {
+.contact-page .contact-socmed i {
     padding: 6% 8%;   
     text-align: center;
     text-decoration: none;
@@ -1691,7 +1691,7 @@ nav{
     
   }
 
-.contact-page .fa:hover{
+.contact-page i:hover{
     background-color:#23c686
 }
 
