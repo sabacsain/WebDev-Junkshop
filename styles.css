@@ -2,6 +2,11 @@
 @import url('assets/fonts/Merriweather/Merriweather-Bold.ttf');
 @import url('assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf');
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+}
+
 body{
     margin: 0;
 }
