@@ -131,9 +131,9 @@ if(isset($_POST['submit'])){
           <div class="card-heading">
             <h3>Follow us</h3>
             <div class="contact-socmed">
-              <i href="#" class="fa fa-facebook"></i>
-              <i href="#" class="fa fa-instagram"></i>
-              <i href="#" class="fa fa-twitter"></i>
+              <i href="#" class="fa-brands fa-facebook"></i>
+              <i href="#" class="fa-brands fa-instagram"></i>
+              <i href="#" class="fa-brands fa-twitter"></i>
             </div>   
           </div>
         </div>
