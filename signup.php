@@ -149,7 +149,7 @@ if(isset($_POST['submit'])){
             <hr>
 
             <form id="signup-form" id="signup-form" method="post"> 
-              <label for="first-name" id="first-name-label">FIRST NAME
+              <label for="first-name" id="first-name-label1">FIRST NAME
                 <input
                   id="first-name"
                   type="text"
@@ -159,7 +159,7 @@ if(isset($_POST['submit'])){
                   <?php echo $fNameError;?>
               </label>
 
-              <label for="last-name" id="last-name-label">LAST NAME
+              <label for="last-name" id="last-name-label1">LAST NAME
                 <input
                   id="last-name"
                   type="text"
@@ -176,7 +176,7 @@ if(isset($_POST['submit'])){
             <h3>Contact Information</h3>
             <hr>
 
-              <label for="phone" id="phone-label">PHONE
+              <label for="phone" id="phone-label1">PHONE
                 <input
                   id="phone"
                   type="tel"
@@ -186,7 +186,7 @@ if(isset($_POST['submit'])){
                   <?php echo $phoneError;?>
               </label>
 
-              <label for="telephone" id="telephone-label">TELEPHONE
+              <label for="telephone" id="telephone-label1">TELEPHONE
                 <input
                   id="telephone"
                   type="tel"
@@ -196,7 +196,7 @@ if(isset($_POST['submit'])){
                   <?php echo $telError;?>
               </label>
 
-              <label for="email" id="email-label">EMAIL
+              <label for="email" id="email-label1">EMAIL
                 <input
                   id="email"
                   type="text"
@@ -211,7 +211,7 @@ if(isset($_POST['submit'])){
             <h3>Address</h3>
             <hr>
 
-              <label for="address" id="address-label">ADDRESS
+              <label for="address" id="address-label1">ADDRESS
                 <input
                   id="address"
                   type="text"
@@ -227,7 +227,7 @@ if(isset($_POST['submit'])){
             <h3>Account</h3>
             <hr>
 
-              <label for="username" id="username-label">USERNAME
+              <label for="username" id="username-label1">USERNAME
                 <input
                   id="username"
                   type="text"
@@ -237,7 +237,7 @@ if(isset($_POST['submit'])){
                   <?php echo $usernameError;?>
               </label>
 
-              <label for="password" id="password-label">PASSWORD
+              <label for="password" id="password-label1">PASSWORD
                 <input
                   id="password"
                   type="password"
@@ -247,7 +247,7 @@ if(isset($_POST['submit'])){
                   <?php echo $passwordError;?>
               </label>
 
-              <label for="confirm-password" id="confirm-password-label">CONFIRM PASSWORD
+              <label for="confirm-password" id="confirm-password-label1">CONFIRM PASSWORD
                 <input
                   id="confirm-password"
                   type="password"
